@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=NetQ3_2 Pin=Q3-5
+Removed Pin From Net: NetName=VCC Pin=Q3-6
+Change Component Footprint: Designator=Q3 Old Footprint=TSOP65P210X110-6N New Footprint=TRANS_BUK9K18-40E,115
+Change Component Comment : Designator=Q3 Old Comment=MMDT5451 New Comment=PHPT610030NPK
+Change component parameters: Designator = "Q3" ("Q3"); Footprint = "TSOP65P210X110-6N"; UniqueID = "\HWRHBJWP" ("\HWRHBJWP")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://assets.nexperia.com/documents/data-sheet/PHPT610030NPK.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://hr.mouser.com/ProductDetail/Nexperia/PHPT610030NPKX?qs=%252BRKXB2WKlSeoXKhT5DAScw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetQ3_2 Pin=Q3-4
+Added Pin To Net: NetName=VCC Pin=Q3-7_8
+Added Pin To Net: NetName=NetQ3_5_6 Pin=Q3-5_6
+Added Pin To Net: NetName=NetQ3_5_6 Pin=R3-1
+Added Net: Name=NetQ3_5_6
+Added Member To Class: ClassName=main Member=Component J2 282837-2
+Added Member To Class: ClassName=main Member=Component Q1 TIP32C
+Added Member To Class: ClassName=main Member=Component Q2 PHPT610030NPK
+Added Member To Class: ClassName=main Member=Component Q4 TIP31C
+Added Member To Class: ClassName=main Member=Component R4 330 mOhms
+Added Member To Class: ClassName=main Member=Component R5 500 mOhms
+Added Member To Class: ClassName=main Member=Component R7 330 mOhms

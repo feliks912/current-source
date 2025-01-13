@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetC2_1 Pin=Q2-4
+Removed Pin From Net: NetName=NetQ1_1 Pin=Q2-6
+Change Component Footprint: Designator=Q2 Old Footprint=TSOP65P210X110-6N New Footprint=TRANS_BUK9K18-40E,115
+Change Component Comment : Designator=Q2 Old Comment=MMDT5451 New Comment=PHPT610030NPK
+Change component parameters: Designator = "Q2" ("Q2"); Footprint = "TSOP65P210X110-6N"; UniqueID = "\GYZQRSMD" ("\GYZQRSMD")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://assets.nexperia.com/documents/data-sheet/PHPT610030NPK.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://hr.mouser.com/ProductDetail/Nexperia/PHPT610030NPKX?qs=%252BRKXB2WKlSeoXKhT5DAScw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC2_1 Pin=Q2-3
+Add Pin To Net: Unknown Pin: Pin Q2-7
+Add Pin To Net: Unknown Pin: Pin Q2-8
+Added Pin To Net: NetName=NetQ2_4 Pin=Q2-4
+Added Pin To Net: NetName=NetQ2_4 Pin=R8-1
+Added Pin To Net: NetName=NetQ2_4 Pin=R9-2
+Added Net: Name=NetQ2_4
+Added Pin To Net: NetName=NetQ2_5,6 Pin=Q4-1
+Added Pin To Net: NetName=NetQ2_5,6 Pin=R10-2
+Added Net: Name=NetQ2_5,6
+Added Member To Class: ClassName=main Member=Component Q3 MMDT5451

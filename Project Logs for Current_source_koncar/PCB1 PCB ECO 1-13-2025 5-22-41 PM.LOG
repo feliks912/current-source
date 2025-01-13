@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=VDD Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Pin From Net: NetName=NetC1_2 Pin=Q2-1
+Removed Pin From Net: NetName=VDD Pin=Q2-3
+Removed Pin From Net: NetName=NetQ1_1 Pin=Q2-7_8
+Removed Pin From Net: NetName=VCC Pin=Q3-7_8
+Removed Pin From Net: NetName=NetQ2_2 Pin=R1-1
+Removed Pin From Net: NetName=NetQ2_2 Pin=R3-2
+Added Pin To Net: NetName=NetQ2_2 Pin=Q2-4
+Added Pin To Net: NetName=VDD Pin=Q2-5_6
+Added Pin To Net: NetName=VCC Pin=Q2-7_8
+Added Pin To Net: NetName=NetC1_2 Pin=Q3-1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q3-7_8
+Added Pin To Net: NetName=NetQ2_2 Pin=U1-1
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_1 Pin=R8-2
+Added Net: Name=NetQ2_1
+Added Pin To Net: NetName=NetQ2_3 Pin=Q2-3
+Added Pin To Net: NetName=NetQ2_3 Pin=R3-1
+Added Net: Name=NetQ2_3
+Added Pin To Net: NetName=NetQ3_2 Pin=Q3-2
+Added Pin To Net: NetName=NetQ3_2 Pin=R1-1
+Added Pin To Net: NetName=NetQ3_2 Pin=R3-2
+Added Net: Name=NetQ3_2
