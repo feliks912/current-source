@@ -1,0 +1,95 @@
+Remove Pin from Net: Failed to remove Pin
+Removed Pin From Net: NetName=VCC Pin=Q2-7_8
+Removed Pin From Net: NetName=NetC1_2 Pin=Q3-1
+Remove Pin from Net: Failed to remove Pin
+Removed Pin From Net: NetName=NetJ?_1 Pin=Q3-7_8
+Removed Member From Class: ClassName=main Member=R?
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Designator: OldDesignator=J1 NewDesignator=J2
+Change Component Designator: OldDesignator=J2 NewDesignator=J9
+Change Component Designator: OldDesignator=J3 NewDesignator=J10
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J4
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Change Component Designator: OldDesignator=J? NewDesignator=J7
+Change Component Designator: OldDesignator=J? NewDesignator=J8
+Change Component Designator: OldDesignator=J? NewDesignator=J11
+Change Component Designator: OldDesignator=J? NewDesignator=J12
+Change Component Designator: OldDesignator=J? NewDesignator=J13
+Change Component Designator: OldDesignator=J? NewDesignator=J14
+Change Component Designator: OldDesignator=J? NewDesignator=J15
+Change Component Designator: OldDesignator=J? NewDesignator=J16
+Change Component Designator: OldDesignator=J? NewDesignator=J17
+Change Component Designator: OldDesignator=J? NewDesignator=J18
+Change Component Designator: OldDesignator=J? NewDesignator=J19
+Change Component Designator: OldDesignator=J? NewDesignator=J20
+Change Component Designator: OldDesignator=J? NewDesignator=J21
+Change Component Designator: OldDesignator=J? NewDesignator=J22
+Change Component Designator: OldDesignator=J? NewDesignator=J23
+Change Component Designator: OldDesignator=J? NewDesignator=J24
+Change Component Designator: OldDesignator=R12 NewDesignator=R13
+Change Component Designator: OldDesignator=R13 NewDesignator=R15
+Change Component Designator: OldDesignator=R? NewDesignator=R12
+Change Component Designator: OldDesignator=R? NewDesignator=R14
+Added Pin To Net: NetName=NetC1_2 Pin=Q2-1
+Added Pin To Net: NetName=NetJ?_1 Pin=Q2-2
+Added Pin To Net: NetName=NetJ?_1 Pin=Q2-7_8
+Added Pin To Net: NetName=NetJ?_1 Pin=Q3-2
+Added Pin To Net: NetName=VCC Pin=Q3-7_8
+Change Net Name : Old Net Name=NetJ2_1 New Net Name=NetJ7_1
+Change Net Name : Old Net Name=NetJ3_1 New Net Name=NetJ8_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ3_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ4_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ15_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ16_1
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ22_1
+Change Net Name : Old Net Name=NetR12_1 New Net Name=NetR13_1
+Added Pin To Net: NetName=NetQ3_1 Pin=Q3-1
+Added Pin To Net: NetName=NetQ3_1 Pin=R8-2
+Added Net: Name=NetQ3_1
+Added Member To Class: ClassName=main Member=Component C6 1 µF
+Added Member To Class: ClassName=main Member=Component J4 5001
+Added Member To Class: ClassName=main Member=Component J5 5001
+Added Member To Class: ClassName=main Member=Component J6 5001
+Added Member To Class: ClassName=main Member=Component J7 5001
+Added Member To Class: ClassName=main Member=Component J8 5001
+Added Member To Class: ClassName=main Member=Component J9 282837-2
+Added Member To Class: ClassName=main Member=Component J10 282837-2
+Added Member To Class: ClassName=main Member=Component J11 5001
+Added Member To Class: ClassName=main Member=Component J12 5001
+Added Member To Class: ClassName=main Member=Component J13 5001
+Added Member To Class: ClassName=main Member=Component J14 5001
+Added Member To Class: ClassName=main Member=Component J15 5001
+Added Member To Class: ClassName=main Member=Component J16 5001
+Added Member To Class: ClassName=main Member=Component J17 5001
+Added Member To Class: ClassName=main Member=Component J18 5001
+Added Member To Class: ClassName=main Member=Component J20 5001
+Added Member To Class: ClassName=main Member=Component J21 5001
+Added Member To Class: ClassName=main Member=Component J22 5001
+Added Member To Class: ClassName=main Member=Component J23 5001
+Added Member To Class: ClassName=main Member=Component J24 5001
+Added Member To Class: ClassName=main Member=Component R14 1 kOhms
+Added Member To Class: ClassName=main Member=Component R15 6.2 kOhms

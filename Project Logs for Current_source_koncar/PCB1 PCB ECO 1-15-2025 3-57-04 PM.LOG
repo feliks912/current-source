@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=VCC Pin=C9-1
+Removed Pin From Net: NetName=GND Pin=C9-2
+Removed Pin From Net: NetName=VCC Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Pin From Net: NetName=GND Pin=C13-1
+Removed Pin From Net: NetName=VDD Pin=C13-2
+Removed Pin From Net: NetName=GND Pin=C14-1
+Removed Pin From Net: NetName=VDD Pin=C14-2
+Removed Member From Class: ClassName=main Member=C17
+Removed Member From Class: ClassName=main Member=C18
+Change Component Designator: OldDesignator=C11 NewDesignator=C9
+Change Component Designator: OldDesignator=C12 NewDesignator=C10
+Change Component Designator: OldDesignator=C15 NewDesignator=C11
+Change Component Designator: OldDesignator=C16 NewDesignator=C12
+Change Component Designator: OldDesignator=C17 NewDesignator=C13
+Change Component Designator: OldDesignator=C18 NewDesignator=C14
+Change Component Designator: OldDesignator=C19 NewDesignator=C15
+Change Net Name : Old Net Name=NetC15_1 New Net Name=NetC11_1
+Change Net Name : Old Net Name=NetC15_2 New Net Name=NetC11_2
+Added Member To Class: ClassName=main Member=Component C4 0.1 µF
+Added Member To Class: ClassName=main Member=Component C7 100 µF
+Added Member To Class: ClassName=main Member=Component C8 100 µF
+Added Member To Class: ClassName=main Member=Component C9 100 µF
