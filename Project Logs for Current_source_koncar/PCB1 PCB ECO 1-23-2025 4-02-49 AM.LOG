@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=NetC1_2 Pin=Q2-1
+Removed Pin From Net: NetName=NetJ4_1 Pin=Q2-2
+Removed Pin From Net: NetName=NetJ5_1 Pin=Q2-7_8
+Removed Pin From Net: NetName=NetJ6_1 Pin=Q3-2
+Removed Pin From Net: NetName=VCC Pin=Q3-7_8
+Change Component Footprint: Designator=J3 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J16 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Added Pin To Net: NetName=NetJ6_1 Pin=Q2-2
+Added Pin To Net: NetName=VCC Pin=Q2-7_8
+Added Pin To Net: NetName=NetC1_2 Pin=Q3-1
+Added Pin To Net: NetName=NetJ4_1 Pin=Q3-2
+Added Pin To Net: NetName=NetJ5_1 Pin=Q3-7_8
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_1 Pin=R8-2
+Added Net: Name=NetQ2_1
+Added Member To Class: ClassName=main Member=Component J3 5001
+Added Member To Class: ClassName=main Member=Component J4 5001
+Added Member To Class: ClassName=main Member=Component J5 5001
+Added Member To Class: ClassName=main Member=Component J6 5001
+Added Member To Class: ClassName=main Member=Component J7 5001
+Added Member To Class: ClassName=main Member=Component J8 5001
+Added Member To Class: ClassName=main Member=Component J10 282837-2
+Added Member To Class: ClassName=main Member=Component J12 5001
+Added Member To Class: ClassName=main Member=Component J14 5001
+Added Member To Class: ClassName=main Member=Component J15 5001
+Added Member To Class: ClassName=main Member=Component J16 5001
+Added Member To Class: ClassName=main Member=Component J17 5001
+Added Member To Class: ClassName=main Member=Component J18 5001
+Added Member To Class: ClassName=main Member=Component J19 5001
+Added Member To Class: ClassName=main Member=Component J20 5001
+Added Member To Class: ClassName=main Member=Component J22 5001
+Added Member To Class: ClassName=main Member=Component J23 5001
