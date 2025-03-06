@@ -1,0 +1,123 @@
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=L? Old Footprint=FP-MLZ2012-1_25-IPC_B New Footprint=FP-MLZ2012-1_25-IPC_B
+Change Component Footprint: Designator=L? Old Footprint=FP-MLZ2012-1_25-IPC_B New Footprint=FP-MLZ2012-1_25-IPC_B
+Change Component Footprint: Designator=U? Old Footprint=FP-UJ-5-IPC_B New Footprint=FP-UJ-5-IPC_B
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=C? NewDesignator=C8
+Change Component Designator: OldDesignator=C? NewDesignator=C9
+Change Component Designator: OldDesignator=C? NewDesignator=C10
+Change Component Designator: OldDesignator=C? NewDesignator=C20
+Change Component Designator: OldDesignator=C? NewDesignator=C21
+Change Component Designator: OldDesignator=C? NewDesignator=C22
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=C? NewDesignator=C24
+Change Component Designator: OldDesignator=C? NewDesignator=C25
+Change Component Designator: OldDesignator=C? NewDesignator=C26
+Change Component Designator: OldDesignator=C? NewDesignator=C27
+Change Component Designator: OldDesignator=C? NewDesignator=C28
+Change Component Designator: OldDesignator=C? NewDesignator=C29
+Change Component Designator: OldDesignator=J? NewDesignator=J15
+Change Component Designator: OldDesignator=J? NewDesignator=J22
+Change Component Designator: OldDesignator=J? NewDesignator=J27
+Change Component Designator: OldDesignator=J? NewDesignator=J28
+Change Component Designator: OldDesignator=J? NewDesignator=J35
+Change Component Designator: OldDesignator=L? NewDesignator=L1
+Change Component Designator: OldDesignator=L? NewDesignator=L2
+Change Component Designator: OldDesignator=L? NewDesignator=L3
+Change Component Designator: OldDesignator=L? NewDesignator=L4
+Change Component Designator: OldDesignator=R? NewDesignator=R48
+Change Component Designator: OldDesignator=R? NewDesignator=R49
+Change Component Designator: OldDesignator=R? NewDesignator=R50
+Change Component Designator: OldDesignator=R? NewDesignator=R51
+Change Component Designator: OldDesignator=R? NewDesignator=R52
+Change Component Designator: OldDesignator=R? NewDesignator=R53
+Change Component Designator: OldDesignator=R? NewDesignator=R54
+Change Component Designator: OldDesignator=R? NewDesignator=R55
+Change Component Designator: OldDesignator=R? NewDesignator=R56
+Change Component Designator: OldDesignator=R? NewDesignator=R57
+Change Component Designator: OldDesignator=U? NewDesignator=U4
+Change Component Designator: OldDesignator=U? NewDesignator=U5
+Change Component Designator: OldDesignator=U? NewDesignator=U6
+Add Pin To Net: Unknown Pin: Pin D2-1
+Add Pin To Net: Unknown Pin: Pin D3-2
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC27_2
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=R52-1
+Added Pin To Net: NetName=NetC7_2 Pin=U4-1
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetC22_2 Pin=C22-2
+Added Pin To Net: NetName=NetC22_2 Pin=L1-1
+Added Pin To Net: NetName=NetC22_2 Pin=R48-2
+Added Pin To Net: NetName=NetC22_2 Pin=R50-1
+Added Net: Name=NetC22_2
+Added Pin To Net: NetName=NetC29_2 Pin=C29-2
+Added Pin To Net: NetName=NetC29_2 Pin=R54-1
+Added Pin To Net: NetName=NetC29_2 Pin=U6-5
+Added Net: Name=NetC29_2
+Added Pin To Net: NetName=NetD2_2 Pin=R50-2
+Added Pin To Net: NetName=NetD2_2 Pin=R51-2
+Added Net: Name=NetD2_2
+Added Pin To Net: NetName=NetD3_1 Pin=R53-2
+Added Pin To Net: NetName=NetD3_1 Pin=R55-2
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetR48_1 Pin=R48-1
+Added Pin To Net: NetName=NetR48_1 Pin=R49-2
+Added Pin To Net: NetName=NetR48_1 Pin=U5-6
+Added Net: Name=NetR48_1
+Added Pin To Net: NetName=NetR49_1 Pin=R49-1
+Added Pin To Net: NetName=NetR49_1 Pin=U4-4
+Added Pin To Net: NetName=NetR49_1 Pin=U5-7
+Added Net: Name=NetR49_1
+Added Pin To Net: NetName=NetR51_1 Pin=R51-1
+Added Pin To Net: NetName=NetR51_1 Pin=R52-2
+Added Pin To Net: NetName=NetR51_1 Pin=U5-5
+Added Net: Name=NetR51_1
+Added Pin To Net: NetName=NetR53_1 Pin=R53-1
+Added Pin To Net: NetName=NetR53_1 Pin=R54-2
+Added Pin To Net: NetName=NetR53_1 Pin=U5-3
+Added Net: Name=NetR53_1
+Added Pin To Net: NetName=NetR56_1 Pin=R56-1
+Added Pin To Net: NetName=NetR56_1 Pin=R57-2
+Added Pin To Net: NetName=NetR56_1 Pin=U5-2
+Added Net: Name=NetR56_1
+Added Pin To Net: NetName=NetR57_1 Pin=R57-1
+Added Pin To Net: NetName=NetR57_1 Pin=U5-1
+Added Pin To Net: NetName=NetR57_1 Pin=U6-4
+Added Net: Name=NetR57_1
+Added Member To Class: ClassName=power Member=Component C7 1 µF
+Added Member To Class: ClassName=power Member=Component C8 1 µF
+Added Member To Class: ClassName=power Member=Component C9 1 µF
+Added Member To Class: ClassName=power Member=Component C20 0.1 µF
+Added Member To Class: ClassName=power Member=Component C21 1 µF
+Added Member To Class: ClassName=power Member=Component C22 1 µF
+Added Member To Class: ClassName=power Member=Component C23 100 µF
+Added Member To Class: ClassName=power Member=Component C24 100 µF
+Added Member To Class: ClassName=power Member=Component C25 100 µF
+Added Member To Class: ClassName=power Member=Component C26 100 µF
+Added Member To Class: ClassName=power Member=Component C27 1 µF
+Added Member To Class: ClassName=power Member=Component C28 1 µF
+Added Member To Class: ClassName=power Member=Component C29 1 µF
+Add Class Member: Failed to add class member : Component D2 BZX38450-C1V8X
+Add Class Member: Failed to add class member : Component D3 BZX38450-C1V8X
+Added Member To Class: ClassName=power Member=Component J15 5001
+Added Member To Class: ClassName=power Member=Component J22 5001
+Added Member To Class: ClassName=power Member=Component J27 5001
+Added Member To Class: ClassName=power Member=Component J28 5001
+Added Member To Class: ClassName=power Member=Component L1 3.3uH
+Added Member To Class: ClassName=power Member=Component L2 33uH
+Added Member To Class: ClassName=power Member=Component L4 3.3uH
+Added Member To Class: ClassName=power Member=Component R48 1 kOhms
+Added Member To Class: ClassName=power Member=Component R49 1 kOhms
+Added Member To Class: ClassName=power Member=Component R50 1 kOhms
+Added Member To Class: ClassName=power Member=Component R51 1 kOhms
+Added Member To Class: ClassName=power Member=Component R52 1 kOhms
+Added Member To Class: ClassName=power Member=Component R53 1 kOhms
+Added Member To Class: ClassName=power Member=Component R54 1 kOhms
+Added Member To Class: ClassName=power Member=Component R56 1 kOhms
+Added Member To Class: ClassName=power Member=Component R57 1 kOhms
+Added Member To Class: ClassName=power Member=Component U5 TLV9362
+Added Member To Class: ClassName=power Member=Component U6 ADP7182AUJZ-R7

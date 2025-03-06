@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetJ27_1 Pin=J27-1
+Removed Pin From Net: NetName=NetJ28_1 Pin=J28-1
+Removed Member From Class: ClassName=vca Member=J27
+Removed Member From Class: ClassName=vca Member=J28
+Removed Member From Class: ClassName=vca Member=J35
+Change Component Footprint: Designator=J29 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J30 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J31 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J32 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J33 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J34 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J36 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Net Name : Old Net Name=NetJ27_1 New Net Name=NetQ6_6
+Change Net Name : Old Net Name=NetJ28_1 New Net Name=NetQ6_3
+Added Pin To Net: NetName=NetQ10_6 Pin=Q10-6
+Added Pin To Net: NetName=NetQ10_6 Pin=R40-1
+Added Net: Name=NetQ10_6
