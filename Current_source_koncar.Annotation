@@ -1,0 +1,21 @@
+[DesignatorManager]
+LogicalDesignator0=IC?
+LogicalPartID0=1
+DocumentName0=filter.SchDoc
+ChannelName0=U_filter2
+UniqueID0=\XIBNWMIN\GFJZOGEE\QJCZSGEE
+PhysicalDesignator0=IC?
+PhysicalDesignatorLocked0=0
+LogicalDesignator1=IC2
+LogicalPartID1=1
+DocumentName1=signal_in.SchDoc
+ChannelName1=U_signal_in2
+UniqueID1=\XIBNWMIN\HAQZKAYP\PHNVSRRI
+PhysicalDesignator1=IC2A
+PhysicalDesignatorLocked1=1
+
+[SheetNumberManager]
+SheetNumberOrder=Display Order
+SheetNumberMethod=Increasing
+
+
