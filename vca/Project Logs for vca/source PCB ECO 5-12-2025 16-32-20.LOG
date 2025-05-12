@@ -1,0 +1,34 @@
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found SOIC8-127P600X175-8N
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Add Pin To Net: Unknown Pin: Pin U1-1
+Add Pin To Net: Unknown Pin: Pin U1-2
+Add Pin To Net: Unknown Pin: Pin U1-3
+Add Pin To Net: Unknown Pin: Pin U1-4
+Add Pin To Net: Unknown Pin: Pin U1-5
+Add Pin To Net: Unknown Pin: Pin U1-6
+Add Pin To Net: Unknown Pin: Pin U1-7
+Add Pin To Net: Unknown Pin: Pin U1-8
+Add Class Member: Failed to add class member : Component C3 0.1 µF
+Add Class Member: Failed to add class member : Component C4 1 µF
+Add Class Member: Failed to add class member : Component C5 0.1 µF
+Add Class Member: Failed to add class member : Component C6 1 µF
+Added Member To Class: ClassName=vca_A Member=Component Q5 BC846BS
+Added Member To Class: ClassName=vca_A Member=Component Q7 BC846BS
+Added Member To Class: ClassName=vca_A Member=Component R16 100 Ohms
+Added Member To Class: ClassName=vca_A Member=Component R18 100 Ohms
+Added Member To Class: ClassName=vca_A Member=Component R20 1 kOhms
+Added Member To Class: ClassName=vca_A Member=Component R23 68 kOhms
+Added Member To Class: ClassName=vca_A Member=Component R30 330 Ohms
+Added Member To Class: ClassName=vca_A Member=Component R31 330 Ohms
+Add Class Member: Failed to add class member : Component U1 TLV9362

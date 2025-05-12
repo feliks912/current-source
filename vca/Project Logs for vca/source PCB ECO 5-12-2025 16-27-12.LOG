@@ -1,0 +1,132 @@
+Removed Pin From Net: NetName=NetJ36_1 Pin=Q10-6
+Removed Pin From Net: NetName=NetJ31_1 Pin=Q11-6
+Removed Pin From Net: NetName=NetJ33_1 Pin=Q12-6
+Removed Pin From Net: NetName=NetC54_2 Pin=U3-5
+Removed Pin From Net: NetName=Vbias_A Pin=U3-6
+Removed Pin From Net: NetName=Vbias_A Pin=U3-7
+Removed Member From Class: ClassName=vca_A Member=U3
+Change Component Designator: OldDesignator=C7 NewDesignator=C2
+Change Component Designator: OldDesignator=C54 NewDesignator=C1
+Change Component Designator: OldDesignator=J29 NewDesignator=J1
+Change Component Designator: OldDesignator=J30 NewDesignator=J2
+Change Component Designator: OldDesignator=J31 NewDesignator=J3
+Change Component Designator: OldDesignator=J32 NewDesignator=J4
+Change Component Designator: OldDesignator=J33 NewDesignator=J5
+Change Component Designator: OldDesignator=J34 NewDesignator=J6
+Change Component Designator: OldDesignator=J36 NewDesignator=J7
+Change Component Designator: OldDesignator=Q5 NewDesignator=Q1
+Change Component Designator: OldDesignator=Q6 NewDesignator=Q2
+Change Component Designator: OldDesignator=Q7 NewDesignator=Q3
+Change Component Designator: OldDesignator=Q8 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q9 NewDesignator=Q5
+Change Component Designator: OldDesignator=Q10 NewDesignator=Q6
+Change Component Designator: OldDesignator=Q11 NewDesignator=Q7
+Change Component Designator: OldDesignator=Q12 NewDesignator=Q8
+Change Component Designator: OldDesignator=R16 NewDesignator=R1
+Change Component Designator: OldDesignator=R17 NewDesignator=R2
+Change Component Designator: OldDesignator=R18 NewDesignator=R3
+Change Component Designator: OldDesignator=R19 NewDesignator=R4
+Change Component Designator: OldDesignator=R20 NewDesignator=R5
+Change Component Designator: OldDesignator=R21 NewDesignator=R6
+Change Component Designator: OldDesignator=R22 NewDesignator=R7
+Change Component Designator: OldDesignator=R23 NewDesignator=R8
+Change Component Designator: OldDesignator=R24 NewDesignator=R9
+Change Component Designator: OldDesignator=R25 NewDesignator=R10
+Change Component Designator: OldDesignator=R26 NewDesignator=R11
+Change Component Designator: OldDesignator=R27 NewDesignator=R13
+Change Component Designator: OldDesignator=R28 NewDesignator=R12
+Change Component Designator: OldDesignator=R29 NewDesignator=R23
+Change Component Designator: OldDesignator=R30 NewDesignator=R14
+Change Component Designator: OldDesignator=R31 NewDesignator=R15
+Change Component Designator: OldDesignator=R32 NewDesignator=R16
+Change Component Designator: OldDesignator=R33 NewDesignator=R17
+Change Component Designator: OldDesignator=R34 NewDesignator=R18
+Change Component Designator: OldDesignator=R35 NewDesignator=R19
+Change Component Designator: OldDesignator=R36 NewDesignator=R25
+Change Component Designator: OldDesignator=R37 NewDesignator=R20
+Change Component Designator: OldDesignator=R38 NewDesignator=R21
+Change Component Designator: OldDesignator=R39 NewDesignator=R22
+Change Component Designator: OldDesignator=R40 NewDesignator=R24
+Change Component Designator: OldDesignator=R41 NewDesignator=R26
+Change Component Designator: OldDesignator=R42 NewDesignator=R27
+Change Component Designator: OldDesignator=R43 NewDesignator=R28
+Change Component Designator: OldDesignator=R44 NewDesignator=R29
+Change Component Designator: OldDesignator=R45 NewDesignator=R30
+Change Component Designator: OldDesignator=R46 NewDesignator=R31
+Change Component Designator: OldDesignator=R47 NewDesignator=R32
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found SOIC8-127P600X175-8N
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Added Pin To Net: NetName=NetJ31_1 Pin=Q6-6
+Added Pin To Net: NetName=NetJ33_1 Pin=Q7-6
+Added Pin To Net: NetName=NetJ36_1 Pin=Q8-6
+Add Pin To Net: Unknown Pin: Pin U1-4
+Add Pin To Net: Unknown Pin: Pin U1-5
+Add Pin To Net: Unknown Pin: Pin U1-6
+Add Pin To Net: Unknown Pin: Pin U1-7
+Add Pin To Net: Unknown Pin: Pin U1-8
+Change Net Name : Old Net Name=NetC7_2 New Net Name=NetC2_2
+Change Net Name : Old Net Name=NetC54_2 New Net Name=NetC1_2
+Change Net Name : Old Net Name=NetJ29_1 New Net Name=NetJ1_1
+Change Net Name : Old Net Name=NetJ30_1 New Net Name=NetJ2_1
+Change Net Name : Old Net Name=NetJ31_1 New Net Name=NetJ3_1
+Change Net Name : Old Net Name=NetJ32_1 New Net Name=NetJ4_1
+Change Net Name : Old Net Name=NetJ33_1 New Net Name=NetJ5_1
+Change Net Name : Old Net Name=NetJ34_1 New Net Name=NetJ6_1
+Change Net Name : Old Net Name=NetJ36_1 New Net Name=NetJ7_1
+Change Net Name : Old Net Name=NetQ5_2 New Net Name=NetQ1_2
+Change Net Name : Old Net Name=NetQ6_1 New Net Name=NetQ2_1
+Change Net Name : Old Net Name=NetQ6_3 New Net Name=NetQ2_3
+Change Net Name : Old Net Name=NetQ6_6 New Net Name=NetQ2_6
+Change Net Name : Old Net Name=NetQ7_1 New Net Name=NetQ3_1
+Change Net Name : Old Net Name=NetQ8_1 New Net Name=NetQ4_1
+Change Net Name : Old Net Name=NetQ8_2 New Net Name=NetQ4_2
+Change Net Name : Old Net Name=NetQ8_3 New Net Name=NetQ4_3
+Change Net Name : Old Net Name=NetQ8_4 New Net Name=NetQ4_4
+Change Net Name : Old Net Name=NetQ8_5 New Net Name=NetQ4_5
+Change Net Name : Old Net Name=NetQ8_6 New Net Name=NetQ4_6
+Change Net Name : Old Net Name=NetQ9_1 New Net Name=NetQ5_1
+Change Net Name : Old Net Name=NetQ9_2 New Net Name=NetQ5_2
+Change Net Name : Old Net Name=NetQ9_3 New Net Name=NetQ5_3
+Change Net Name : Old Net Name=NetQ9_4 New Net Name=NetQ5_4
+Change Net Name : Old Net Name=NetQ9_5 New Net Name=NetQ5_5
+Change Net Name : Old Net Name=NetQ9_6 New Net Name=NetQ5_6
+Change Net Name : Old Net Name=NetQ10_4 New Net Name=NetQ6_4
+Change Net Name : Old Net Name=NetQ11_4 New Net Name=NetQ7_4
+Change Net Name : Old Net Name=NetQ12_4 New Net Name=NetQ8_4
+Change Net Name : Old Net Name=NetR27_1 New Net Name=NetR13_1
+Change Net Name : Old Net Name=NetR28_1 New Net Name=NetR12_1
+Change Net Name : Old Net Name=NetR41_1 New Net Name=NetR26_1
+Change Net Name : Old Net Name=NetR43_1 New Net Name=NetR28_1
+Added Pin To Net: NetName=NetQ6_1 Pin=Q6-1
+Added Pin To Net: NetName=NetQ6_1 Pin=R26-2
+Added Net: Name=NetQ6_1
+Added Pin To Net: NetName=NetQ7_1 Pin=Q7-1
+Added Pin To Net: NetName=NetQ7_1 Pin=R28-2
+Added Net: Name=NetQ7_1
+Added Pin To Net: NetName=NetQ8_1 Pin=Q8-1
+Added Pin To Net: NetName=NetQ8_1 Pin=R30-2
+Added Net: Name=NetQ8_1
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=R7-1
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=R6-2
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Net: Name=NetR6_1
+Add Class Member: Failed to add class member : Component C3 0.1 µF
+Add Class Member: Failed to add class member : Component C4 1 µF
+Add Class Member: Failed to add class member : Component C5 0.1 µF
+Add Class Member: Failed to add class member : Component C6 1 µF
+Add Class Member: Failed to add class member : Component U1 TLV9362

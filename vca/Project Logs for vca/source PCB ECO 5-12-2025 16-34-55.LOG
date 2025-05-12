@@ -1,0 +1,32 @@
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Removed Member From Class: ClassName=misc Member=U?
+Removed Member From Class: ClassName=vca_A Member=U?
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Added Pin To Net: NetName=NetR6_1 Pin=U1-1
+Added Pin To Net: NetName=NetR5_1 Pin=U1-2
+Added Pin To Net: NetName=NetR4_1 Pin=U1-3
+Added Pin To Net: NetName=NetC1_2 Pin=U1-5
+Added Pin To Net: NetName=Vbias_A Pin=U1-6
+Added Pin To Net: NetName=Vbias_A Pin=U1-7
+Add Class Member: Failed to add class member : Component C3 0.1 µF
+Add Class Member: Failed to add class member : Component C4 1 µF
+Add Class Member: Failed to add class member : Component C5 0.1 µF
+Add Class Member: Failed to add class member : Component C6 1 µF
+Added Member To Class: ClassName=vca_A Member=Component U1 TLV9362

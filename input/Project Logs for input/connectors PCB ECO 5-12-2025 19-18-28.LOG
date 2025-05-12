@@ -1,0 +1,54 @@
+Removed Pin From Net: NetName=GND Pin=D?-1
+Removed Pin From Net: NetName=GND Pin=D?-1
+Removed Pin From Net: NetName=NetD?_2 Pin=D?-2
+Removed Pin From Net: NetName=GND Pin=R?-1
+Change Component Footprint: Designator=D? Old Footprint=ESDZV5HS1BF4 New Footprint=SOD2613X100N
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-PCB_SMAFRA_HT-MFG New Footprint=FP-PCB_SMAFRA_HT-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-PCB_SMAFRA_HT-MFG New Footprint=FP-PCB_SMAFRA_HT-MFG
+Change Component Comment : Designator=D? Old Comment=ESDZV5HS-1BF4 New Comment=AQW05C-01FTG
+Change component parameters: Designator = "D?" ("D?"); Footprint = "ESDZV5HS1BF4"; UniqueID = "\JUDDFEBV" ("\JUDDFEBV")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=80ae0bbb-a157-46a1-97eb-84c82c82e9e5&filename=littelfuse-tvs-diode-array-aqw05c-01ftg-datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "AQW05C-01FTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "576-AQW05C-01FTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/AQW05C-01FTG?qs=Z%252BL2brAPG1JHH8XKoKQPyw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=F?(FUSC3216X90N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/pts120660v005/eaton?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://in.element14.com/eaton-bussmann-series/pts120660v005/pptc-resettable-fuse-0-05a-60vdc/dp/2929344?srsltid=AfmBOorX1B25_1GKuczfUlW7ilxwoZgl3KmxHJmMFzJpoWYAJ50DmC3S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "504-PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Eaton-Electronics/PTS120660V005?qs=QmibqUXyDhQPirhmCJ6OpQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=F?(FUSC3216X90N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/pts120660v005/eaton?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://in.element14.com/eaton-bussmann-series/pts120660v005/pptc-resettable-fuse-0-05a-60vdc/dp/2929344?srsltid=AfmBOorX1B25_1GKuczfUlW7ilxwoZgl3KmxHJmMFzJpoWYAJ50DmC3S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "504-PTS120660V005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Eaton-Electronics/PTS120660V005?qs=QmibqUXyDhQPirhmCJ6OpQ%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD?_2 Pin=D?-1
+Added Pin To Net: NetName=GND Pin=D?-2
+Added Pin To Net: NetName=GND Pin=D?-2
+Change Net Name : Old Net Name=NetD?_2 New Net Name=NetD?_1
+Add Net: Net with name "NetD?_1" already exists
+Added Pin To Net: NetName=NetF?_1 Pin=F?-1
+Added Pin To Net: NetName=NetF?_1 Pin=J?-1
+Added Pin To Net: NetName=NetF?_1 Pin=J?-1
+Added Net: Name=NetF?_1
+Change Class Name : Old Net Name=Sheet1 New Net Name=connectors
+Added Member To Class: ClassName=connectors Member=Component D? AQW05C-01FTG
+Added Member To Class: ClassName=connectors Member=Component F? PTS120660V005
+Added Member To Class: ClassName=connectors Member=Component F? PTS120660V005
+Added Member To Class: ClassName=connectors Member=Component J? PCB.SMAFRA.HT
+Added Member To Class: ClassName=connectors Member=Component J? PCB.SMAFRA.HT
+Added Member To Class: ClassName=connectors Member=Component J? 5001
+Added Member To Class: ClassName=connectors Member=Component R? 50

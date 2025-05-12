@@ -1,0 +1,36 @@
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Added Component: Designator=U?(SOIC8-127P600X175-8N)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.ti.com/lit/ds/symlink/tlv9362.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOIC8-127P600X175-8N)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.ti.com/lit/ds/symlink/tlv9362.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOIC8-127P600X175-8N)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.ti.com/lit/ds/symlink/tlv9362.pdf"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Added Pin To Net: NetName=NetR6_1 Pin=U?-1
+Added Pin To Net: NetName=NetR5_1 Pin=U?-2
+Added Pin To Net: NetName=NetR4_1 Pin=U?-3
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=U?-4
+Added Pin To Net: NetName=NetC1_2 Pin=U?-5
+Added Pin To Net: NetName=Vbias_A Pin=U?-6
+Added Pin To Net: NetName=Vbias_A Pin=U?-7
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=U?-8
+Add Class Member: Failed to add class member : Component C3 0.1 µF
+Add Class Member: Failed to add class member : Component C4 1 µF
+Add Class Member: Failed to add class member : Component C5 0.1 µF
+Add Class Member: Failed to add class member : Component C6 1 µF
+Added Member To Class: ClassName=misc Member=Component U? TLV9362
+Added Member To Class: ClassName=vca_A Member=Component U? TLV9362
+Added Member To Class: ClassName=vca_A Member=Component U? TLV9362

@@ -1,0 +1,35 @@
+Change Class Name : Old Net Name=source_A New Net Name=source
+Added Member To Class: ClassName=source Member=Component C3 47pF
+Added Member To Class: ClassName=misc Member=Component C11 1 µF
+Added Member To Class: ClassName=source Member=Component J1 5001
+Added Member To Class: ClassName=source Member=Component J2 5001
+Added Member To Class: ClassName=source Member=Component J4 5001
+Added Member To Class: ClassName=source Member=Component J5 5001
+Added Member To Class: ClassName=source Member=Component J7 5001
+Added Member To Class: ClassName=source Member=Component J11 5001
+Added Member To Class: ClassName=source Member=Component J12 5001
+Added Member To Class: ClassName=source Member=Component J15 5001
+Added Member To Class: ClassName=source Member=Component R1 10 kOhms
+Added Member To Class: ClassName=source Member=Component R2 10 kOhms
+Added Member To Class: ClassName=source Member=Component R3 2.2 kOhms
+Added Member To Class: ClassName=source Member=Component R5 5.1 Ohms
+Added Member To Class: ClassName=source Member=Component R6 330 mOhms
+Added Member To Class: ClassName=source Member=Component R8 12 kOhms
+Added Member To Class: ClassName=source Member=Component R9 330 mOhms
+Added Member To Class: ClassName=source Member=Component R10 5.1 Ohms
+Added Member To Class: ClassName=source Member=Component R11 3.3 kOhms
+Added Member To Class: ClassName=source Member=Component R12 3.3 kOhms
+Added Member To Class: ClassName=source Member=Component R13 2.2 kOhms
+Added Member To Class: ClassName=source Member=Component R14 51 Ohms
+Added Member To Class: ClassName=source Member=Component R15 2 kOhms
+Added Member To Class: ClassName=source Member=Component R16 1 kOhms
+Added Member To Class: ClassName=source Member=Component R17 2 kOhms
+Added Member To Class: ClassName=source Member=Component R18 1 kOhms
+Added Member To Class: ClassName=source Member=Component R19 12 kOhms
+Added Member To Class: ClassName=misc Member=Component R20 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R21 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R22 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R23 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R24 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R25 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R26 10 kOhms

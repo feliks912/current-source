@@ -1,0 +1,604 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C3-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C5-1
+Removed Pin From Net: NetName=GND Pin=C5-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C6-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C7-1
+Removed Pin From Net: NetName=GND Pin=C8-1
+Removed Pin From Net: NetName=VCC Pin=C8-2
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C12-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C13-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C16-1
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C17-1
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C18-1
+Removed Pin From Net: NetName=GND Pin=C18-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C19-1
+Removed Pin From Net: NetName=GND Pin=C19-2
+Removed Pin From Net: NetName=GND Pin=C20-1
+Removed Pin From Net: NetName=GND Pin=C21-1
+Removed Pin From Net: NetName=GND Pin=C22-1
+Removed Pin From Net: NetName=VCC Pin=C22-2
+Removed Pin From Net: NetName=VCC Pin=C23-1
+Removed Pin From Net: NetName=GND Pin=C23-2
+Removed Pin From Net: NetName=VCC Pin=C24-1
+Removed Pin From Net: NetName=GND Pin=C24-2
+Removed Pin From Net: NetName=GND Pin=C25-1
+Removed Pin From Net: NetName=VCC Pin=C25-2
+Removed Pin From Net: NetName=GND Pin=C26-1
+Removed Pin From Net: NetName=VCC Pin=C26-2
+Removed Pin From Net: NetName=GND Pin=C27-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C27-2
+Removed Pin From Net: NetName=GND Pin=C28-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C28-2
+Removed Pin From Net: NetName=GND Pin=C29-1
+Removed Pin From Net: NetName=GND Pin=C30-1
+Removed Pin From Net: NetName=GND Pin=C31-1
+Removed Pin From Net: NetName=VDD Pin=C31-2
+Removed Pin From Net: NetName=GND Pin=C32-1
+Removed Pin From Net: NetName=VDD Pin=C32-2
+Removed Pin From Net: NetName=GND Pin=C33-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C33-2
+Removed Pin From Net: NetName=GND Pin=C34-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C34-2
+Removed Pin From Net: NetName=GND Pin=C35-1
+Removed Pin From Net: NetName=VDD Pin=C35-2
+Removed Pin From Net: NetName=GND Pin=C36-1
+Removed Pin From Net: NetName=VDD Pin=C36-2
+Removed Pin From Net: NetName=VDD Pin=C37-1
+Removed Pin From Net: NetName=GND Pin=C37-2
+Removed Pin From Net: NetName=VDD Pin=C38-1
+Removed Pin From Net: NetName=GND Pin=C38-2
+Removed Pin From Net: NetName=GND Pin=C39-1
+Removed Pin From Net: NetName=GND Pin=C40-1
+Removed Pin From Net: NetName=GND Pin=C41-1
+Removed Pin From Net: NetName=GND Pin=C42-1
+Removed Pin From Net: NetName=VCC Pin=C42-2
+Removed Pin From Net: NetName=GND Pin=C43-1
+Removed Pin From Net: NetName=VCC Pin=C43-2
+Removed Pin From Net: NetName=GND Pin=C44-1
+Removed Pin From Net: NetName=GND Pin=C45-1
+Removed Pin From Net: NetName=GND Pin=C48-1
+Removed Pin From Net: NetName=GND Pin=C49-1
+Removed Pin From Net: NetName=GND Pin=C50-1
+Removed Pin From Net: NetName=GND Pin=C51-1
+Removed Pin From Net: NetName=GND Pin=C52-2
+Removed Pin From Net: NetName=GND Pin=C53-1
+Removed Pin From Net: NetName=GND Pin=C54-1
+Removed Pin From Net: NetName=GND Pin=C55-1
+Removed Pin From Net: NetName=GND Pin=C56-1
+Removed Pin From Net: NetName=GND Pin=C57-1
+Removed Pin From Net: NetName=GND Pin=C58-1
+Removed Pin From Net: NetName=GND Pin=C60-1
+Removed Pin From Net: NetName=VCC Pin=C60-2
+Removed Pin From Net: NetName=GND Pin=C61-1
+Removed Pin From Net: NetName=VCC Pin=C61-2
+Removed Pin From Net: NetName=GND Pin=C62-1
+Removed Pin From Net: NetName=GND Pin=C63-1
+Removed Pin From Net: NetName=GND Pin=C64-2
+Removed Pin From Net: NetName=GND Pin=C66-2
+Removed Pin From Net: NetName=GND Pin=C68-2
+Removed Pin From Net: NetName=GND Pin=C69-1
+Removed Pin From Net: NetName=GND Pin=C70-1
+Removed Pin From Net: NetName=GND Pin=C72-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C73-1
+Removed Pin From Net: NetName=GND Pin=C73-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C74-1
+Removed Pin From Net: NetName=GND Pin=C74-2
+Removed Pin From Net: NetName=GND Pin=C75-1
+Removed Pin From Net: NetName=GND Pin=C76-1
+Removed Pin From Net: NetName=GND Pin=C77-1
+Removed Pin From Net: NetName=GND Pin=C78-1
+Removed Pin From Net: NetName=GND Pin=C79-1
+Removed Pin From Net: NetName=GND Pin=C80-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C82-1
+Removed Pin From Net: NetName=GND Pin=C82-2
+Removed Pin From Net: NetName=GND Pin=C83-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C84-1
+Removed Pin From Net: NetName=GND Pin=C84-2
+Removed Pin From Net: NetName=GND Pin=C86-1
+Removed Pin From Net: NetName=GND Pin=C87-2
+Removed Pin From Net: NetName=GND Pin=C88-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C102-1
+Removed Pin From Net: NetName=GND Pin=C102-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C103-1
+Removed Pin From Net: NetName=GND Pin=C103-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C104-1
+Removed Pin From Net: NetName=GND Pin=C104-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C105-1
+Removed Pin From Net: NetName=GND Pin=C105-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C107-1
+Removed Pin From Net: NetName=GND Pin=C107-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C108-1
+Removed Pin From Net: NetName=GND Pin=C108-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C109-1
+Removed Pin From Net: NetName=GND Pin=C109-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C110-1
+Removed Pin From Net: NetName=GND Pin=C110-2
+Removed Pin From Net: NetName=GND Pin=C111-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C112-1
+Removed Pin From Net: NetName=GND Pin=C112-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C113-1
+Removed Pin From Net: NetName=GND Pin=C113-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C114-1
+Removed Pin From Net: NetName=GND Pin=C114-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C115-1
+Removed Pin From Net: NetName=GND Pin=C115-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C116-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=D1-1
+Removed Pin From Net: NetName=GND Pin=D2-1
+Removed Pin From Net: NetName=GND Pin=D3-2
+Removed Pin From Net: NetName=GND Pin=D4-1
+Removed Pin From Net: NetName=GND Pin=D5-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=D6-1
+Removed Pin From Net: NetName=GND Pin=D7-1
+Removed Pin From Net: NetName=GND Pin=D8-1
+Removed Pin From Net: NetName=GND Pin=D9-1
+Removed Pin From Net: NetName=NetD9_2 Pin=D9-2
+Removed Pin From Net: NetName=GND Pin=D10-1
+Removed Pin From Net: NetName=NetD10_2 Pin=D10-2
+Removed Pin From Net: NetName=VCC Pin=DS1-1
+Removed Pin From Net: NetName=GND Pin=DS1-26
+Removed Pin From Net: NetName=GND Pin=DS1-33
+Removed Pin From Net: NetName=GND Pin=IC1-4
+Removed Pin From Net: NetName=GND Pin=IC2-7
+Removed Pin From Net: NetName=GND Pin=IC3-4
+Removed Pin From Net: NetName=GND Pin=IC4-3
+Removed Pin From Net: NetName=GND Pin=IC5-4
+Removed Pin From Net: NetName=GND Pin=IC6-10
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=IC7-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=IC7-8
+Removed Pin From Net: NetName=GND Pin=IC8-1
+Removed Pin From Net: NetName=GND Pin=IC8-2
+Removed Pin From Net: NetName=NetD9_2 Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=NetD10_2 Pin=J2-1
+Removed Pin From Net: NetName=GND Pin=J2-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=J7-1
+Removed Pin From Net: NetName=GND Pin=J11-1
+Removed Pin From Net: NetName=VDD Pin=J19-1
+Removed Pin From Net: NetName=GND Pin=J49-2
+Removed Pin From Net: NetName=GND Pin=J49-3
+Removed Pin From Net: NetName=GND Pin=J49-4
+Removed Pin From Net: NetName=GND Pin=J49-5
+Removed Pin From Net: NetName=GND Pin=J50-2
+Removed Pin From Net: NetName=GND Pin=J50-3
+Removed Pin From Net: NetName=GND Pin=J50-4
+Removed Pin From Net: NetName=GND Pin=J50-5
+Removed Pin From Net: NetName=GND Pin=J51-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=J81-1
+Removed Pin From Net: NetName=GND Pin=J90-2
+Removed Pin From Net: NetName=GND Pin=J93-2
+Removed Pin From Net: NetName=VCC Pin=J97-1
+Removed Pin From Net: NetName=VDD Pin=J98-1
+Removed Pin From Net: NetName=VCC Pin=L1-1
+Removed Pin From Net: NetName=VCC Pin=L2-2
+Removed Pin From Net: NetName=VDD Pin=L3-1
+Removed Pin From Net: NetName=VDD Pin=L4-1
+Removed Pin From Net: NetName=GND Pin=LS1-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=Q10-3
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=Q22-3
+Removed Pin From Net: NetName=GND Pin=Q25-1
+Removed Pin From Net: NetName=GND Pin=Q26-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R16-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R17-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R18-2
+Removed Pin From Net: NetName=GND Pin=R22-2
+Removed Pin From Net: NetName=GND Pin=R36-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R37-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R45-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R46-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R47-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R52-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R54-1
+Removed Pin From Net: NetName=GND Pin=R59-2
+Removed Pin From Net: NetName=GND Pin=R66-2
+Removed Pin From Net: NetName=GND Pin=R76-2
+Removed Pin From Net: NetName=GND Pin=R80-2
+Removed Pin From Net: NetName=GND Pin=R82-2
+Removed Pin From Net: NetName=NetJ69_1 Pin=R84-1
+Removed Pin From Net: NetName=GND Pin=R85-1
+Removed Pin From Net: NetName=GND Pin=R86-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R102-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R103-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R104-2
+Removed Pin From Net: NetName=NetJ20_1 Pin=R107-1
+Removed Pin From Net: NetName=GND Pin=R108-2
+Removed Pin From Net: NetName=GND Pin=R122-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=R123-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R131-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R132-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=R133-1
+Removed Pin From Net: NetName=GND Pin=R134-2
+Removed Pin From Net: NetName=GND Pin=R136-2
+Removed Pin From Net: NetName=NetJ24_1 Pin=R138-1
+Removed Pin From Net: NetName=GND Pin=R139-2
+Removed Pin From Net: NetName=GND Pin=R143-2
+Removed Pin From Net: NetName=GND Pin=R146-2
+Removed Pin From Net: NetName=NetR152_1 Pin=R155-1
+Removed Pin From Net: NetName=NetR152_1 Pin=R159-2
+Removed Pin From Net: NetName=GND Pin=R162-1
+Removed Pin From Net: NetName=GND Pin=R172-1
+Removed Pin From Net: NetName=GND Pin=R174-1
+Removed Pin From Net: NetName=GND Pin=S1-1
+Removed Pin From Net: NetName=GND Pin=S1-2
+Removed Pin From Net: NetName=GND Pin=S2-1
+Removed Pin From Net: NetName=GND Pin=S2-2
+Removed Pin From Net: NetName=GND Pin=S3-1
+Removed Pin From Net: NetName=GND Pin=S3-2
+Removed Pin From Net: NetName=GND Pin=S4-1
+Removed Pin From Net: NetName=GND Pin=S4-2
+Removed Pin From Net: NetName=GND Pin=S5-1
+Removed Pin From Net: NetName=GND Pin=S5-2
+Removed Pin From Net: NetName=GND Pin=SW1-1
+Removed Pin From Net: NetName=GND Pin=SW1-3
+Removed Pin From Net: NetName=GND Pin=SW1-4
+Removed Pin From Net: NetName=GND Pin=SW1-C
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U3-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U3-8
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-2
+Removed Pin From Net: NetName=VCC Pin=U4-3
+Removed Pin From Net: NetName=GND Pin=U6-1
+Removed Pin From Net: NetName=VDD Pin=U6-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U6-5
+Removed Pin From Net: NetName=GND Pin=U7-2
+Removed Pin From Net: NetName=VCC Pin=U7-3
+Removed Pin From Net: NetName=VCC Pin=U7-5
+Removed Pin From Net: NetName=GND Pin=U9-2
+Removed Pin From Net: NetName=VCC Pin=U9-3
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U13-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U13-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U14-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U14-8
+Removed Pin From Net: NetName=NetJ20_1 Pin=U15-1
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U15-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U15-8
+Removed Pin From Net: NetName=GND Pin=Y1-2
+Removed Pin From Net: NetName=GND Pin=Y1-4
+Removed Member From Class: ClassName=resistors Member=IC7
+Removed Member From Class: ClassName=resistors Member=J22
+Removed Member From Class: ClassName=source_A Member=R60
+Removed Member From Class: ClassName=source_A Member=R61
+Removed Member From Class: ClassName=source_A Member=R62
+Removed Member From Class: ClassName=source_A Member=R63
+Removed Member From Class: ClassName=resistors Member=R151
+Removed Member From Class: ClassName=resistors Member=R155
+Removed Member From Class: ClassName=resistors Member=R159
+Removed Member From Class: ClassName=resistors Member=R161
+Removed Member From Class: ClassName=resistors Member=R162
+Removed Member From Class: ClassName=resistors Member=R163
+Removed Member From Class: ClassName=resistors Member=R164
+Removed Member From Class: ClassName=resistors Member=R165
+Removed Member From Class: ClassName=resistors Member=R166
+Removed Member From Class: ClassName=resistors Member=R167
+Removed Member From Class: ClassName=resistors Member=R168
+Removed Member From Class: ClassName=resistors Member=R169
+Removed Member From Class: ClassName=resistors Member=R170
+Removed Member From Class: ClassName=resistors Member=R171
+Removed Member From Class: ClassName=resistors Member=R172
+Removed Member From Class: ClassName=resistors Member=R173
+Removed Member From Class: ClassName=resistors Member=R174
+Change Component Comment : Designator=C5 Old Comment=0.1 µF New Comment=1 µF
+Change Component Comment : Designator=C10 Old Comment=0.1 µF New Comment=1 µF
+Change Component Comment : Designator=C13 Old Comment=0.1 µF New Comment=1 µF
+Change Component Comment : Designator=C7 Old Comment=1 µF New Comment=0.1 µF
+Change Component Comment : Designator=C12 Old Comment=1 µF New Comment=0.1 µF
+Change Component Comment : Designator=C8 Old Comment=2.2 µF New Comment=1 µF
+Change Component Designator: OldDesignator=C11 NewDesignator=C3
+Change Component Designator: OldDesignator=J3 NewDesignator=J1
+Change Component Designator: OldDesignator=J4 NewDesignator=J2
+Change Component Designator: OldDesignator=J5 NewDesignator=J3
+Change Component Designator: OldDesignator=J6 NewDesignator=J4
+Change Component Designator: OldDesignator=J8 NewDesignator=J5
+Change Component Designator: OldDesignator=J9 NewDesignator=J6
+Change Component Designator: OldDesignator=J10 NewDesignator=J7
+Change Component Designator: OldDesignator=J12 NewDesignator=J9
+Change Component Designator: OldDesignator=J13 NewDesignator=J10
+Change Component Designator: OldDesignator=J14 NewDesignator=J8
+Change Component Designator: OldDesignator=J16 NewDesignator=J11
+Change Component Designator: OldDesignator=J17 NewDesignator=J12
+Change Component Designator: OldDesignator=J18 NewDesignator=J13
+Change Component Designator: OldDesignator=J21 NewDesignator=J16
+Change Component Designator: OldDesignator=J23 NewDesignator=J14
+Change Component Designator: OldDesignator=J24 NewDesignator=J15
+Change Component Designator: OldDesignator=R1 NewDesignator=R3
+Change Component Designator: OldDesignator=R2 NewDesignator=R4
+Change Component Designator: OldDesignator=R3 NewDesignator=R5
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R8
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R8 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R13
+Change Component Designator: OldDesignator=R10 NewDesignator=R14
+Change Component Designator: OldDesignator=R11 NewDesignator=R15
+Change Component Designator: OldDesignator=R12 NewDesignator=R16
+Change Component Designator: OldDesignator=R13 NewDesignator=R17
+Change Component Designator: OldDesignator=R14 NewDesignator=R18
+Change Component Designator: OldDesignator=R15 NewDesignator=R19
+Change Component Designator: OldDesignator=R60 NewDesignator=R1
+Change Component Designator: OldDesignator=R61 NewDesignator=R2
+Change Component Designator: OldDesignator=R62 NewDesignator=R11
+Change Component Designator: OldDesignator=R63 NewDesignator=R12
+Change Component Designator: OldDesignator=R152 NewDesignator=R20
+Change Component Designator: OldDesignator=R153 NewDesignator=R21
+Change Component Designator: OldDesignator=R154 NewDesignator=R22
+Change Component Designator: OldDesignator=R156 NewDesignator=R23
+Change Component Designator: OldDesignator=R157 NewDesignator=R24
+Change Component Designator: OldDesignator=R158 NewDesignator=R25
+Change Component Designator: OldDesignator=R160 NewDesignator=R26
+Change component parameters: Designator = "C5" ("C5"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\IXBXOWWO" ("\IXBXOWWO")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208093.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208093/5453432"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:33"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208093"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "39665"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-7577-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.075" (1.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C7" ("C7"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\BXBXNGAX" ("\BXBXNGAX")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208087.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208087/5453982"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:27"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208087"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "20879"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.06"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-8127-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.035" (0.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C8" ("C8"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\FRDVCVME" ("\FRDVCVME")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208093.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208093/5453432"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:33"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208093"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "39665"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-7577-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.075" (1.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C10" ("C10"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\FDQOEOHK" ("\FDQOEOHK")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208093.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208093/5453432"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:33"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208093"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "39665"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-7577-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.075" (1.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C12" ("C12"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\FHXJMFNW" ("\FHXJMFNW")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208087.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208087/5453982"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:27"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208087"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "20879"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.06"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-8127-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.035" (0.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C13" ("C13"); Footprint = "CAP 1206_3216 - 0.8MM"; UniqueID = "\GDCODGYP" ("\GDCODGYP")
+Change component parameters (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208093.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208093/5453432"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:33"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "885012208093"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "partid"; Value = "39665"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "price"; Value = "0.10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-7577-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.075" (1.90mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "value"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP 1206_3216 - 0.8MM)
+Add component (AddParameter): Name = "Applications"; Value = "General Purpose"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "componentlink1description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "componentlink1url"; Value = "https://katalog.we-online.de/pbs/datasheet/885012208093.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "componentlink2description"; Value = "DigiKey Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "componentlink2url"; Value = "https://www.digikey.com/en/products/detail/würth-elektronik/885012208093/5453432"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Package"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "lastupdated"; Value = "6/4/2024 19:10:33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lifecycle Status"; Value = "Active"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum Order"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount, MLCC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "1206 (3216 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "packaging"; Value = "TapeAndReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "885012208093"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "partid"; Value = "39665"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "price"; Value = "0.10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "series"; Value = "WCAP-CSGP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size / Dimension"; Value = "0.126" L x 0.063" W (3.20mm x 1.60mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "DigiKey"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-7577-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness (Max)"; Value = "0.075" (1.90mm)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "value"; Value = "1 µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Rated"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C5-2
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C6-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=VCC Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=VDD Pin=C10-2
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=C12-1
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=C13-1
+Added Pin To Net: NetName=NetR152_1 Pin=J8-3
+Added Pin To Net: NetName=VCC Pin=J16-2
+Added Pin To Net: NetName=VCC Pin=J16-4
+Added Pin To Net: NetName=VCC Pin=J16-6
+Added Pin To Net: NetName=VDD Pin=J16-10
+Added Pin To Net: NetName=VDD Pin=J16-12
+Added Pin To Net: NetName=VDD Pin=J16-14
+Change Net Name : Old Net Name=NetC11_1 New Net Name=NetC3_1
+Change Net Name : Old Net Name=NetC11_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetD9_2 New Net Name=NetJ6_1
+Change Net Name : Old Net Name=NetD10_2 New Net Name=NetJ57_1
+Change Net Name : Old Net Name=NetJ4_1 New Net Name=NetJ2_1
+Change Net Name : Old Net Name=NetJ5_1 New Net Name=NetJ3_1
+Change Net Name : Old Net Name=NetJ6_1 New Net Name=NetJ4_1
+Change Net Name : Old Net Name=NetJ10_1 New Net Name=NetJ7_1
+Change Net Name : Old Net Name=NetJ17_1 New Net Name=NetJ12_1
+Change Net Name : Old Net Name=NetJ18_1 New Net Name=NetJ13_1
+Change Net Name : Old Net Name=NetJ21_1 New Net Name=NetJ16_1
+Change Net Name : Old Net Name=NetJ21_3 New Net Name=NetJ16_3
+Change Net Name : Old Net Name=NetJ21_5 New Net Name=NetJ16_5
+Change Net Name : Old Net Name=NetJ21_9 New Net Name=NetJ16_9
+Change Net Name : Old Net Name=NetJ21_11 New Net Name=NetJ16_11
+Change Net Name : Old Net Name=NetJ21_13 New Net Name=NetJ16_13
+Change Net Name : Old Net Name=NetJ24_1 New Net Name=NetJ15_1
+Change Net Name : Old Net Name=NetR13_1 New Net Name=NetR17_1
+Change Net Name : Old Net Name=NetR60_1 New Net Name=NetR1_1
+Change Net Name : Old Net Name=NetR62_2 New Net Name=NetR11_2
+Change Net Name : Old Net Name=NetR63_2 New Net Name=NetR12_2
+Change Net Name : Old Net Name=NetR152_1 New Net Name=NetJ8_3
+Added Pin To Net: NetName=NetJ8_1 Pin=J8-1
+Added Net: Name=NetJ8_1
+Added Pin To Net: NetName=NetJ20_3 Pin=J20-3
+Added Net: Name=NetJ20_3
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Net: Name=NetR2_2
+Added Pin To Net: NetName=NetR148_2 Pin=R148-2
+Added Net: Name=NetR148_2
+Change Class Name : Old Net Name=resistors New Net Name=misc
+Added Member To Class: ClassName=misc Member=Component C4 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C5 1 µF
+Added Member To Class: ClassName=misc Member=Component C6 1 µF
+Added Member To Class: ClassName=misc Member=Component C7 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C8 1 µF
+Added Member To Class: ClassName=misc Member=Component C9 1 µF
+Added Member To Class: ClassName=misc Member=Component C10 1 µF
+Added Member To Class: ClassName=misc Member=Component C11 1 µF
+Added Member To Class: ClassName=misc Member=Component C12 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C13 1 µF
+Added Member To Class: ClassName=misc Member=Component C14 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C15 1 µF
+Added Member To Class: ClassName=source_A Member=Component R16 1 kOhms
+Added Member To Class: ClassName=source_A Member=Component R17 2 kOhms
+Added Member To Class: ClassName=source_A Member=Component R18 1 kOhms
+Added Member To Class: ClassName=source_A Member=Component R19 12 kOhms
+Added Room: Name=source_B

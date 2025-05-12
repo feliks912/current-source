@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Added Member To Class: ClassName=connectors Member=Component J5 5001

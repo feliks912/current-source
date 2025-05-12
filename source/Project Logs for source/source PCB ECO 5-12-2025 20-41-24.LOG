@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=J52-1
+Removed Pin From Net: NetName=GND Pin=J59-1
+Removed Pin From Net: NetName=GND Pin=J60-1
+Removed Pin From Net: NetName=GND Pin=J62-1
+Removed Pin From Net: NetName=VCC Pin=Q13-3
+Removed Pin From Net: NetName=VDD Pin=Q14-5_6
+Removed Pin From Net: NetName=VCC Pin=Q14-7_8
+Removed Pin From Net: NetName=VDD Pin=Q16-3
+Removed Pin From Net: NetName=VCC Pin=R87-2
+Removed Pin From Net: NetName=VCC Pin=R88-2
+Removed Pin From Net: NetName=VDD Pin=R95-1
+Removed Pin From Net: NetName=VDD Pin=R96-1
+Removed Pin From Net: NetName=GND Pin=R101-1
+Removed Pin From Net: NetName=GND Pin=U13-3

@@ -1,0 +1,131 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C4-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C4-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C5-1
+Removed Pin From Net: NetName=GND Pin=C5-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=C9-2
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C12-1
+Removed Pin From Net: NetName=GND Pin=C12-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C13-1
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C14-1
+Removed Pin From Net: NetName=GND Pin=C14-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C15-1
+Removed Pin From Net: NetName=GND Pin=C15-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C16-1
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C17-1
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C18-1
+Removed Pin From Net: NetName=GND Pin=C18-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C19-1
+Removed Pin From Net: NetName=GND Pin=C19-2
+Removed Pin From Net: NetName=GND Pin=C20-1
+Removed Pin From Net: NetName=GND Pin=C21-1
+Removed Pin From Net: NetName=GND Pin=C40-1
+Removed Pin From Net: NetName=GND Pin=C41-1
+Removed Pin From Net: NetName=GND Pin=C42-1
+Removed Pin From Net: NetName=GND Pin=C43-1
+Removed Pin From Net: NetName=GND Pin=C45-1
+Removed Pin From Net: NetName=Vref Pin=C45-2
+Removed Pin From Net: NetName=GND Pin=C48-1
+Removed Pin From Net: NetName=GND Pin=C49-1
+Removed Pin From Net: NetName=GND Pin=C60-1
+Removed Pin From Net: NetName=GND Pin=C61-1
+Removed Pin From Net: NetName=GND Pin=C62-1
+Removed Pin From Net: NetName=GND Pin=C63-1
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C73-1
+Removed Pin From Net: NetName=GND Pin=C73-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C74-1
+Removed Pin From Net: NetName=GND Pin=C74-2
+Removed Pin From Net: NetName=GND Pin=C75-1
+Removed Pin From Net: NetName=Vref Pin=C75-2
+Removed Pin From Net: NetName=GND Pin=C76-1
+Removed Pin From Net: NetName=Vref Pin=C76-2
+Removed Pin From Net: NetName=GND Pin=C77-1
+Removed Pin From Net: NetName=Vref Pin=C77-2
+Removed Pin From Net: NetName=GND Pin=C78-1
+Removed Pin From Net: NetName=Vref Pin=C78-2
+Removed Pin From Net: NetName=GND Pin=C79-1
+Removed Pin From Net: NetName=Vref Pin=C79-2
+Removed Pin From Net: NetName=GND Pin=C80-1
+Removed Pin From Net: NetName=Vref Pin=C80-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C82-1
+Removed Pin From Net: NetName=GND Pin=C82-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C84-1
+Removed Pin From Net: NetName=GND Pin=C84-2
+Removed Pin From Net: NetName=GND Pin=C86-1
+Removed Pin From Net: NetName=GND Pin=C88-1
+Removed Pin From Net: NetName=Vref Pin=C88-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C102-1
+Removed Pin From Net: NetName=GND Pin=C102-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C103-1
+Removed Pin From Net: NetName=GND Pin=C103-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C104-1
+Removed Pin From Net: NetName=GND Pin=C104-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C105-1
+Removed Pin From Net: NetName=GND Pin=C105-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C107-1
+Removed Pin From Net: NetName=GND Pin=C107-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C108-1
+Removed Pin From Net: NetName=GND Pin=C108-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C109-1
+Removed Pin From Net: NetName=GND Pin=C109-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C110-1
+Removed Pin From Net: NetName=GND Pin=C110-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C112-1
+Removed Pin From Net: NetName=GND Pin=C112-2
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=C113-1
+Removed Pin From Net: NetName=GND Pin=C113-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C114-1
+Removed Pin From Net: NetName=GND Pin=C114-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=C115-1
+Removed Pin From Net: NetName=GND Pin=C115-2
+Removed Pin From Net: NetName=GND Pin=IC1-4
+Removed Pin From Net: NetName=Vref Pin=IC1-8
+Removed Pin From Net: NetName=GND Pin=IC3-4
+Removed Pin From Net: NetName=Vref Pin=IC3-8
+Removed Pin From Net: NetName=GND Pin=IC5-4
+Removed Pin From Net: NetName=Vref Pin=IC5-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=IC7-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=IC7-8
+Removed Pin From Net: NetName=GND Pin=IC8-1
+Removed Pin From Net: NetName=GND Pin=IC8-2
+Removed Pin From Net: NetName=Vref Pin=IC8-5
+Removed Pin From Net: NetName=Vref Pin=IC8-6
+Removed Pin From Net: NetName=GND Pin=R59-2
+Removed Pin From Net: NetName=GND Pin=R80-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U1-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U1-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U2-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U2-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U3-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U3-8
+Removed Pin From Net: NetName=GND Pin=U7-2
+Removed Pin From Net: NetName=GND Pin=U9-2
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U13-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U13-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U14-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U14-8
+Removed Pin From Net: NetName=VDD_LDO_OUT Pin=U15-4
+Removed Pin From Net: NetName=VCC_LDO_OUT Pin=U15-8
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found CAP 1206_3216 - 0.8MM
+Add Component: Footprint Not Found SOIC8-127P600X175-8N
+Add Pin To Net: Unknown Pin: Pin C?-1
+Add Pin To Net: Unknown Pin: Pin C?-1
+Add Pin To Net: Unknown Pin: Pin C?-1
+Add Pin To Net: Unknown Pin: Pin C?-1
+Add Pin To Net: Unknown Pin: Pin C?-2
+Add Pin To Net: Unknown Pin: Pin C?-2
+Add Pin To Net: Unknown Pin: Pin C?-2
+Add Pin To Net: Unknown Pin: Pin C?-2
+Add Pin To Net: Unknown Pin: Pin U?-4
+Add Pin To Net: Unknown Pin: Pin U?-8
+Added Class: Name=misc
