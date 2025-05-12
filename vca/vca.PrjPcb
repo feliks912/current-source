@@ -118,7 +118,7 @@ GenerateClassCluster=0
 DocumentUniqueId=CQHNSNZC
 
 [Document5]
-DocumentPath=za_koncar.PcbLib
+DocumentPath=..\za_koncar.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -132,10 +132,10 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=MGPWEFTS
+DocumentUniqueId=
 
 [Document6]
-DocumentPath=za_koncar.SchLib
+DocumentPath=..\za_koncar.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -149,7 +149,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HLXHYRXB
+DocumentUniqueId=
 
 [Document7]
 DocumentPath=filters.SchDoc
@@ -288,7 +288,7 @@ GenerateClassCluster=0
 DocumentUniqueId=QTYCPRAX
 
 [Document15]
-DocumentPath=Current_source_koncar.Annotation
+DocumentPath=vca.Annotation
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0

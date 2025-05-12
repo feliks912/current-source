@@ -1,0 +1,14 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=input\input.PrjPcb
+[Project2]
+ProjectPath=source\source.PrjPcb
+[Project3]
+ProjectPath=mcu\mcu.PrjPcb
+[Project4]
+ProjectPath=power\power.PrjPcb
+[Project5]
+ProjectPath=vca\vca.PrjPcb
+[Project6]
+ProjectPath=mutliboard\multiboard.PrjMbd
