@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=LDO_EN Pin=U?-5
-Removed Member From Class: ClassName=MCU Member=SW?
-Added Pin To Net: NetName=VCC Pin=U?-5
-Added Member To Class: ClassName=MCU Member=Component C? 1 µF
-Added Member To Class: ClassName=MCU Member=Component R? 1 kOhms
