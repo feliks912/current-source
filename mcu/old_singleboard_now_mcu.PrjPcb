@@ -288,7 +288,7 @@ GenerateClassCluster=0
 DocumentUniqueId=QTYCPRAX
 
 [Document15]
-DocumentPath=mcu.Annotation
+DocumentPath=old_singleboard_now_mcu.Annotation
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0

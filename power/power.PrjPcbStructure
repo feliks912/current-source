@@ -1,12 +1,3 @@
-Record=TopLevelDocument|FileName=connectors.SchDoc|SheetNumber=10
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=filters.SchDoc|SheetNumber=5
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=LCD.SchDoc|SheetNumber=11
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=LDO.SchDoc|SheetNumber=8
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=MCU.SchDoc|SheetNumber=7
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=misc.SchDoc|SheetNumber=9
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=power.SchDoc|SheetNumber=6
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=resistors.SchDoc|SheetNumber=12
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=source_A.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=source_B.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=vca_A.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=vca_B.SchDoc|SheetNumber=4
+Record=TopLevelDocument|FileName=connectors.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=LDO.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=power.SchDoc|SheetNumber=1
