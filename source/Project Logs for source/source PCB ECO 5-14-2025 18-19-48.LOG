@@ -1,0 +1,26 @@
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=IC? NewDesignator=IC2
+Change Component Designator: OldDesignator=J? NewDesignator=J16
+Change Component Designator: OldDesignator=R? NewDesignator=R27
+Change Component Designator: OldDesignator=R? NewDesignator=R28
+Change Component Designator: OldDesignator=R? NewDesignator=R29
+Change Component Designator: OldDesignator=R? NewDesignator=R30
+Change Component Designator: OldDesignator=R? NewDesignator=R31
+Change Component Designator: OldDesignator=R? NewDesignator=R32
+Change Net Name : Old Net Name=NetIC?_3 New Net Name=NetIC2_3
+Change Net Name : Old Net Name=NetJ?_1 New Net Name=NetJ16_1
+Change Net Name : Old Net Name=NetJ?_3 New Net Name=NetJ16_3
+Change Net Name : Old Net Name=NetJ?_5 New Net Name=NetJ16_5
+Change Net Name : Old Net Name=NetJ?_9 New Net Name=NetJ16_9
+Change Net Name : Old Net Name=NetJ?_11 New Net Name=NetJ16_11
+Change Net Name : Old Net Name=NetJ?_13 New Net Name=NetJ16_13
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=NetIC1_3 Pin=R29-2
+Added Pin To Net: NetName=NetIC1_3 Pin=R31-2
+Added Net: Name=NetIC1_3
+Added Member To Class: ClassName=misc Member=Component IC2 LM431CCM3
+Added Member To Class: ClassName=misc Member=Component R27 2.2 kOhms
+Added Member To Class: ClassName=misc Member=Component R28 2.2 kOhms
+Added Member To Class: ClassName=misc Member=Component R30 400
+Added Member To Class: ClassName=misc Member=Component R31 2 kOhms
+Added Member To Class: ClassName=misc Member=Component R32 2 kOhms

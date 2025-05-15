@@ -1,0 +1,24 @@
+Added Component: Designator=R29(RESC3116X65N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "null?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.fr/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.65mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "603-RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/YAGEO/RT1206BRD07400RL?qs=NgbZBzc1CyGp8d%2FABgImbQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R30(RESC3116X65N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "null?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.fr/datasheet/2/447/PYu_RT_1_to_0_01_RoHS_L_15-3461507.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.65mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "603-RT1206BRD07400RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/YAGEO/RT1206BRD07400RL?qs=NgbZBzc1CyGp8d%2FABgImbQ%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetIC1_3 Pin=R29-1
+Added Pin To Net: NetName=Vref- Pin=R29-2
+Added Pin To Net: NetName=NetIC2_3 Pin=R30-1
+Added Pin To Net: NetName=Vref+ Pin=R30-2
+Added Member To Class: ClassName=misc Member=Component R29 400
+Added Member To Class: ClassName=misc Member=Component R30 400

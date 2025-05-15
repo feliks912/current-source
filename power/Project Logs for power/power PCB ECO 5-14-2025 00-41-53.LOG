@@ -1,0 +1,13 @@
+Removed Member From Class: ClassName=misc Member=C4
+Change Component Footprint: Designator=J3 Old Footprint=FP-5001-MFG New Footprint=HDRV3W64P0X254_1X3_762X254X864P - duplicate
+Change Component Footprint: Designator=J4 Old Footprint=FP-5001-MFG New Footprint=HDRV3W64P0X254_1X3_762X254X864P - duplicate
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=J3-2
+Added Pin To Net: NetName=VCC Pin=J3-3
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=J4-2
+Added Member To Class: ClassName=LDO Member=Component C8 2.2 µF
+Added Member To Class: ClassName=misc Member=Component C17 10 µF
+Added Member To Class: ClassName=misc Member=Component C20 100 µF
+Added Member To Class: ClassName=misc Member=Component C21 10 µF
+Added Member To Class: ClassName=misc Member=Component C22 0.1 µF
+Added Member To Class: ClassName=misc Member=Component J7 5001
+Added Member To Class: ClassName=misc Member=Component Q2 DMG3406L-13

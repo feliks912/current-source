@@ -1,0 +1,45 @@
+Removed Pin From Net: NetName=VCC Pin=J16-2
+Removed Pin From Net: NetName=VCC Pin=J16-4
+Removed Pin From Net: NetName=VCC Pin=J16-6
+Removed Pin From Net: NetName=GND Pin=J16-7
+Removed Pin From Net: NetName=GND Pin=J16-8
+Removed Pin From Net: NetName=VDD Pin=J16-10
+Removed Pin From Net: NetName=VDD Pin=J16-12
+Removed Pin From Net: NetName=VDD Pin=J16-14
+Removed Member From Class: ClassName=misc Member=J16
+Added Component: Designator=J?(HDRV14W46P254_2X7_1778X508X818P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "TD-107-G-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/td-107-g-aa/samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://suddendocs.samtec.com/catalog_english/td.pdf?_gl=1*1wt4qt0*_ga*MTEzMjQwMzYxOS4xNjk3ODEzMDcx*_ga_3KFNZC07WW*MTcxMjgzNDUyOC40My4xLjE3MTI4MzQ1ODguNjAuMC4w"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.18mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SAMTEC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TD-107-G-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "200-TD107GAA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Samtec/TD-107-G-AA?qs=0lQeLiL1qybxLJvA9lDIZA%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=J?-2
+Added Pin To Net: NetName=VCC Pin=J?-4
+Added Pin To Net: NetName=VCC Pin=J?-6
+Added Pin To Net: NetName=GND Pin=J?-7
+Added Pin To Net: NetName=GND Pin=J?-8
+Added Pin To Net: NetName=VDD Pin=J?-10
+Added Pin To Net: NetName=VDD Pin=J?-12
+Added Pin To Net: NetName=VDD Pin=J?-14
+Added Pin To Net: NetName=NetJ?_1 Pin=J?-1
+Added Pin To Net: NetName=NetJ?_1 Pin=R20-2
+Added Net: Name=NetJ?_1
+Added Pin To Net: NetName=NetJ?_3 Pin=J?-3
+Added Pin To Net: NetName=NetJ?_3 Pin=R21-2
+Added Net: Name=NetJ?_3
+Added Pin To Net: NetName=NetJ?_5 Pin=J?-5
+Added Pin To Net: NetName=NetJ?_5 Pin=R22-2
+Added Net: Name=NetJ?_5
+Added Pin To Net: NetName=NetJ?_9 Pin=J?-9
+Added Pin To Net: NetName=NetJ?_9 Pin=R23-2
+Added Net: Name=NetJ?_9
+Added Pin To Net: NetName=NetJ?_11 Pin=J?-11
+Added Pin To Net: NetName=NetJ?_11 Pin=R24-2
+Added Net: Name=NetJ?_11
+Added Pin To Net: NetName=NetJ?_13 Pin=J?-13
+Added Pin To Net: NetName=NetJ?_13 Pin=R25-2
+Added Net: Name=NetJ?_13
+Added Member To Class: ClassName=misc Member=Component J? TD-107-G-AA

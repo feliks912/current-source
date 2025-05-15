@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=J16-7
+Added Pin To Net: NetName=GND Pin=J16-8
+Added Member To Class: ClassName=misc Member=Component C10 1 µF
+Added Member To Class: ClassName=misc Member=Component C12 1 µF
+Added Member To Class: ClassName=misc Member=Component C14 0.1 µF

@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=NetJ4_1 Pin=Q2-2
+Removed Pin From Net: NetName=VCC Pin=Q2-7_8
+Removed Pin From Net: NetName=NetC1_2 Pin=Q3-1
+Removed Pin From Net: NetName=NetJ2_1 Pin=Q3-2
+Removed Pin From Net: NetName=NetJ3_1 Pin=Q3-7_8
+Removed Pin From Net: NetName=NetIC1_3 Pin=R29-1
+Removed Pin From Net: NetName=Vref- Pin=R29-2
+Removed Pin From Net: NetName=NetIC2_3 Pin=R30-1
+Removed Pin From Net: NetName=Vref+ Pin=R30-2
+Add Component: Footprint Not Found RESC3116X65N
+Add Component: Footprint Not Found RESC3116X65N
+Added Pin To Net: NetName=NetC1_2 Pin=Q2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=Q2-2
+Added Pin To Net: NetName=NetJ3_1 Pin=Q2-7_8
+Added Pin To Net: NetName=NetJ4_1 Pin=Q3-2
+Added Pin To Net: NetName=VCC Pin=Q3-7_8
+Add Pin To Net: Unknown Pin: Pin R29-1
+Add Pin To Net: Unknown Pin: Pin R29-2
+Add Pin To Net: Unknown Pin: Pin R30-1
+Add Pin To Net: Unknown Pin: Pin R30-2
+Added Pin To Net: NetName=NetQ3_1 Pin=Q3-1
+Added Pin To Net: NetName=NetQ3_1 Pin=R10-2
+Added Net: Name=NetQ3_1

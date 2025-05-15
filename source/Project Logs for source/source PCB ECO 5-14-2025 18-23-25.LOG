@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=R29 Old Footprint=RESC1608X46N New Footprint=RESC6332X65N
+Change Component Footprint: Designator=R30 Old Footprint=RESC1608X46N New Footprint=RESC6332X65N
+Change Component Library : Designator=R29 Old Library=* New Library=za_koncar.SchLib
+Change Component Library : Designator=R30 Old Library=* New Library=za_koncar.SchLib

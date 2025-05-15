@@ -1,3 +1,2 @@
-Record=TopLevelDocument|FileName=connectors.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=LDO.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=power.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=LDO.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=misc.SchDoc|SheetNumber=1
