@@ -1,0 +1,61 @@
+Removed Member From Class: ClassName=power Member=C4
+Removed Member From Class: ClassName=misc Member=IC1
+Removed Member From Class: ClassName=filters Member=IC6
+Removed Member From Class: ClassName=MCU Member=S2
+Add Component: Footprint Not Found TE 282837-2
+Add Component: Footprint Not Found TE 282837-2
+Add Component: Footprint Not Found TE 282837-3
+Added Component: Designator=J?(HDRV6W82P254_2X3_762X500X884P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/prt-12807/sparkfun-electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.84mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SparkFun"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "474-PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=J?(HDRV6W82P254_2X3_762X500X884P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/prt-12807/sparkfun-electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8.84mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "SparkFun"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "474-PRT-12807"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin J3-1
+Add Pin To Net: Unknown Pin: Pin J3-2
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin J5-1
+Add Pin To Net: Unknown Pin: Pin J5-2
+Add Pin To Net: Unknown Pin: Pin J5-3
+Added Pin To Net: NetName=NetJ?_1 Pin=J?-1
+Added Pin To Net: NetName=NetJ?_1 Pin=R23-1
+Added Net: Name=NetJ?_1
+Added Pin To Net: NetName=NetJ?_2 Pin=J?-2
+Added Pin To Net: NetName=NetJ?_2 Pin=R19-1
+Added Net: Name=NetJ?_2
+Add Net: Net with name "NetJ?_2" already exists
+Added Pin To Net: NetName=NetJ?_4 Pin=J?-4
+Added Pin To Net: NetName=NetJ?_4 Pin=R7-1
+Added Net: Name=NetJ?_4
+Add Net: Net with name "NetJ?_4" already exists
+Added Pin To Net: NetName=NetJ?_6 Pin=J?-6
+Added Pin To Net: NetName=NetJ?_6 Pin=R15-1
+Added Net: Name=NetJ?_6
+Added Member To Class: ClassName=power Member=Component C39 0.1 µF
+Added Member To Class: ClassName=power Member=Component C42 1 µF
+Added Member To Class: ClassName=power Member=Component C43 10 µF
+Added Member To Class: ClassName=LCD Member=Component DS1 EA DOGM132W-5
+Added Member To Class: ClassName=misc Member=Component IC2 MCP4728-E_UN
+Added Member To Class: ClassName=filters Member=Component IC4 TLV9002IDDFR
+Add Class Member: Failed to add class member : Component J3 282837-2
+Add Class Member: Failed to add class member : Component J4 282837-2
+Add Class Member: Failed to add class member : Component J5 282837-3
+Added Member To Class: ClassName=filters Member=Component J? PRT-12807
+Added Member To Class: ClassName=filters Member=Component J? PRT-12807
+Added Member To Class: ClassName=MCU Member=Component S1 FSM4JSMA
+Added Member To Class: ClassName=misc Member=Component S3 FSM4JSMA
+Added Member To Class: ClassName=misc Member=Component S4 FSM4JSMA
+Added Member To Class: ClassName=misc Member=Component S5 FSM4JSMA

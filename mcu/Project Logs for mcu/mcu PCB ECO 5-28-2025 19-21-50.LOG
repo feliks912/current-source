@@ -1,0 +1,16 @@
+Add Component: Footprint Not Found TE 282837-2
+Add Component: Footprint Not Found TE 282837-2
+Add Component: Footprint Not Found TE 282837-3
+Add Pin To Net: Unknown Pin: Pin J3-1
+Add Pin To Net: Unknown Pin: Pin J3-2
+Add Pin To Net: Unknown Pin: Pin J4-1
+Add Pin To Net: Unknown Pin: Pin J4-2
+Add Pin To Net: Unknown Pin: Pin J5-1
+Add Pin To Net: Unknown Pin: Pin J5-2
+Add Pin To Net: Unknown Pin: Pin J5-3
+Add Net: Net with name "NetJ?_2" already exists
+Add Net: Net with name "NetJ?_4" already exists
+Add Class Member: Failed to add class member : Component J3 282837-2
+Add Class Member: Failed to add class member : Component J4 282837-2
+Add Class Member: Failed to add class member : Component J5 282837-3
+Added Member To Class: ClassName=filters Member=Component J? PRT-12807
