@@ -3,7 +3,7 @@ Version=1.0
 [Project1]
 ProjectPath=input\input.PrjPcb
 [Project2]
-ProjectPath=mcu\old_singleboard_now_mcu.PrjPcb
+ProjectPath=mcu\mcu.PrjPcb
 [Project3]
 ProjectPath=power\power.PrjPcb
 [Project4]
