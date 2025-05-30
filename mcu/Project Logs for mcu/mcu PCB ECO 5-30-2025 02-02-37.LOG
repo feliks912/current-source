@@ -1,0 +1,84 @@
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=NetD1_2 Pin=J3-1
+Removed Pin From Net: NetName=GND Pin=J3-2
+Removed Member From Class: ClassName=misc Member=J3
+Removed Member From Class: ClassName=misc Member=J6
+Removed Member From Class: ClassName=misc Member=J7
+Change Component Footprint: Designator=D1 Old Footprint=ESDAXLC181BF4 New Footprint=SP342004UTG
+Change Component Comment : Designator=D1 Old Comment=ESDAXLC18-1BF4 New Comment=SP3420-04UTG
+Change Component Comment : Designator=IC7 Old Comment=REF3425IDBVR New Comment=REF3433IDBVR
+Change component parameters: Designator = "D1" ("D1"); Footprint = "ESDAXLC181BF4"; UniqueID = "\BBPKVLCQ" ("\BBPKVLCQ")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "SP3420-04UTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sp3420-04utg/littelfuse?region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/SP3420-04UTG.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SP3420-04UTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "576-SP3420-04UTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/SP3420-04UTG?qs=d0WKAl%252BL4KadTnBionJ8CA%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "IC7" ("IC7"); Footprint = "SOT95P280X145-6N"; UniqueID = "\VENRPUQH" ("\VENRPUQH")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "REF3433IDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ref3433idbvr/texas-instruments?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://www.ti.com/lit/ds/symlink/ref3433.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.45mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "REF3433IDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "595-REF3433IDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/REF3433IDBVR?qs=W0yvOO0ixfGBJPqcMgjPbw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D3(SOT65P222X110-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "BAT54DW-7-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/bat54dw-7-f/diodes-incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/BAT54DW.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "BAT54DW-7-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "621-BAT54DW-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=621-BAT54DW-F"; VariantName = "[No Variations]"
+Added Component: Designator=D4(SOT65P222X110-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "BAT54DW-7-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/bat54dw-7-f/diodes-incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/BAT54DW.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "BAT54DW-7-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "621-BAT54DW-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=621-BAT54DW-F"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found YAGEO RES 1206_3216
+Add Component: Footprint Not Found YAGEO RES 1206_3216
+Add Component: Footprint Not Found YAGEO RES 1206_3216
+Add Component: Footprint Not Found YAGEO RES 1206_3216
+Added Pin To Net: NetName=GND Pin=D1-3
+Added Pin To Net: NetName=GND Pin=D1-6
+Added Pin To Net: NetName=GND Pin=D1-7
+Added Pin To Net: NetName=GND Pin=D1-8
+Added Pin To Net: NetName=GND Pin=D1-9
+Added Pin To Net: NetName=GND Pin=D1-10
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=GND Pin=D3-4
+Added Pin To Net: NetName=NetD1_2 Pin=D3-6
+Added Pin To Net: NetName=GND Pin=D4-1
+Added Pin To Net: NetName=GND Pin=D4-4
+Added Pin To Net: NetName=NetD1_2 Pin=IC2-8
+Add Pin To Net: Unknown Pin: Pin R36-2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=D3-3
+Added Pin To Net: NetName=NetD1_1 Pin=IC2-9
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD1_4 Pin=D1-4
+Added Pin To Net: NetName=NetD1_4 Pin=D4-6
+Added Pin To Net: NetName=NetD1_4 Pin=IC2-7
+Added Net: Name=NetD1_4
+Added Pin To Net: NetName=NetD1_5 Pin=D1-5
+Added Pin To Net: NetName=NetD1_5 Pin=D4-3
+Added Pin To Net: NetName=NetD1_5 Pin=IC2-6
+Added Net: Name=NetD1_5
+Added Net: Name=NetR1_1
+Added Net: Name=NetR35_1
+Added Net: Name=NetR36_1
+Added Net: Name=NetR37_1
+Added Member To Class: ClassName=misc Member=Component D3 BAT54DW-7-F
+Added Member To Class: ClassName=misc Member=Component D4 BAT54DW-7-F
+Add Class Member: Failed to add class member : Component R1 1 kOhms
+Add Class Member: Failed to add class member : Component R35 1 kOhms
+Add Class Member: Failed to add class member : Component R36 1 kOhms
+Add Class Member: Failed to add class member : Component R37 1 kOhms

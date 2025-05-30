@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=C40 Old Footprint=CAP 1206_3216 - 0.8MM New Footprint=C0805
+Change Component Library : Designator=C40 Old Library=* New Library=za_koncar.SchLib
+Added Member To Class: ClassName=power Member=Component C40 4u7

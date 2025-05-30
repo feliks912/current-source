@@ -1163,8 +1163,8 @@ UpdateToLatestRevision=1
 PartTypes=0
 ComponentLibIdentifierKind0=Any
 ComponentLibraryIdentifier0=
-ComponentDesignItemID0=RT1206BRD07400RL
-ComponentSymbolReference0=RT1206BRD07400RL
+ComponentDesignItemID0=TA6F18CAHM3_H
+ComponentSymbolReference0=TA6F18CAHM3_H
 ComponentUpdate0=1
 ComponentIsDeviceSheet0=0
 FullReplace=1
@@ -1207,7 +1207,7 @@ ParameterUpdate11=1
 ModelTypeGroup0=PCBLIB
 ModelTypeUpdate0=1
 ModelType0=PCBLIB
-ModelName0=RESC3116X65N
+ModelName0=SODFL5226X100N
 ModelUpdate0=1
 
 [DatabaseUpdateOptions]

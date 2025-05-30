@@ -1,0 +1,17 @@
+Added Component: Designator=D1(SODFL5226X100N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.vishay.com/docs/98718/ta6f12ca_thru_ta6f100ca.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TA6F18CAHM3/H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "78-TA6F18CAHM3/H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay/TA6F18CAHM3-H?qs=7%2F6SraaimPTwUqKdNIO8bQ%3D%3D"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found TE 282837-2
+Added Pin To Net: NetName=GND Pin=D1-1
+Added Pin To Net: NetName=NetJ6_1 Pin=D1-2
+Add Pin To Net: Unknown Pin: Pin J17-1
+Add Pin To Net: Unknown Pin: Pin J17-2
+Change Net Name : Old Net Name=NetJ6_1 New Net Name=NetD1_2
+Added Member To Class: ClassName=misc Member=Component D1 TA6F18CAHM3_H
+Add Class Member: Failed to add class member : Component J17 282837-2
