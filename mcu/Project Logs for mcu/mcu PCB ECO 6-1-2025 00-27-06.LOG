@@ -1,0 +1,23 @@
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Added Component: Designator=TP1(Test pad 1mm)
+Add component (AddParameter): Name = "ClassName"; Value = "CH1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentID"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description2"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Koncar"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ManufacturerPartNumber"; Value = "Test_pad_1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MountingType"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MTBF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MTBFstandard"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "OperatingTemp"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageType"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartStatus"; Value = "Active"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ROHS"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "TP1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueNumeric"; Value = "TP1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=MCU Member=Component TP1
