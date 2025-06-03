@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=LCD_\C\S\1 Pin=IC1-28
+Added Pin To Net: NetName=LCD_\C\S\1 Pin=IC1-37
+Added Pin To Net: NetName=NetIC1_28 Pin=IC1-28
+Added Pin To Net: NetName=NetIC1_28 Pin=IC6-1
+Added Net: Name=NetIC1_28
