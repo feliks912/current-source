@@ -1,0 +1,10 @@
+Added Component: Designator=IC?(QFN50P400X400X80-25N-D)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "CP2102N-A02-GQFN24R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/cp2102n-a02-gqfn24r/silicon-labs?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Silicon Labs"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CP2102N-A02-GQFN24R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "634-CP2102NA02QFN24R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN24R?qs=u16ybLDytRaIVBf0X4zL0g%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=MCU Member=Component IC? CP2102N-A02-GQFN24R

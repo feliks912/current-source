@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=DAC_signal_A Pin=IC2-6
+Removed Pin From Net: NetName=NetD1_4 Pin=IC2-7
+Removed Pin From Net: NetName=DAC_signal_B Pin=IC2-8
+Added Pin To Net: NetName=DAC_signal_B Pin=IC2-6
+Added Pin To Net: NetName=DAC_signal_A Pin=IC2-7
+Added Pin To Net: NetName=NetD1_4 Pin=IC2-8
+Added Member To Class: ClassName=misc Member=Component C56 0.1 µF

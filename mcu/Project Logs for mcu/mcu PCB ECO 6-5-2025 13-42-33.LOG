@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetC53_1 Pin=C59-1
+Removed Pin From Net: NetName=NetC55_1 Pin=C59-2
+Removed Pin From Net: NetName=NetR1_1 Pin=R38-1
+Removed Pin From Net: NetName=NetR36_1 Pin=R40-1
+Removed Member From Class: ClassName=misc Member=C59
+Added Pin To Net: NetName=NetC53_1 Pin=D1-1
+Added Pin To Net: NetName=NetC55_1 Pin=D1-6
+Added Pin To Net: NetName=NetC53_1 Pin=R1-2
+Added Pin To Net: NetName=NetC55_1 Pin=R36-2
+Change Net Name : Old Net Name=NetC53_1 New Net Name=DAC_signal_A_filtered
+Change Net Name : Old Net Name=NetC55_1 New Net Name=DAC_signal_B_filtered
+Added Pin To Net: NetName=DAC_signal_A Pin=IC2-6
+Added Pin To Net: NetName=DAC_signal_A Pin=R38-1
+Added Net: Name=DAC_signal_A
+Added Pin To Net: NetName=DAC_signal_B Pin=IC2-8
+Added Pin To Net: NetName=DAC_signal_B Pin=R40-1
+Added Net: Name=DAC_signal_B
