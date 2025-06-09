@@ -1235,8 +1235,8 @@ UpdateToLatestRevision=1
 PartTypes=0
 ComponentLibIdentifierKind0=Any
 ComponentLibraryIdentifier0=
-ComponentDesignItemID0=PESD2USB3UVT-QR
-ComponentSymbolReference0=PESD2USB3UVT-QR
+ComponentDesignItemID0=ASCB-RTF2-0A307
+ComponentSymbolReference0=ASCB-RTF2-0A307
 ComponentUpdate0=1
 ComponentIsDeviceSheet0=0
 FullReplace=1
@@ -1279,7 +1279,7 @@ ParameterUpdate11=1
 ModelTypeGroup0=PCBLIB
 ModelTypeUpdate0=1
 ModelType0=PCBLIB
-ModelName0=SOT95P230X110-3N
+ModelName0=ASCBRTF20A307
 ModelUpdate0=1
 
 [DatabaseUpdateOptions]
