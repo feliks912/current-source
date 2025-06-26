@@ -1,0 +1,5 @@
+Add Component: Footprint Not Found FP-5001-MFG
+Add Pin To Net: Unknown Pin: Pin J10-1
+Added Member To Class: ClassName=source Member=Component J1 5001
+Add Class Member: Failed to add class member : Component J10 5001
+Added Member To Class: ClassName=source Member=Component Q2 PHPT610030NPK

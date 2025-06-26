@@ -1,0 +1,20 @@
+Change Component Footprint: Designator=J7 Old Footprint=FP-5001-MFG New Footprint=FP-5001-MFG
+Change Component Designator: OldDesignator=D1 NewDesignator=D1_conn
+Change Component Designator: OldDesignator=D2 NewDesignator=D2_conn
+Change Component Designator: OldDesignator=F1 NewDesignator=F1_conn
+Change Component Designator: OldDesignator=F2 NewDesignator=F2_conn
+Change Component Designator: OldDesignator=J1 NewDesignator=J1_conn
+Change Component Designator: OldDesignator=J2 NewDesignator=J2_conn
+Change Component Designator: OldDesignator=J3 NewDesignator=J5_conn
+Change Component Designator: OldDesignator=J4 NewDesignator=J3_conn
+Change Component Designator: OldDesignator=J5 NewDesignator=J4_conn
+Change Component Designator: OldDesignator=J6 NewDesignator=J6_conn
+Change Component Designator: OldDesignator=J7 NewDesignator=J7_conn
+Change Component Designator: OldDesignator=J8 NewDesignator=J8_conn
+Change Component Designator: OldDesignator=R1 NewDesignator=R1_conn
+Change Component Designator: OldDesignator=R2 NewDesignator=R2_conn
+Change Net Name : Old Net Name=NetD1_1 New Net Name=NetD1_conn_1
+Change Net Name : Old Net Name=NetD2_1 New Net Name=NetD2_conn_1
+Change Net Name : Old Net Name=NetF1_1 New Net Name=NetF1_conn_1
+Change Net Name : Old Net Name=NetF2_1 New Net Name=NetF2_conn_1
+Added Member To Class: ClassName=connectors Member=Component J7_conn 5001

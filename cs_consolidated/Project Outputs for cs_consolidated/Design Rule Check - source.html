@@ -1,0 +1,947 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD24\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">6/26/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19:44:46</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc" class="file"><acronym title="C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc">C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">2</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">187</td></tr>
+</table>
+</td>
+</table><a name="IDF2IF4TAARYQ0T045XXJMDAWTOHHETA50NVWFWIQXKWWLE0NDIGF"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDITQGSGQF5W0FL5QFE4WDW51F1HO4F1QKK2GYE0OSUUS2AHNAJKJL">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</a></td>
+<td class="column2">2</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">2</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRD21R4L10Q4ROBBPMQVOY51NCD0ZNKAI1JVGFWKARMWJ1ICOBALN">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXK0F5BUF4WRTKPB45YVKI2XO2BIEZ2UQBKQSZKFZIGWTTLS3ZMMC">Clearance Constraint (Gap=0.203mm) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRIW55TJOHEJAGW4CPHKAPN2XCFISYSB4U4SE5GE41EU1K4ZDK5SN">Clearance Constraint (Gap=0.203mm) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0D1QZZ2KVFCMDQOK0SGUE13IYFOHKZOS3U1G0KKMMODSYG4DNVRD">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPH5S1IPUNR24OKHFOYTCQSSQUM3MVFPBTBYB4OD02W0EAMULJHZJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE1VQQ0ZO24H2PT0RCAPVDVFS5BL45X4MUBONWKOUOUTLAWTVRIVD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">75</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJD3YVJEDKIICFXIE2PQIU02DCOLAP3CUOIIDW5PORLRFL3K5H5IM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOGWPY1ENDMURHEVOFQCWL4U15KVMB5KBOIJ0J2CF45A4QCJGO1JM">Width Constraint (Min=0.089mm) (Max=2.54mm) (Preferred=0.381mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHF2FUGXSGI0OIYVZRKUVP0RAZH2H3QU0AS4IWOMPZQLUF2CZZLFJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUPCNS4DPUF3XHEA4OWJDE3NIDC1TOPNX1ZR03OMLF2Q3EPOSASVN">Minimum Annular Ring (Minimum=0.13mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM2VVEMY0GO5VIR510II4N3C5HORUFG4CYDEO0LN3F23VAWTTGPYK">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOBTFWZGOC51CDP3KTCRP2RJIGO0S2Q2TGKRBAMKUEYWXOZ0TFWKJ">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4ENMYMYXGFLVJGV3KKYUK0MGYHIU3CFUABFXNOPSRONUTW0WMGDG">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM4HJR2X4AOJIKCYW44U5LBKIUP1COR5PQK24HIPYHQADV0BLPRHB">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJTJSLZO02BYPCUHDW2MCSPC1EDG4DRI1IEMQJOLDLTFFX3UOYRB">Silk to Silk (Clearance=0.1mm) (All),(All)</a></td>
+<td class="column2">85</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWUSHE4V0LMCCFNY1NZ0VNPLLGPHWBUI35XKOKPM0WGEWEP4ORKPH">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYBWIMPNBNUW3IBUTXCJH0SFYQBUDMZLXPINJXNORMAT2C1QPZEXI">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNDMTWEXMBL5CHHKW4ZI1ZSL4MBY1YIJRVDZR2BJJCSISPIUTZVXH">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">187</td>
+</tr>
+</table><br><a name="IDFI0WGYHPMKJZJYC4OJHACUTR0MTUNRUHY1AVXGEGWBRLFSH21VPB"><h2>Warnings</h2></a><a name="IDITQGSGQF5W0FL5QFE4WDW51F1HO4F1QKK2GYE0OSUUS2AHNAJKJL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: NETJ3_1_L01_P001</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Polygon named: NETJ17_1_L01_P000</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0D1QZZ2KVFCMDQOK0SGUE13IYFOHKZOS3U1G0KKMMODSYG4DNVRD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.2mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2751.403mil|Location2.X=2757.652mil|Location1.Y=946.403mil|Location2.Y=952.652mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2751.403mil|Location2.X=2757.652mil|Location1.Y=946.403mil|Location2.Y=952.652mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.2mm) Between Pad Q2-5_6(69.215mm,23.368mm) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2721.875mil|Location2.X=2728.125mil|Location1.Y=916.875mil|Location2.Y=923.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2721.875mil|Location2.X=2728.125mil|Location1.Y=916.875mil|Location2.Y=923.125mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.2mm) Between Region (0 hole(s)) Top Layer And Track (69.215mm,23.368mm)(71.882mm,23.368mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2838.096mil|Location2.X=2844.345mil|Location1.Y=928.096mil|Location2.Y=934.345mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2838.096mil|Location2.X=2844.345mil|Location1.Y=928.096mil|Location2.Y=934.345mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.2mm) Between Region (0 hole(s)) Top Layer And Track (71.882mm,23.368mm)(73.152mm,24.638mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDPH5S1IPUNR24OKHFOYTCQSSQUM3MVFPBTBYB4OD02W0EAMULJHZJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.742mil|Location2.X=2768.258mil|Location1.Y=876.742mil|Location2.Y=963.258mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.742mil|Location2.X=2768.258mil|Location1.Y=876.742mil|Location2.Y=963.258mil|Absolute=True">Short-Circuit Constraint: Between Pad Q2-5_6(69.215mm,23.368mm) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 69.215mm][Y = 23.368mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712.283mil|Location2.X=2806.371mil|Location1.Y=872.956mil|Location2.Y=967.044mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712.283mil|Location2.X=2806.371mil|Location1.Y=872.956mil|Location2.Y=967.044mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (69.215mm,23.368mm)(71.882mm,23.368mm) on Top Layer Location : [X = 70.087mm][Y = 23.368mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2820.684mil|Location2.X=2856.272mil|Location1.Y=924.948mil|Location2.Y=960.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2820.684mil|Location2.X=2856.272mil|Location1.Y=924.948mil|Location2.Y=960.537mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (71.882mm,23.368mm)(73.152mm,24.638mm) on Top Layer Location : [X = 72.097mm][Y = 23.946mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDE1VQQ0ZO24H2PT0RCAPVDVFS5BL45X4MUBONWKOUOUTLAWTVRIVD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2765.905mil|Location1.Y=858.323mil|Location2.Y=1215.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2765.905mil|Location1.Y=858.323mil|Location2.Y=1215.906mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(55.562mm,22.553mm) on Top Layer And Pad J15-1(69.469mm,30.099mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2087.5mil|Location2.X=2313.858mil|Location1.Y=787.914mil|Location2.Y=825.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2087.5mil|Location2.X=2313.858mil|Location1.Y=787.914mil|Location2.Y=825.118mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(55.562mm,22.553mm) on Top Layer And Track (56.007mm,18.418mm)(56.232mm,18.418mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2234.433mil|Location1.Y=477.495mil|Location2.Y=1031.677mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2234.433mil|Location1.Y=477.495mil|Location2.Y=1031.677mil|Absolute=True">Un-Routed Net Constraint: Net VCC_LDO_OUT Between Pad C1-2(55.562mm,25.453mm) on Top Layer And Pad C3-1(55.753mm,12.88mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2548.528mil|Location1.Y=972.495mil|Location2.Y=1193.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2148.067mil|Location2.X=2548.528mil|Location1.Y=972.495mil|Location2.Y=1193.527mil|Absolute=True">Un-Routed Net Constraint: Net VCC_LDO_OUT Between Pad C1-2(55.562mm,25.453mm) on Top Layer And Pad J1-2(63.881mm,29.464mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=659.556mil|Location2.X=990mil|Location1.Y=1595.88mil|Location2.Y=1886.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=659.556mil|Location2.X=990mil|Location1.Y=1595.88mil|Location2.Y=1886.606mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (18.634mm,43.075mm)(19.293mm,43.075mm) on Top Layer And Pad C20-1(22.606mm,45.38mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.667mil|Location2.X=2167.5mil|Location1.Y=810mil|Location2.Y=987.914mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.667mil|Location2.X=2167.5mil|Location1.Y=810mil|Location2.Y=987.914mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (44.01mm,23.114mm)(44.544mm,23.114mm) on Top Layer And Pad C2-1(52.514mm,22.553mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1835.724mil|Location2.X=2259.866mil|Location1.Y=2463.59mil|Location2.Y=2747.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1835.724mil|Location2.X=2259.866mil|Location1.Y=2463.59mil|Location2.Y=2747.693mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C26-1(47.879mm,67.415mm) on Top Layer And Pad L3-2(55.499mm,64.377mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395mil|Location2.X=1985mil|Location1.Y=2561.783mil|Location2.Y=2754.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1395mil|Location2.X=1985mil|Location1.Y=2561.783mil|Location2.Y=2754.126mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Track (37.973mm,67.415mm)(37.973mm,67.609mm) on Top Layer And Pad C26-1(47.879mm,67.415mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.724mil|Location2.X=1934.276mil|Location1.Y=2261.346mil|Location2.Y=2448.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.724mil|Location2.X=1934.276mil|Location1.Y=2261.346mil|Location2.Y=2448.48mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C27-2(37.973mm,59.815mm) on Top Layer And Pad C26-2(47.879mm,59.815mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1835.724mil|Location2.X=1939.276mil|Location1.Y=1950.953mil|Location2.Y=2448.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1835.724mil|Location2.X=1939.276mil|Location1.Y=1950.953mil|Location2.Y=2448.48mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C26-2(47.879mm,59.815mm) on Top Layer And Pad C30-1(48.006mm,51.931mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1262.063mil|Location2.X=1544.276mil|Location1.Y=2261.346mil|Location2.Y=2448.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1262.063mil|Location2.X=1544.276mil|Location1.Y=2261.346mil|Location2.Y=2448.48mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D2-1(32.47mm,59.698mm) on Top Layer And Pad C27-2(37.973mm,59.815mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1840.724mil|Location2.X=2395.905mil|Location1.Y=1950.953mil|Location2.Y=2225.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1840.724mil|Location2.X=2395.905mil|Location1.Y=1950.953mil|Location2.Y=2225.425mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C30-1(48.006mm,51.931mm) on Top Layer And Pad J27-1(60.071mm,55.741mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1840.724mil|Location2.X=2254.866mil|Location1.Y=1651.74mil|Location2.Y=1920.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1840.724mil|Location2.X=2254.866mil|Location1.Y=1651.74mil|Location2.Y=1920.449mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad C30-2(48.006mm,44.331mm) on Top Layer And Pad L4-1(55.372mm,46.978mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1390mil|Location2.X=1990mil|Location1.Y=1612.256mil|Location2.Y=1845.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1390mil|Location2.X=1990mil|Location1.Y=1612.256mil|Location2.Y=1845.307mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Track (37.846mm,43.491mm)(37.846mm,43.696mm) on Top Layer And Pad C30-2(48.006mm,44.331mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.788mil|Location2.X=2234.433mil|Location1.Y=477.495mil|Location2.Y=545.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.788mil|Location2.X=2234.433mil|Location1.Y=477.495mil|Location2.Y=545.811mil|Absolute=True">Un-Routed Net Constraint: Net VCC_LDO_OUT Between Pad U2-8(53.119mm,13.462mm) on Top Layer And Pad C3-1(55.753mm,12.88mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2095mil|Location2.X=2409.843mil|Location1.Y=407.086mil|Location2.Y=607.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2095mil|Location2.X=2409.843mil|Location1.Y=407.086mil|Location2.Y=607.087mil|Absolute=True">Un-Routed Net Constraint: Net VCC_LDO_OUT Between Pad C3-1(55.753mm,12.88mm) on Top Layer And Track (58.67mm,12.88mm)(60.579mm,10.971mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1257.929mil|Location2.X=1539.276mil|Location1.Y=1925.953mil|Location2.Y=2113.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1257.929mil|Location2.X=1539.276mil|Location1.Y=1925.953mil|Location2.Y=2113.086mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D3-2(32.366mm,51.784mm) on Top Layer And Pad C31-1(37.846mm,51.296mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=424.842mil|Location2.X=712.913mil|Location1.Y=1679.52mil|Location2.Y=2074.519mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=424.842mil|Location2.X=712.913mil|Location1.Y=1679.52mil|Location2.Y=2074.519mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (13.081mm,45.2mm)(13.331mm,45.2mm) on Top Layer And Pad C34-1(15.568mm,50.153mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=405.409mil|Location2.X=442.858mil|Location1.Y=186.236mil|Location2.Y=411.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=405.409mil|Location2.X=442.858mil|Location1.Y=186.236mil|Location2.Y=411.992mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad IC1-2(10.724mm,9.813mm) on Top Layer [Unplated] And Pad D1-1(10.922mm,5.077mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1257.929mil|Location2.X=1294.669mil|Location1.Y=2018.393mil|Location2.Y=2370.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1257.929mil|Location2.X=1294.669mil|Location1.Y=2018.393mil|Location2.Y=2370.646mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D3-2(32.366mm,51.784mm) on Top Layer And Pad D2-1(32.47mm,59.698mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1118.878mil|Location2.X=1378.366mil|Location1.Y=2488.712mil|Location2.Y=2450.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1118.878mil|Location2.X=1378.366mil|Location1.Y=2488.712mil|Location2.Y=2450.307mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (30.959mm,65.753mm)(30.959mm,65.928mm) on Top Layer And Pad D2-1(32.47mm,59.698mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1123.11mil|Location2.X=1374.232mil|Location1.Y=1694.559mil|Location2.Y=2138.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1123.11mil|Location2.X=1374.232mil|Location1.Y=1694.559mil|Location2.Y=2138.732mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (31.067mm,45.582mm)(31.242mm,45.582mm) on Top Layer And Pad D3-2(32.366mm,51.784mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2787.693mil|Location2.X=2959.827mil|Location1.Y=2337.212mil|Location2.Y=2728.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2787.693mil|Location2.X=2959.827mil|Location1.Y=2337.212mil|Location2.Y=2728.008mil|Absolute=True">Un-Routed Net Constraint: Net NetF1_1 Between Pad J28-1(72.009mm,60.567mm) on Multi-Layer And Pad F1-1(74.168mm,68.695mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2770.685mil|Location2.X=2959.827mil|Location1.Y=2554.26mil|Location2.Y=2676.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2770.685mil|Location2.X=2959.827mil|Location1.Y=2554.26mil|Location2.Y=2676.315mil|Absolute=True">Un-Routed Net Constraint: Net NetF1_2 Between Pad Q3-3(71.027mm,67.552mm) on Top Layer [Unplated] And Pad F1-2(74.168mm,65.475mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2787.693mil|Location2.X=2959.827mil|Location1.Y=1607.646mil|Location2.Y=2031.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2787.693mil|Location2.X=2959.827mil|Location1.Y=1607.646mil|Location2.Y=2031.827mil|Absolute=True">Un-Routed Net Constraint: Net NetF2_1 Between Pad J28-3(72.009mm,50.407mm) on Multi-Layer And Pad F2-1(74.168mm,41.431mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2708.205mil|Location2.X=2959.827mil|Location1.Y=1632.527mil|Location2.Y=1781.393mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2708.205mil|Location2.X=2959.827mil|Location1.Y=1632.527mil|Location2.Y=1781.393mil|Absolute=True">Un-Routed Net Constraint: Net NetF2_2 Between Pad Q4-3(69.215mm,42.118mm) on Top Layer [Unplated] And Pad F2-2(74.168mm,44.651mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=405.409mil|Location2.X=897.15mil|Location1.Y=360.685mil|Location2.Y=530.929mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=405.409mil|Location2.X=897.15mil|Location1.Y=360.685mil|Location2.Y=530.929mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad IC1-2(10.724mm,9.813mm) on Top Layer [Unplated] And Pad J2-8(22.161mm,12.859mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.094mil|Location2.X=1776.677mil|Location1.Y=159.095mil|Location2.Y=258.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.094mil|Location2.X=1776.677mil|Location1.Y=159.095mil|Location2.Y=258.527mil|Absolute=True">Un-Routed Net Constraint: Net NetD1_2 Between Pad J10-1(37.719mm,4.826mm) on Multi-Layer And Pad R25-1(44.526mm,5.715mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.095mil|Location2.X=2548.528mil|Location1.Y=1226.473mil|Location2.Y=2225.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.095mil|Location2.X=2548.528mil|Location1.Y=1226.473mil|Location2.Y=2225.425mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad J26-1(56.134mm,55.741mm) on Multi-Layer And Pad J1-1(63.881mm,32.004mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2481.472mil|Location2.X=2754.528mil|Location1.Y=990.472mil|Location2.Y=1293.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2481.472mil|Location2.X=2754.528mil|Location1.Y=990.472mil|Location2.Y=1293.527mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad J1-1(63.881mm,32.004mm) on Multi-Layer And Pad Q2-7_8(69.215mm,25.908mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=509.094mil|Location2.X=803.528mil|Location1.Y=1021.472mil|Location2.Y=1130.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=509.094mil|Location2.X=803.528mil|Location1.Y=1021.472mil|Location2.Y=1130.906mil|Absolute=True">Un-Routed Net Constraint: Net NetJ11_1 Between Pad J11-1(13.716mm,27.94mm) on Multi-Layer And Pad J12-2(19.558mm,26.797mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=736.472mil|Location2.X=903.528mil|Location1.Y=1021.472mil|Location2.Y=1088.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=736.472mil|Location2.X=903.528mil|Location1.Y=1021.472mil|Location2.Y=1088.527mil|Absolute=True">Un-Routed Net Constraint: Net NetJ11_1 Between Pad J12-2(19.558mm,26.797mm) on Multi-Layer And Pad J12-4(22.098mm,26.797mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=836.472mil|Location2.X=1003.528mil|Location1.Y=1021.472mil|Location2.Y=1088.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=836.472mil|Location2.X=1003.528mil|Location1.Y=1021.472mil|Location2.Y=1088.527mil|Absolute=True">Un-Routed Net Constraint: Net NetJ11_1 Between Pad J12-4(22.098mm,26.797mm) on Multi-Layer And Pad J12-6(24.638mm,26.797mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=870mil|Location2.X=1544.823mil|Location1.Y=855mil|Location2.Y=1192.972mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=870mil|Location2.X=1544.823mil|Location1.Y=855mil|Location2.Y=1192.972mil|Absolute=True">Un-Routed Net Constraint: Net signal_A_bypass_inv Between Pad J12-5(24.638mm,24.257mm) on Multi-Layer And Track (36.698mm,27.761mm)(37.008mm,28.071mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.094mil|Location2.X=1604mil|Location1.Y=461mil|Location2.Y=565.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1454.094mil|Location2.X=1604mil|Location1.Y=461mil|Location2.Y=565.905mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J13-1(37.719mm,13.589mm) on Multi-Layer And Via (40.005mm,12.446mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2614.095mil|Location2.X=2720.905mil|Location1.Y=154.095mil|Location2.Y=360.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2614.095mil|Location2.X=2720.905mil|Location1.Y=154.095mil|Location2.Y=360.906mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J5-1(67.183mm,8.382mm) on Multi-Layer And Pad J14-1(68.326mm,4.699mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.134mil|Location2.X=2348.528mil|Location1.Y=1226.473mil|Location2.Y=1920.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.134mil|Location2.X=2348.528mil|Location1.Y=1226.473mil|Location2.Y=1920.449mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad L4-1(55.372mm,46.978mm) on Top Layer [Unplated] And Pad J1-5(58.801mm,32.004mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2215mil|Location2.X=2425.357mil|Location1.Y=1160mil|Location2.Y=714.525mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2215mil|Location2.X=2425.357mil|Location1.Y=1160mil|Location2.Y=714.525mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad J1-5(58.801mm,32.004mm) on Multi-Layer And Track (59.064mm,14.85mm)(59.064mm,15.609mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2704.095mil|Location2.X=2779.591mil|Location1.Y=1154.094mil|Location2.Y=1766.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2704.095mil|Location2.X=2779.591mil|Location1.Y=1154.094mil|Location2.Y=1766.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J15-1(69.469mm,30.099mm) on Multi-Layer And Pad Q4-1(70.175mm,44.218mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.667mil|Location2.X=2415mil|Location1.Y=760mil|Location2.Y=1260mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.667mil|Location2.X=2415mil|Location1.Y=760mil|Location2.Y=1260mil|Absolute=True">Un-Routed Net Constraint: Net VDD_LDO_OUT Between Track (44.01mm,21.844mm)(44.544mm,21.844mm) on Top Layer And Pad J1-6(58.801mm,29.464mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715mil|Location2.X=3005mil|Location1.Y=230mil|Location2.Y=615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715mil|Location2.X=3005mil|Location1.Y=230mil|Location2.Y=615mil|Absolute=True">Un-Routed Net Constraint: Net NetJ17_1 Between Pad J17-1(71.501mm,8.382mm) on Multi-Layer And Track (73.787mm,13.081mm)(74.422mm,12.446mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1385mil|Location2.X=1704.882mil|Location1.Y=615mil|Location2.Y=715mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1385mil|Location2.X=1704.882mil|Location1.Y=615mil|Location2.Y=715mil|Absolute=True">Un-Routed Net Constraint: Net NetC14_2 Between Pad J18-1(37.719mm,18.161mm) on Multi-Layer And Track (40.764mm,15.621mm)(40.767mm,15.618mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1385mil|Location2.X=2015.829mil|Location1.Y=260mil|Location2.Y=580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1385mil|Location2.X=2015.829mil|Location1.Y=260mil|Location2.Y=580mil|Absolute=True">Un-Routed Net Constraint: Net NetJ19_1 Between Pad J19-1(37.719mm,9.144mm) on Multi-Layer And Track (48.662mm,12.192mm)(49.911mm,13.441mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=403.52mil|Location2.X=801.48mil|Location1.Y=812.496mil|Location2.Y=1586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=403.52mil|Location2.X=801.48mil|Location1.Y=812.496mil|Location2.Y=1586mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad R8-1(11.176mm,21.339mm) on Top Layer And Pad J23-1(19.431mm,39.358mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=628.52mil|Location2.X=1489mil|Location1.Y=816mil|Location2.Y=1586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=628.52mil|Location2.X=1489mil|Location1.Y=816mil|Location2.Y=1586mil|Absolute=True">Un-Routed Net Constraint: Net VDD_LDO_OUT Between Pad J23-2(16.891mm,39.358mm) on Multi-Layer And Via (37.084mm,21.463mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.134mil|Location2.X=2259.866mil|Location1.Y=2163.614mil|Location2.Y=2605.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.134mil|Location2.X=2259.866mil|Location1.Y=2163.614mil|Location2.Y=2605.449mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad L3-2(55.499mm,64.377mm) on Top Layer [Unplated] And Pad J26-1(56.134mm,55.741mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.095mil|Location2.X=2882.307mil|Location1.Y=2137.212mil|Location2.Y=2231.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2334.095mil|Location2.X=2882.307mil|Location1.Y=2137.212mil|Location2.Y=2231.827mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J27-1(60.071mm,55.741mm) on Multi-Layer And Pad J28-2(72.009mm,55.487mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.811mil|Location2.X=1224mil|Location1.Y=311mil|Location2.Y=530.929mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.811mil|Location2.X=1224mil|Location1.Y=311mil|Location2.Y=530.929mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J2-8(22.161mm,12.859mm) on Multi-Layer And Via (30.353mm,8.636mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.008mil|Location2.X=2882.307mil|Location1.Y=2137.212mil|Location2.Y=2714.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.008mil|Location2.X=2882.307mil|Location1.Y=2137.212mil|Location2.Y=2714.11mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Q3-1(68.927mm,68.512mm) on Top Layer [Unplated] And Pad J28-2(72.009mm,55.487mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2746mil|Location2.X=2882.307mil|Location1.Y=1715.205mil|Location2.Y=2231.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2746mil|Location2.X=2882.307mil|Location1.Y=1715.205mil|Location2.Y=2231.827mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Q4-1(70.175mm,44.218mm) on Top Layer [Unplated] And Pad J28-2(72.009mm,55.487mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.134mil|Location2.X=2555.905mil|Location1.Y=1778.59mil|Location2.Y=2215.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.134mil|Location2.X=2555.905mil|Location1.Y=1778.59mil|Location2.Y=2215.425mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Pad L4-1(55.372mm,46.978mm) on Top Layer [Unplated] And Pad J29-1(64.135mm,55.487mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.472mil|Location2.X=1921.677mil|Location1.Y=1081.473mil|Location2.Y=1178.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.472mil|Location2.X=1921.677mil|Location1.Y=1081.473mil|Location2.Y=1178.527mil|Absolute=True">Un-Routed Net Constraint: Net NetJ4_2 Between Pad J4-2(4.699mm,29.083mm) on Multi-Layer And Pad R15-2(48.209mm,28.321mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2346mil|Location2.X=2675.905mil|Location1.Y=271mil|Location2.Y=360.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2346mil|Location2.X=2675.905mil|Location1.Y=271mil|Location2.Y=360.906mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (60.325mm,7.62mm) from Top Layer to Bottom Layer And Pad J5-1(67.183mm,8.382mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2472.339mil|Location2.X=2739.315mil|Location1.Y=2463.59mil|Location2.Y=2638.519mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2472.339mil|Location2.X=2739.315mil|Location1.Y=2463.59mil|Location2.Y=2638.519mil|Absolute=True">Un-Routed Net Constraint: Net NetL3_1 Between Pad L3-1(64.699mm,64.377mm) on Top Layer [Unplated] And Pad Q3-2(68.927mm,66.592mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2467.339mil|Location2.X=2704mil|Location1.Y=1715.205mil|Location2.Y=1920.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2467.339mil|Location2.X=2704mil|Location1.Y=1715.205mil|Location2.Y=1920.449mil|Absolute=True">Un-Routed Net Constraint: Net NetL4_2 Between Pad L4-2(64.572mm,46.978mm) on Top Layer [Unplated] And Pad Q4-2(68.255mm,44.218mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625mil|Location2.X=2890mil|Location1.Y=920mil|Location2.Y=1200mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625mil|Location2.X=2890mil|Location1.Y=920mil|Location2.Y=1200mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad Q2-7_8(69.215mm,25.908mm) on Top Layer And Track (70.866mm,27.94mm)(71.374mm,28.448mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456mil|Location2.X=2754.528mil|Location1.Y=511mil|Location2.Y=1049.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2456mil|Location2.X=2754.528mil|Location1.Y=511mil|Location2.Y=1049.527mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Via (63.119mm,13.716mm) from Top Layer to Bottom Layer And Pad Q2-7_8(69.215mm,25.908mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625mil|Location2.X=3005mil|Location1.Y=440mil|Location2.Y=615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2625mil|Location2.X=3005mil|Location1.Y=440mil|Location2.Y=615mil|Absolute=True">Un-Routed Net Constraint: Net NetJ17_1 Between Pad Q3-5_6(69.215mm,13.716mm) on Top Layer And Track (73.787mm,13.081mm)(74.422mm,12.446mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2695.472mil|Location2.X=3019mil|Location1.Y=596mil|Location2.Y=669.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2695.472mil|Location2.X=3019mil|Location1.Y=596mil|Location2.Y=669.528mil|Absolute=True">Un-Routed Net Constraint: Net NetJ7_1 Between Pad Q3-7_8(69.215mm,16.256mm) on Top Layer And Via (75.946mm,15.875mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2909.882mil|Location2.X=3340mil|Location1.Y=1020mil|Location2.Y=1505mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2909.882mil|Location2.X=3340mil|Location1.Y=1020mil|Location2.Y=1505mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad R17-2(76.451mm,28.448mm) on Top Layer And Track (82.296mm,20.066mm)(82.296mm,35.687mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2009.448mil|Location2.X=2297.008mil|Location1.Y=63.976mil|Location2.Y=325mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2009.448mil|Location2.X=2297.008mil|Location1.Y=63.976mil|Location2.Y=325mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Track (53.58mm,4.165mm)(54.948mm,2.797mm) on Top Layer And Pad R24-1(55.804mm,5.715mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2097.008mil|Location2.X=2574.537mil|Location1.Y=125mil|Location2.Y=329.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2097.008mil|Location2.X=2574.537mil|Location1.Y=125mil|Location2.Y=329.537mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Pad R24-1(55.804mm,5.715mm) on Top Layer And Track (62.853mm,5.83mm)(62.865mm,5.842mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.992mil|Location2.X=1940.552mil|Location1.Y=125mil|Location2.Y=263.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.992mil|Location2.X=1940.552mil|Location1.Y=125mil|Location2.Y=263.976mil|Absolute=True">Un-Routed Net Constraint: Net NetD1_2 Between Pad R25-1(44.526mm,5.715mm) on Top Layer And Track (46.75mm,4.165mm)(46.915mm,4.33mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=382.972mil|Location2.X=2094.73mil|Location1.Y=2361.705mil|Location2.Y=1102.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=382.972mil|Location2.X=2094.73mil|Location1.Y=2361.705mil|Location2.Y=1102.086mil|Absolute=True">Un-Routed Net Constraint: Net VCC_LDO_OUT Between Track (12.267mm,62.527mm)(12.267mm,62.777mm) on Top Layer And Track (50.465mm,25.654mm)(50.666mm,25.453mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=434.842mil|Location2.X=857.087mil|Location1.Y=2477.433mil|Location2.Y=2629.362mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=434.842mil|Location2.X=857.087mil|Location1.Y=2477.433mil|Location2.Y=2629.362mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (13.585mm,65.467mm)(14.045mm,65.926mm) on Top Layer And Track (19.23mm,63.996mm)(19.23mm,64.246mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=675.177mil|Location2.X=941.909mil|Location1.Y=2447.453mil|Location2.Y=2684.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=675.177mil|Location2.X=941.909mil|Location1.Y=2447.453mil|Location2.Y=2684.342mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (19.23mm,64.246mm)(19.69mm,64.705mm) on Top Layer And Track (21.384mm,65.642mm)(21.844mm,66.102mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.118mil|Location2.X=1705mil|Location1.Y=945mil|Location2.Y=825.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.118mil|Location2.X=1705mil|Location1.Y=945mil|Location2.Y=825.118mil|Absolute=True">Un-Routed Net Constraint: Net NetC14_1 Between Track (30.991mm,26.924mm)(31.372mm,26.543mm) on Top Layer And Track (40.767mm,18.418mm)(40.767mm,18.418mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165mil|Location2.X=2413.259mil|Location1.Y=570mil|Location2.Y=479.655mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165mil|Location2.X=2413.259mil|Location1.Y=570mil|Location2.Y=479.655mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (57.531mm,17.018mm) from Top Layer to Bottom Layer And Track (58.42mm,9.98mm)(58.757mm,9.643mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2389.882mil|Location2.X=2660mil|Location1.Y=625.118mil|Location2.Y=904.471mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2389.882mil|Location2.X=2660mil|Location1.Y=625.118mil|Location2.Y=904.471mil|Absolute=True">Un-Routed Net Constraint: Net NetJ6_1 Between Track (62.23mm,18.418mm)(63.243mm,18.418mm) on Top Layer And Track (65.024mm,20.273mm)(65.024mm,20.434mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2811.82mil|Location2.X=3170mil|Location1.Y=966.82mil|Location2.Y=1500mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2811.82mil|Location2.X=3170mil|Location1.Y=966.82mil|Location2.Y=1500mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Via (73.96mm,27.097mm) from Top Layer to Bottom Layer And Track (77.978mm,21.209mm)(77.978mm,35.56mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1166mil|Location2.X=1604mil|Location1.Y=311mil|Location2.Y=519mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1166mil|Location2.X=1604mil|Location1.Y=311mil|Location2.Y=519mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (30.353mm,8.636mm) from Top Layer to Bottom Layer And Via (40.005mm,12.446mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196mil|Location2.X=2514mil|Location1.Y=511mil|Location2.Y=584mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1196mil|Location2.X=2514mil|Location1.Y=511mil|Location2.Y=584mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Via (31.115mm,14.097mm) from Top Layer to Bottom Layer And Via (63.119mm,13.716mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1431mil|Location2.X=1604mil|Location1.Y=391mil|Location2.Y=874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1431mil|Location2.X=1604mil|Location1.Y=391mil|Location2.Y=874mil|Absolute=True">Un-Routed Net Constraint: Net VDD_LDO_OUT Between Via (37.084mm,21.463mm) from Top Layer to Bottom Layer And Via (40.005mm,10.668mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1546mil|Location2.X=2404mil|Location1.Y=271mil|Location2.Y=519mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1546mil|Location2.X=2404mil|Location1.Y=271mil|Location2.Y=519mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (40.005mm,12.446mm) from Top Layer to Bottom Layer And Via (60.325mm,7.62mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2356mil|Location2.X=3019mil|Location1.Y=471mil|Location2.Y=579mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2356mil|Location2.X=3019mil|Location1.Y=471mil|Location2.Y=579mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Via (60.579mm,12.7mm) from Top Layer to Bottom Layer And Via (75.946mm,13.97mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJD3YVJEDKIICFXIE2PQIU02DCOLAP3CUOIIDW5PORLRFL3K5H5IM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Modified Polygon (Allow modified: No), (Allow shelved: No)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2640mil|Location2.X=2935mil|Location1.Y=395mil|Location2.Y=580mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2640mil|Location2.X=2935mil|Location1.Y=395mil|Location2.Y=580mil|Absolute=True">Modified Polygon: Polygon Not Repour After Edit  (NETJ17_1_L01_P000) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2640mil|Location2.X=2935mil|Location1.Y=600mil|Location2.Y=785mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2640mil|Location2.X=2935mil|Location1.Y=600mil|Location2.Y=785mil|Absolute=True">Modified Polygon: Polygon Not Repour After Edit  (NETJ3_1_L01_P001) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDM4HJR2X4AOJIKCYW44U5LBKIUP1COR5PQK24HIPYHQADV0BLPRHB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=407.413mil|Location2.X=412.6mil|Location1.Y=2547.486mil|Location2.Y=2552.673mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=407.413mil|Location2.X=412.6mil|Location1.Y=2547.486mil|Location2.Y=2552.673mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.09mm &lt; 0.1mm) Between Pad C19-1(10.541mm,65.467mm) on Top Layer And Text "R34" (10.414mm,64.6mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.09mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=979.09mil|Location2.X=984.277mil|Location1.Y=2056.008mil|Location2.Y=2061.195mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=979.09mil|Location2.X=984.277mil|Location1.Y=2056.008mil|Location2.Y=2061.195mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.071mm &lt; 0.1mm) Between Pad C24-2(25.4mm,51.603mm) on Top Layer And Text "R36" (24.935mm,52.451mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.642mil|Location2.X=2781.267mil|Location1.Y=328.188mil|Location2.Y=331.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.642mil|Location2.X=2781.267mil|Location1.Y=328.188mil|Location2.Y=331.812mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad J17-1(71.501mm,8.382mm) on Multi-Layer And Text "J14" (67.043mm,6.998mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2663.149mil|Location2.X=2666.774mil|Location1.Y=333.668mil|Location2.Y=337.293mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2663.149mil|Location2.X=2666.774mil|Location1.Y=333.668mil|Location2.Y=337.293mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad J5-1(67.183mm,8.382mm) on Multi-Layer And Text "J14" (67.043mm,6.998mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1067.879mil|Location2.X=1073.066mil|Location1.Y=2056.008mil|Location2.Y=2061.195mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1067.879mil|Location2.X=1073.066mil|Location1.Y=2056.008mil|Location2.Y=2061.195mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.071mm &lt; 0.1mm) Between Pad R42-1(27.94mm,51.753mm) on Top Layer And Text "R36" (24.935mm,52.451mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=741.371mil|Location2.X=744.996mil|Location1.Y=2283.194mil|Location2.Y=2286.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=741.371mil|Location2.X=744.996mil|Location1.Y=2283.194mil|Location2.Y=2286.819mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad U3-5(19.177mm,58.314mm) on Top Layer And Text "C16" (19.177mm,59.055mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=711.543mil|Location2.X=715.168mil|Location1.Y=2323.181mil|Location2.Y=2326.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=711.543mil|Location2.X=715.168mil|Location1.Y=2323.181mil|Location2.Y=2326.806mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad U3-6(17.907mm,58.314mm) on Top Layer And Text "C16" (19.177mm,59.055mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=653.204mil|Location2.X=656.828mil|Location1.Y=2283.194mil|Location2.Y=2286.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=653.204mil|Location2.X=656.828mil|Location1.Y=2283.194mil|Location2.Y=2286.819mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad U3-7(16.637mm,58.314mm) on Top Layer And Text "C16" (19.177mm,59.055mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJTJSLZO02BYPCUHDW2MCSPC1EDG4DRI1IEMQJOLDLTFFX3UOYRB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=409.856mil|Location2.X=413.48mil|Location1.Y=2778.181mil|Location2.Y=2781.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=409.856mil|Location2.X=413.48mil|Location1.Y=2778.181mil|Location2.Y=2781.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (10.287mm,72.124mm) on Top Overlay And Text "C19" (9.271mm,69.596mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=353.181mil|Location2.X=356.806mil|Location1.Y=2868.201mil|Location2.Y=2871.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=353.181mil|Location2.X=356.806mil|Location1.Y=2868.201mil|Location2.Y=2871.825mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (10.287mm,72.124mm) on Top Overlay And Text "J21" (8.001mm,75.099mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=235.865mil|Location2.Y=239.489mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=235.865mil|Location2.Y=239.489mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (10.922mm,6.087mm) on Top Overlay And Text "IC1" (10.584mm,5.715mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=237.833mil|Location2.Y=241.458mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=237.833mil|Location2.Y=241.458mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (10.922mm,6.087mm) on Top Overlay And Text "IC1" (10.584mm,5.715mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=237.833mil|Location2.Y=241.458mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=421.533mil|Location2.X=425.158mil|Location1.Y=237.833mil|Location2.Y=241.458mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (10.922mm,6.087mm) on Top Overlay And Text "IC1" (10.584mm,5.715mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1226.475mil|Location2.X=1230.099mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1226.475mil|Location2.X=1230.099mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (31.242mm,46.507mm) on Top Overlay And Text "L2" (30.523mm,46.482mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1226.523mil|Location2.X=1230.148mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1226.523mil|Location2.X=1230.148mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (31.242mm,46.507mm) on Top Overlay And Text "L2" (30.523mm,46.482mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2498.172mil|Location2.X=2501.796mil|Location1.Y=786.523mil|Location2.Y=790.148mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2498.172mil|Location2.X=2501.796mil|Location1.Y=786.523mil|Location2.Y=790.148mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (65.024mm,20.273mm) on Top Overlay And Text "R16" (60.96mm,19.685mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2667.678mil|Location2.X=2671.303mil|Location1.Y=283.685mil|Location2.Y=287.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2667.678mil|Location2.X=2671.303mil|Location1.Y=283.685mil|Location2.Y=287.309mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (67.183mm,8.382mm) on Top Overlay And Text "J14" (67.043mm,6.998mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.642mil|Location2.X=2781.267mil|Location1.Y=288.938mil|Location2.Y=292.563mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.642mil|Location2.X=2781.267mil|Location1.Y=288.938mil|Location2.Y=292.563mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (71.501mm,8.382mm) on Top Overlay And Text "J14" (67.043mm,6.998mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=403.194mil|Location2.X=406.819mil|Location1.Y=1946.536mil|Location2.Y=1950.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=403.194mil|Location2.X=406.819mil|Location1.Y=1946.536mil|Location2.Y=1950.161mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (9.779mm,48.121mm) on Top Overlay And Text "R44" (10.287mm,52.027mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=408.675mil|Location2.X=412.3mil|Location1.Y=2441.536mil|Location2.Y=2445.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=408.675mil|Location2.X=412.3mil|Location1.Y=2441.536mil|Location2.Y=2445.161mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Arc (9.906mm,60.821mm) on Top Overlay And Text "R34" (10.414mm,64.6mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1798.514mil|Location2.X=1803.701mil|Location1.Y=765.642mil|Location2.Y=770.829mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1798.514mil|Location2.X=1803.701mil|Location1.Y=765.642mil|Location2.Y=770.829mil|Absolute=True">Silk To Silk Clearance Constraint: (0.091mm &lt; 0.1mm) Between Text "C14" (45.593mm,19.685mm) on Top Overlay And Track (45.738mm,14.643mm)(45.738mm,19.393mm) on Top Overlay Silk Text to Silk Clearance [0.091mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1799.087mil|Location2.X=1804.274mil|Location1.Y=765.638mil|Location2.Y=770.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1799.087mil|Location2.X=1804.274mil|Location1.Y=765.638mil|Location2.Y=770.825mil|Absolute=True">Silk To Silk Clearance Constraint: (0.09mm &lt; 0.1mm) Between Text "C14" (45.593mm,19.685mm) on Top Overlay And Track (45.738mm,19.393mm)(45.988mm,19.393mm) on Top Overlay Silk Text to Silk Clearance [0.09mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1885.726mil|Location2.X=1890.913mil|Location1.Y=765.638mil|Location2.Y=770.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1885.726mil|Location2.X=1890.913mil|Location1.Y=765.638mil|Location2.Y=770.825mil|Absolute=True">Silk To Silk Clearance Constraint: (0.09mm &lt; 0.1mm) Between Text "C14" (45.593mm,19.685mm) on Top Overlay And Track (47.738mm,19.393mm)(47.988mm,19.393mm) on Top Overlay Silk Text to Silk Clearance [0.09mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1886.298mil|Location2.X=1891.485mil|Location1.Y=765.642mil|Location2.Y=770.829mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1886.298mil|Location2.X=1891.485mil|Location1.Y=765.642mil|Location2.Y=770.829mil|Absolute=True">Silk To Silk Clearance Constraint: (0.091mm &lt; 0.1mm) Between Text "C14" (45.593mm,19.685mm) on Top Overlay And Track (47.988mm,14.643mm)(47.988mm,19.393mm) on Top Overlay Silk Text to Silk Clearance [0.091mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.872mil|Location2.X=1048.496mil|Location1.Y=2553.181mil|Location2.Y=2556.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.872mil|Location2.X=1048.496mil|Location1.Y=2553.181mil|Location2.Y=2556.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C15" (24.13mm,64.008mm) on Top Overlay And Text "R35" (26.586mm,63.881mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=953.418mil|Location2.X=958.605mil|Location1.Y=2563.929mil|Location2.Y=2569.116mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=953.418mil|Location2.X=958.605mil|Location1.Y=2563.929mil|Location2.Y=2569.116mil|Absolute=True">Silk To Silk Clearance Constraint: (0.079mm &lt; 0.1mm) Between Text "C15" (24.13mm,64.008mm) on Top Overlay And Track (24.021mm,65.304mm)(24.271mm,65.304mm) on Top Overlay Silk Text to Silk Clearance [0.079mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1021.855mil|Location2.X=1027.042mil|Location1.Y=2563.935mil|Location2.Y=2569.122mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1021.855mil|Location2.X=1027.042mil|Location1.Y=2563.935mil|Location2.Y=2569.122mil|Absolute=True">Silk To Silk Clearance Constraint: (0.078mm &lt; 0.1mm) Between Text "C15" (24.13mm,64.008mm) on Top Overlay And Track (26.021mm,65.304mm)(26.271mm,65.304mm) on Top Overlay Silk Text to Silk Clearance [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1031.698mil|Location2.X=1036.885mil|Location1.Y=2563.935mil|Location2.Y=2569.122mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1031.698mil|Location2.X=1036.885mil|Location1.Y=2563.935mil|Location2.Y=2569.122mil|Absolute=True">Silk To Silk Clearance Constraint: (0.078mm &lt; 0.1mm) Between Text "C15" (24.13mm,64.008mm) on Top Overlay And Track (26.271mm,65.304mm)(26.271mm,70.054mm) on Top Overlay Silk Text to Silk Clearance [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=467.406mil|Location2.X=472.594mil|Location1.Y=2744.077mil|Location2.Y=2749.265mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=467.406mil|Location2.X=472.594mil|Location1.Y=2744.077mil|Location2.Y=2749.265mil|Absolute=True">Silk To Silk Clearance Constraint: (0.001mm &lt; 0.1mm) Between Text "C18" (12.065mm,69.596mm) on Top Overlay And Text "C19" (9.271mm,69.596mm) on Top Overlay Silk Text to Silk Clearance [0.001mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=945.688mil|Location2.X=949.312mil|Location1.Y=1607.333mil|Location2.Y=1610.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=945.688mil|Location2.X=949.312mil|Location1.Y=1607.333mil|Location2.Y=1610.957mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C20" (21.252mm,40.132mm) on Top Overlay And Text "C33" (24.046mm,40.005mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=834.872mil|Location2.X=838.496mil|Location1.Y=1584.859mil|Location2.Y=1588.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=834.872mil|Location2.X=838.496mil|Location1.Y=1584.859mil|Location2.Y=1588.483mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C20" (21.252mm,40.132mm) on Top Overlay And Text "J23" (21.336mm,40.597mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=936.536mil|Location2.X=940.161mil|Location1.Y=1868.181mil|Location2.Y=1871.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=936.536mil|Location2.X=940.161mil|Location1.Y=1868.181mil|Location2.Y=1871.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Text "R40" (21.125mm,46.355mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1042.407mil|Location2.X=1047.593mil|Location1.Y=1847.407mil|Location2.Y=1852.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1042.407mil|Location2.X=1047.593mil|Location1.Y=1847.407mil|Location2.Y=1852.593mil|Absolute=True">Silk To Silk Clearance Constraint: (0.086mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Text "R42" (26.713mm,46.482mm) on Top Overlay Silk Text to Silk Clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.212mil|Location2.X=940.446mil|Location1.Y=1821.457mil|Location2.Y=1828.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.212mil|Location2.X=940.446mil|Location1.Y=1821.457mil|Location2.Y=1828.223mil|Absolute=True">Silk To Silk Clearance Constraint: (0.003mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (23.481mm,46.305mm)(23.731mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.003mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.212mil|Location2.X=940.446mil|Location1.Y=1821.457mil|Location2.Y=1828.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.212mil|Location2.X=940.446mil|Location1.Y=1821.457mil|Location2.Y=1828.223mil|Absolute=True">Silk To Silk Clearance Constraint: (0.003mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (23.731mm,41.555mm)(23.731mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.003mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.611mil|Location2.X=958.798mil|Location1.Y=1823.035mil|Location2.Y=1829.886mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.611mil|Location2.X=958.798mil|Location1.Y=1823.035mil|Location2.Y=1829.886mil|Absolute=True">Silk To Silk Clearance Constraint: (0.003mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (24.275mm,41.555mm)(24.275mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.003mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.611mil|Location2.X=958.798mil|Location1.Y=1823.035mil|Location2.Y=1829.886mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.611mil|Location2.X=958.798mil|Location1.Y=1823.035mil|Location2.Y=1829.886mil|Absolute=True">Silk To Silk Clearance Constraint: (0.003mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (24.275mm,46.305mm)(24.525mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.003mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.451mil|Location2.X=959.076mil|Location1.Y=1872.39mil|Location2.Y=1879.059mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.451mil|Location2.X=959.076mil|Location1.Y=1872.39mil|Location2.Y=1879.059mil|Absolute=True">Silk To Silk Clearance Constraint: (0.096mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (24.275mm,47.778mm)(24.275mm,52.528mm) on Top Overlay Silk Text to Silk Clearance [0.096mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.451mil|Location2.X=959.076mil|Location1.Y=1872.39mil|Location2.Y=1879.059mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=951.451mil|Location2.X=959.076mil|Location1.Y=1872.39mil|Location2.Y=1879.059mil|Absolute=True">Silk To Silk Clearance Constraint: (0.096mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (24.275mm,47.778mm)(24.525mm,47.778mm) on Top Overlay Silk Text to Silk Clearance [0.096mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1029.839mil|Location2.X=1033.464mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1029.839mil|Location2.X=1033.464mil|Location1.Y=1828.194mil|Location2.Y=1831.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (26.275mm,46.305mm)(26.525mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1030.708mil|Location2.X=1035.895mil|Location1.Y=1873.903mil|Location2.Y=1879.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1030.708mil|Location2.X=1035.895mil|Location1.Y=1873.903mil|Location2.Y=1879.09mil|Absolute=True">Silk To Silk Clearance Constraint: (0.087mm &lt; 0.1mm) Between Text "C24" (23.665mm,46.482mm) on Top Overlay And Track (26.275mm,47.778mm)(26.525mm,47.778mm) on Top Overlay Silk Text to Silk Clearance [0.087mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2422.156mil|Location2.Y=2425.781mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2422.156mil|Location2.Y=2425.781mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C25" (14.224mm,64.219mm) on Top Overlay And Track (15.405mm,61.569mm)(15.405mm,61.819mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2431.999mil|Location2.Y=2435.623mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2431.999mil|Location2.Y=2435.623mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C25" (14.224mm,64.219mm) on Top Overlay And Track (15.405mm,61.819mm)(20.155mm,61.819mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2479.852mil|Location2.Y=2483.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2479.852mil|Location2.Y=2483.477mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C25" (14.224mm,64.219mm) on Top Overlay And Track (15.405mm,62.871mm)(15.405mm,63.121mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2473.416mil|Location2.Y=2477.041mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=598.181mil|Location2.X=601.806mil|Location1.Y=2473.416mil|Location2.Y=2477.041mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C25" (14.224mm,64.219mm) on Top Overlay And Track (15.405mm,62.871mm)(20.155mm,62.871mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.407mil|Location2.X=1052.593mil|Location1.Y=2779.077mil|Location2.Y=2784.265mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.407mil|Location2.X=1052.593mil|Location1.Y=2779.077mil|Location2.Y=2784.265mil|Absolute=True">Silk To Silk Clearance Constraint: (0.086mm &lt; 0.1mm) Between Text "C28" (26.84mm,70.485mm) on Top Overlay And Text "C29" (23.792mm,70.485mm) on Top Overlay Silk Text to Silk Clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.872mil|Location2.X=1063.496mil|Location1.Y=1601.517mil|Location2.Y=1605.141mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.872mil|Location2.X=1063.496mil|Location1.Y=1601.517mil|Location2.Y=1605.141mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C32" (26.967mm,39.878mm) on Top Overlay And Text "C33" (24.046mm,40.005mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=798.188mil|Location2.X=801.812mil|Location1.Y=1906.504mil|Location2.Y=1910.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=798.188mil|Location2.X=801.812mil|Location1.Y=1906.504mil|Location2.Y=1910.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C34" (19.812mm,51.392mm) on Top Overlay And Text "R39" (19.939mm,48.471mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1344.071mil|Location2.X=1349.258mil|Location1.Y=2307.403mil|Location2.Y=2312.59mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1344.071mil|Location2.X=1349.258mil|Location1.Y=2307.403mil|Location2.Y=2312.59mil|Absolute=True">Silk To Silk Clearance Constraint: (0.085mm &lt; 0.1mm) Between Text "D2" (33.528mm,60.536mm) on Top Overlay And Text "R33" (33.655mm,58.504mm) on Top Overlay Silk Text to Silk Clearance [0.085mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.802mil|Location2.X=1333.427mil|Location1.Y=2381.51mil|Location2.Y=2385.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.802mil|Location2.X=1333.427mil|Location1.Y=2381.51mil|Location2.Y=2385.135mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "D2" (33.528mm,60.536mm) on Top Overlay And Track (33.823mm,59.465mm)(33.823mm,66.265mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1325.099mil|Location2.X=1328.724mil|Location1.Y=2334.618mil|Location2.Y=2338.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1325.099mil|Location2.X=1328.724mil|Location1.Y=2334.618mil|Location2.Y=2338.243mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "D2" (33.528mm,60.536mm) on Top Overlay And Track (33.823mm,59.465mm)(36.523mm,59.465mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1356.517mil|Location2.X=1360.141mil|Location1.Y=2071.51mil|Location2.Y=2075.135mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1356.517mil|Location2.X=1360.141mil|Location1.Y=2071.51mil|Location2.Y=2075.135mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "D3" (33.528mm,52.662mm) on Top Overlay And Text "R43" (33.655mm,55.583mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1358.181mil|Location2.X=1361.806mil|Location1.Y=2011.53mil|Location2.Y=2015.154mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1358.181mil|Location2.X=1361.806mil|Location1.Y=2011.53mil|Location2.Y=2015.154mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "D3" (33.528mm,52.662mm) on Top Overlay And Track (33.696mm,50.146mm)(35.196mm,51.646mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.802mil|Location2.X=1333.427mil|Location1.Y=2479.846mil|Location2.Y=2483.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.802mil|Location2.X=1333.427mil|Location1.Y=2479.846mil|Location2.Y=2483.47mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "L1" (33.528mm,63.034mm) on Top Overlay And Track (33.823mm,59.465mm)(33.823mm,66.265mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.204mil|Location2.X=1931.829mil|Location1.Y=1152.558mil|Location2.Y=1156.182mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.204mil|Location2.X=1931.829mil|Location1.Y=1152.558mil|Location2.Y=1156.182mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R15" (49.022mm,28.702mm) on Top Overlay And Track (44.209mm,29.321mm)(49.009mm,29.321mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.204mil|Location2.X=1931.829mil|Location1.Y=1140.747mil|Location2.Y=1144.371mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.204mil|Location2.X=1931.829mil|Location1.Y=1140.747mil|Location2.Y=1144.371mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R15" (49.022mm,28.702mm) on Top Overlay And Track (49.009mm,29.021mm)(49.009mm,29.321mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2398.204mil|Location2.X=2401.829mil|Location1.Y=813.181mil|Location2.Y=816.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2398.204mil|Location2.X=2401.829mil|Location1.Y=813.181mil|Location2.Y=816.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R16" (60.96mm,19.685mm) on Top Overlay And Text "R26" (58.082mm,19.685mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1356.517mil|Location2.X=1360.141mil|Location1.Y=2186.504mil|Location2.Y=2190.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1356.517mil|Location2.X=1360.141mil|Location1.Y=2186.504mil|Location2.Y=2190.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R33" (33.655mm,58.504mm) on Top Overlay And Text "R43" (33.655mm,55.583mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=448.181mil|Location2.X=451.806mil|Location1.Y=2541.504mil|Location2.Y=2545.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=448.181mil|Location2.X=451.806mil|Location1.Y=2541.504mil|Location2.Y=2545.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R34" (10.414mm,64.6mm) on Top Overlay And Track (11.416mm,64.542mm)(11.666mm,64.542mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=453.072mil|Location2.X=458.26mil|Location1.Y=2540.723mil|Location2.Y=2545.91mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=453.072mil|Location2.X=458.26mil|Location1.Y=2540.723mil|Location2.Y=2545.91mil|Absolute=True">Silk To Silk Clearance Constraint: (0.034mm &lt; 0.1mm) Between Text "R34" (10.414mm,64.6mm) on Top Overlay And Track (11.666mm,64.542mm)(11.666mm,69.292mm) on Top Overlay Silk Text to Silk Clearance [0.034mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.65mil|Location2.X=1046.653mil|Location1.Y=2506.428mil|Location2.Y=2513.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.65mil|Location2.X=1046.653mil|Location1.Y=2506.428mil|Location2.Y=2513.405mil|Absolute=True">Silk To Silk Clearance Constraint: (0.056mm &lt; 0.1mm) Between Text "R35" (26.586mm,63.881mm) on Top Overlay And Track (26.148mm,63.704mm)(26.398mm,63.704mm) on Top Overlay Silk Text to Silk Clearance [0.056mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.65mil|Location2.X=1046.653mil|Location1.Y=2506.428mil|Location2.Y=2513.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.65mil|Location2.X=1046.653mil|Location1.Y=2506.428mil|Location2.Y=2513.405mil|Absolute=True">Silk To Silk Clearance Constraint: (0.056mm &lt; 0.1mm) Between Text "R35" (26.586mm,63.881mm) on Top Overlay And Track (26.398mm,58.954mm)(26.398mm,63.704mm) on Top Overlay Silk Text to Silk Clearance [0.056mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1071.53mil|Location2.X=1075.154mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1071.53mil|Location2.X=1075.154mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R35" (26.586mm,63.881mm) on Top Overlay And Track (26.94mm,63.729mm)(27.24mm,63.729mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1131.51mil|Location2.X=1135.135mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1131.51mil|Location2.X=1135.135mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R35" (26.586mm,63.881mm) on Top Overlay And Track (28.64mm,63.729mm)(28.94mm,63.729mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1137.558mil|Location2.X=1141.182mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1137.558mil|Location2.X=1141.182mil|Location1.Y=2513.194mil|Location2.Y=2516.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R35" (26.586mm,63.881mm) on Top Overlay And Track (28.94mm,58.929mm)(28.94mm,63.729mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=972.402mil|Location2.X=977.589mil|Location1.Y=2102.421mil|Location2.Y=2107.608mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=972.402mil|Location2.X=977.589mil|Location1.Y=2102.421mil|Location2.Y=2107.608mil|Absolute=True">Silk To Silk Clearance Constraint: (0.086mm &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (24.322mm,53.468mm)(24.622mm,53.468mm) on Top Overlay Silk Text to Silk Clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=972.402mil|Location2.X=977.589mil|Location1.Y=2102.421mil|Location2.Y=2107.608mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=972.402mil|Location2.X=977.589mil|Location1.Y=2102.421mil|Location2.Y=2107.608mil|Absolute=True">Silk To Silk Clearance Constraint: (0.086mm &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (24.622mm,53.468mm)(24.622mm,58.268mm) on Top Overlay Silk Text to Silk Clearance [0.086mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=993.818mil|Location2.X=997.442mil|Location1.Y=2103.181mil|Location2.Y=2106.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=993.818mil|Location2.X=997.442mil|Location1.Y=2103.181mil|Location2.Y=2106.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (25.289mm,53.595mm)(25.289mm,58.395mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=999.865mil|Location2.X=1003.49mil|Location1.Y=2103.181mil|Location2.Y=2106.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=999.865mil|Location2.X=1003.49mil|Location1.Y=2103.181mil|Location2.Y=2106.806mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (25.289mm,53.595mm)(25.589mm,53.595mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1046.517mil|Location2.X=1050.141mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1046.517mil|Location2.X=1050.141mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (26.275mm,52.528mm)(26.525mm,52.528mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1046.517mil|Location2.X=1050.141mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1046.517mil|Location2.X=1050.141mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (26.525mm,47.778mm)(26.525mm,52.528mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.846mil|Location2.X=1063.47mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.846mil|Location2.X=1063.47mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (26.94mm,47.753mm)(26.94mm,52.553mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.846mil|Location2.X=1063.47mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1059.846mil|Location2.X=1063.47mil|Location1.Y=2069.859mil|Location2.Y=2073.483mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (26.94mm,52.553mm)(27.24mm,52.553mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1073.941mil|Location2.X=1081.186mil|Location1.Y=2103.109mil|Location2.Y=2109.926mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1073.941mil|Location2.X=1081.186mil|Location1.Y=2103.109mil|Location2.Y=2109.926mil|Absolute=True">Silk To Silk Clearance Constraint: (0.046mm &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (26.989mm,53.595mm)(27.289mm,53.595mm) on Top Overlay Silk Text to Silk Clearance [0.046mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1073.941mil|Location2.X=1081.186mil|Location1.Y=2103.109mil|Location2.Y=2109.926mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1073.941mil|Location2.X=1081.186mil|Location1.Y=2103.109mil|Location2.Y=2109.926mil|Absolute=True">Silk To Silk Clearance Constraint: (0.046mm &lt; 0.1mm) Between Text "R36" (24.935mm,52.451mm) on Top Overlay And Track (27.289mm,53.595mm)(27.289mm,58.395mm) on Top Overlay Silk Text to Silk Clearance [0.046mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=841.517mil|Location2.X=845.141mil|Location1.Y=2219.872mil|Location2.Y=2223.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=841.517mil|Location2.X=845.141mil|Location1.Y=2219.872mil|Location2.Y=2223.496mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R37" (21.082mm,56.345mm) on Top Overlay And Text "R38" (20.574mm,59.139mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=843.818mil|Location2.X=847.442mil|Location1.Y=2326.504mil|Location2.Y=2330.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=843.818mil|Location2.X=847.442mil|Location1.Y=2326.504mil|Location2.Y=2330.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R38" (20.574mm,59.139mm) on Top Overlay And Track (21.479mm,59.056mm)(21.479mm,63.856mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=848.181mil|Location2.X=851.806mil|Location1.Y=2326.504mil|Location2.Y=2330.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=848.181mil|Location2.X=851.806mil|Location1.Y=2326.504mil|Location2.Y=2330.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R38" (20.574mm,59.139mm) on Top Overlay And Track (21.479mm,59.056mm)(21.779mm,59.056mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=823.181mil|Location2.X=826.806mil|Location1.Y=1859.852mil|Location2.Y=1863.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=823.181mil|Location2.X=826.806mil|Location1.Y=1859.852mil|Location2.Y=1863.477mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R39" (19.939mm,48.471mm) on Top Overlay And Text "R40" (21.125mm,46.355mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=846.045mil|Location2.X=853.07mil|Location1.Y=1821.593mil|Location2.Y=1828.547mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=846.045mil|Location2.X=853.07mil|Location1.Y=1821.593mil|Location2.Y=1828.547mil|Absolute=True">Silk To Silk Clearance Constraint: (0.061mm &lt; 0.1mm) Between Text "R40" (21.125mm,46.355mm) on Top Overlay And Track (21.481mm,41.555mm)(21.481mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.061mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=856.126mil|Location2.X=859.75mil|Location1.Y=1823.598mil|Location2.Y=1827.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=856.126mil|Location2.X=859.75mil|Location1.Y=1823.598mil|Location2.Y=1827.223mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R40" (21.125mm,46.355mm) on Top Overlay And Track (21.481mm,46.305mm)(21.731mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=929.839mil|Location2.X=933.464mil|Location1.Y=1823.194mil|Location2.Y=1826.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=929.839mil|Location2.X=933.464mil|Location1.Y=1823.194mil|Location2.Y=1826.819mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R40" (21.125mm,46.355mm) on Top Overlay And Track (23.481mm,46.305mm)(23.731mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=930.168mil|Location2.X=933.792mil|Location1.Y=1823.523mil|Location2.Y=1827.147mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=930.168mil|Location2.X=933.792mil|Location1.Y=1823.523mil|Location2.Y=1827.147mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "R40" (21.125mm,46.355mm) on Top Overlay And Track (23.731mm,41.555mm)(23.731mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.65mil|Location2.X=1051.653mil|Location1.Y=1821.428mil|Location2.Y=1828.406mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.65mil|Location2.X=1051.653mil|Location1.Y=1821.428mil|Location2.Y=1828.406mil|Absolute=True">Silk To Silk Clearance Constraint: (0.056mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (26.275mm,46.305mm)(26.525mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.056mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.65mil|Location2.X=1051.653mil|Location1.Y=1821.428mil|Location2.Y=1828.406mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1044.65mil|Location2.X=1051.653mil|Location1.Y=1821.428mil|Location2.Y=1828.406mil|Absolute=True">Silk To Silk Clearance Constraint: (0.056mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (26.525mm,41.555mm)(26.525mm,46.305mm) on Top Overlay Silk Text to Silk Clearance [0.056mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1058.036mil|Location2.X=1063.223mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1058.036mil|Location2.X=1063.223mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True">Silk To Silk Clearance Constraint: (0.028mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (26.94mm,47.753mm)(26.94mm,52.553mm) on Top Overlay Silk Text to Silk Clearance [0.028mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1069.084mil|Location2.X=1074.271mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1069.084mil|Location2.X=1074.271mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True">Silk To Silk Clearance Constraint: (0.028mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (26.94mm,47.753mm)(27.24mm,47.753mm) on Top Overlay Silk Text to Silk Clearance [0.028mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.729mil|Location2.X=1140.916mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1135.729mil|Location2.X=1140.916mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True">Silk To Silk Clearance Constraint: (0.028mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (28.64mm,47.753mm)(28.94mm,47.753mm) on Top Overlay Silk Text to Silk Clearance [0.028mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1136.777mil|Location2.X=1141.964mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1136.777mil|Location2.X=1141.964mil|Location1.Y=1872.95mil|Location2.Y=1878.137mil|Absolute=True">Silk To Silk Clearance Constraint: (0.028mm &lt; 0.1mm) Between Text "R42" (26.713mm,46.482mm) on Top Overlay And Track (28.94mm,47.753mm)(28.94mm,52.553mm) on Top Overlay Silk Text to Silk Clearance [0.028mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=424.966mil|Location2.X=430.153mil|Location1.Y=2052.112mil|Location2.Y=2057.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=424.966mil|Location2.X=430.153mil|Location1.Y=2052.112mil|Location2.Y=2057.299mil|Absolute=True">Silk To Silk Clearance Constraint: (0.071mm &lt; 0.1mm) Between Text "R44" (10.287mm,52.027mm) on Top Overlay And Track (10.86mm,52.325mm)(11.16mm,52.325mm) on Top Overlay Silk Text to Silk Clearance [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=436.777mil|Location2.X=441.964mil|Location1.Y=2052.112mil|Location2.Y=2057.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=436.777mil|Location2.X=441.964mil|Location1.Y=2052.112mil|Location2.Y=2057.299mil|Absolute=True">Silk To Silk Clearance Constraint: (0.071mm &lt; 0.1mm) Between Text "R44" (10.287mm,52.027mm) on Top Overlay And Track (11.16mm,52.325mm)(11.16mm,57.125mm) on Top Overlay Silk Text to Silk Clearance [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=695.749mil|Location2.X=700.936mil|Location1.Y=1601.638mil|Location2.Y=1606.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=695.749mil|Location2.X=700.936mil|Location1.Y=1601.638mil|Location2.Y=1606.825mil|Absolute=True">Silk To Silk Clearance Constraint: (0.039mm &lt; 0.1mm) Between Text "U5" (17.569mm,40.894mm) on Top Overlay And Track (13.081mm,40.628mm)(20.701mm,40.628mm) on Top Overlay Silk Text to Silk Clearance [0.039mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=689.084mil|Location2.X=694.271mil|Location1.Y=1654.23mil|Location2.Y=1659.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=689.084mil|Location2.X=694.271mil|Location1.Y=1654.23mil|Location2.Y=1659.417mil|Absolute=True">Silk To Silk Clearance Constraint: (0.093mm &lt; 0.1mm) Between Text "U5" (17.569mm,40.894mm) on Top Overlay And Track (16.888mm,42.23mm)(19.688mm,42.23mm) on Top Overlay Silk Text to Silk Clearance [0.093mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDWUSHE4V0LMCCFNY1NZ0VNPLLGPHWBUI35XKOKPM0WGEWEP4ORKPH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2776.5mil|Location2.X=2810.973mil|Location1.Y=1086.5mil|Location2.Y=1138.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2776.5mil|Location2.X=2810.973mil|Location1.Y=1086.5mil|Location2.Y=1138.65mil|Absolute=True">Net Antennae: Track (70.866mm,27.94mm)(71.374mm,28.448mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.5mil|Location2.X=2925.973mil|Location1.Y=501.5mil|Location2.Y=553.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.5mil|Location2.X=2925.973mil|Location1.Y=501.5mil|Location2.Y=553.65mil|Absolute=True">Net Antennae: Track (73.787mm,13.081mm)(74.422mm,12.446mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041.5mil|Location2.X=3108.628mil|Location1.Y=1371.5mil|Location2.Y=1478.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3041.5mil|Location2.X=3108.628mil|Location1.Y=1371.5mil|Location2.Y=1478.748mil|Absolute=True">Net Antennae: Track (77.978mm,21.209mm)(77.978mm,35.56mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3211.5mil|Location2.X=3278.628mil|Location1.Y=1376.5mil|Location2.Y=1483.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3211.5mil|Location2.X=3278.628mil|Location1.Y=1376.5mil|Location2.Y=1483.748mil|Absolute=True">Net Antennae: Track (82.296mm,20.066mm)(82.296mm,35.687mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1192.5mil|Location2.X=1268.335mil|Location1.Y=522.5mil|Location2.Y=644.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1192.5mil|Location2.X=1268.335mil|Location1.Y=522.5mil|Location2.Y=644.456mil|Absolute=True">Net Antennae: Via (31.115mm,14.097mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1427.5mil|Location2.X=1503.335mil|Location1.Y=812.5mil|Location2.Y=934.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1427.5mil|Location2.X=1503.335mil|Location1.Y=812.5mil|Location2.Y=934.456mil|Absolute=True">Net Antennae: Via (37.084mm,21.463mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1427.5mil|Location2.X=1503.335mil|Location1.Y=997.5mil|Location2.Y=1119.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1427.5mil|Location2.X=1503.335mil|Location1.Y=997.5mil|Location2.Y=1119.456mil|Absolute=True">Net Antennae: Via (37.084mm,26.162mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2342.5mil|Location2.X=2418.336mil|Location1.Y=267.5mil|Location2.Y=389.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2342.5mil|Location2.X=2418.336mil|Location1.Y=267.5mil|Location2.Y=389.456mil|Absolute=True">Net Antennae: Via (60.325mm,7.62mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2352.5mil|Location2.X=2428.336mil|Location1.Y=342.5mil|Location2.Y=464.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2352.5mil|Location2.X=2428.336mil|Location1.Y=342.5mil|Location2.Y=464.456mil|Absolute=True">Net Antennae: Via (60.579mm,9.525mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2452.5mil|Location2.X=2528.336mil|Location1.Y=507.5mil|Location2.Y=629.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2452.5mil|Location2.X=2528.336mil|Location1.Y=507.5mil|Location2.Y=629.456mil|Absolute=True">Net Antennae: Via (63.119mm,13.716mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.5mil|Location2.X=3033.336mil|Location1.Y=592.5mil|Location2.Y=714.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\source.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.5mil|Location2.X=3033.336mil|Location1.Y=592.5mil|Location2.Y=714.456mil|Absolute=True">Net Antennae: Via (75.946mm,15.875mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

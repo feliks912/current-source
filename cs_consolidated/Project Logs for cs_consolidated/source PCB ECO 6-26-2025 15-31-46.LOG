@@ -1,0 +1,115 @@
+Removed Pin From Net: NetName=NetC1_2 Pin=Q3-1
+Removed Pin From Net: NetName=NetJ2_1 Pin=Q3-2
+Removed Pin From Net: NetName=NetJ3_1 Pin=Q3-7_8
+Change Component Designator: OldDesignator=C1 NewDesignator=C12_src
+Change Component Designator: OldDesignator=C2 NewDesignator=C13_src
+Change Component Designator: OldDesignator=C3 NewDesignator=C14_src
+Change Component Designator: OldDesignator=C4 NewDesignator=C1_src
+Change Component Designator: OldDesignator=C5 NewDesignator=C2_src
+Change Component Designator: OldDesignator=C6 NewDesignator=C3_src
+Change Component Designator: OldDesignator=C7 NewDesignator=C4_src
+Change Component Designator: OldDesignator=C8 NewDesignator=C5_src
+Change Component Designator: OldDesignator=C9 NewDesignator=C6_src
+Change Component Designator: OldDesignator=C10 NewDesignator=C7_src
+Change Component Designator: OldDesignator=C11 NewDesignator=C8_src
+Change Component Designator: OldDesignator=C12 NewDesignator=C9_src
+Change Component Designator: OldDesignator=C13 NewDesignator=C10_src
+Change Component Designator: OldDesignator=C14 NewDesignator=C11_src
+Change Component Designator: OldDesignator=D1 NewDesignator=D1_src
+Change Component Designator: OldDesignator=IC1 NewDesignator=IC1_src
+Change Component Designator: OldDesignator=IC2 NewDesignator=IC2_src
+Change Component Designator: OldDesignator=J1 NewDesignator=J5_src
+Change Component Designator: OldDesignator=J2 NewDesignator=J6_src
+Change Component Designator: OldDesignator=J3 NewDesignator=J7_src
+Change Component Designator: OldDesignator=J4 NewDesignator=J8_src
+Change Component Designator: OldDesignator=J5 NewDesignator=J9_src
+Change Component Designator: OldDesignator=J6 NewDesignator=J10_src
+Change Component Designator: OldDesignator=J7 NewDesignator=J11_src
+Change Component Designator: OldDesignator=J8 NewDesignator=J12_src
+Change Component Designator: OldDesignator=J9 NewDesignator=J13_src
+Change Component Designator: OldDesignator=J11 NewDesignator=J15_src
+Change Component Designator: OldDesignator=J12 NewDesignator=J16_src
+Change Component Designator: OldDesignator=J13 NewDesignator=J17_src
+Change Component Designator: OldDesignator=J14 NewDesignator=J18_src
+Change Component Designator: OldDesignator=J15 NewDesignator=J19_src
+Change Component Designator: OldDesignator=J16 NewDesignator=J2_src
+Change Component Designator: OldDesignator=J17 NewDesignator=J3_src
+Change Component Designator: OldDesignator=J18 NewDesignator=J4_src
+Change Component Designator: OldDesignator=J19 NewDesignator=J1_src
+Change Component Designator: OldDesignator=Q1 NewDesignator=Q1_src
+Change Component Designator: OldDesignator=Q3 NewDesignator=Q2_src
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q3_src
+Change Component Designator: OldDesignator=R1 NewDesignator=R14_src
+Change Component Designator: OldDesignator=R2 NewDesignator=R15_src
+Change Component Designator: OldDesignator=R3 NewDesignator=R16_src
+Change Component Designator: OldDesignator=R4 NewDesignator=R17_src
+Change Component Designator: OldDesignator=R5 NewDesignator=R18_src
+Change Component Designator: OldDesignator=R6 NewDesignator=R19_src
+Change Component Designator: OldDesignator=R7 NewDesignator=R20_src
+Change Component Designator: OldDesignator=R8 NewDesignator=R21_src
+Change Component Designator: OldDesignator=R9 NewDesignator=R22_src
+Change Component Designator: OldDesignator=R10 NewDesignator=R23_src
+Change Component Designator: OldDesignator=R11 NewDesignator=R24_src
+Change Component Designator: OldDesignator=R12 NewDesignator=R25_src
+Change Component Designator: OldDesignator=R13 NewDesignator=R26_src
+Change Component Designator: OldDesignator=R14 NewDesignator=R27_src
+Change Component Designator: OldDesignator=R15 NewDesignator=R28_src
+Change Component Designator: OldDesignator=R16 NewDesignator=R29_src
+Change Component Designator: OldDesignator=R17 NewDesignator=R30_src
+Change Component Designator: OldDesignator=R18 NewDesignator=R31_src
+Change Component Designator: OldDesignator=R19 NewDesignator=R32_src
+Change Component Designator: OldDesignator=R20 NewDesignator=R1_src
+Change Component Designator: OldDesignator=R21 NewDesignator=R2_src
+Change Component Designator: OldDesignator=R22 NewDesignator=R3_src
+Change Component Designator: OldDesignator=R23 NewDesignator=R4_src
+Change Component Designator: OldDesignator=R24 NewDesignator=R5_src
+Change Component Designator: OldDesignator=R25 NewDesignator=R6_src
+Change Component Designator: OldDesignator=R26 NewDesignator=R7_src
+Change Component Designator: OldDesignator=R27 NewDesignator=R8_src
+Change Component Designator: OldDesignator=R28 NewDesignator=R9_src
+Change Component Designator: OldDesignator=R29 NewDesignator=R10_src
+Change Component Designator: OldDesignator=R30 NewDesignator=R11_src
+Change Component Designator: OldDesignator=R31 NewDesignator=R12_src
+Change Component Designator: OldDesignator=R32 NewDesignator=R13_src
+Change Component Designator: OldDesignator=U1 NewDesignator=U1_src
+Change Component Designator: OldDesignator=U2 NewDesignator=U2_src
+Add Component: Footprint Not Found FP-5001-MFG
+Added Component: Designator=Q3(TRANS_BUK9K18-40E,115)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://assets.nexperia.com/documents/data-sheet/PHPT610030NPK.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://hr.mouser.com/ProductDetail/Nexperia/PHPT610030NPKX?qs=%252BRKXB2WKlSeoXKhT5DAScw%3D%3D"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin J14_src-1
+Added Pin To Net: NetName=NetC1_2 Pin=Q3-1
+Added Pin To Net: NetName=NetJ2_1 Pin=Q3-2
+Added Pin To Net: NetName=NetJ3_1 Pin=Q3-7_8
+Change Net Name : Old Net Name=NetC1_1 New Net Name=NetC12_src_1
+Change Net Name : Old Net Name=NetC1_2 New Net Name=NetC12_src_2
+Change Net Name : Old Net Name=NetC2_1 New Net Name=NetC13_src_1
+Change Net Name : Old Net Name=NetC3_1 New Net Name=NetC14_src_1
+Change Net Name : Old Net Name=NetC3_2 New Net Name=NetC14_src_2
+Change Net Name : Old Net Name=NetC14_1 New Net Name=NetC11_src_1
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetD1_src_2
+Change Net Name : Old Net Name=NetIC1_3 New Net Name=NetIC1_src_3
+Change Net Name : Old Net Name=NetIC2_3 New Net Name=NetIC2_src_3
+Change Net Name : Old Net Name=NetJ2_1 New Net Name=NetJ6_src_1
+Change Net Name : Old Net Name=NetJ3_1 New Net Name=NetJ7_src_1
+Change Net Name : Old Net Name=NetJ4_1 New Net Name=NetJ8_src_1
+Change Net Name : Old Net Name=NetJ7_1 New Net Name=NetJ11_src_1
+Change Net Name : Old Net Name=NetJ8_1 New Net Name=NetJ4_src_4
+Change Net Name : Old Net Name=NetJ12_1 New Net Name=NetJ16_src_1
+Change Net Name : Old Net Name=NetJ13_1 New Net Name=NetJ17_src_1
+Change Net Name : Old Net Name=NetJ15_1 New Net Name=NetJ19_src_1
+Change Net Name : Old Net Name=NetJ16_1 New Net Name=NetJ2_src_1
+Change Net Name : Old Net Name=NetJ16_3 New Net Name=NetJ2_src_3
+Change Net Name : Old Net Name=NetJ16_5 New Net Name=NetJ2_src_5
+Change Net Name : Old Net Name=NetJ16_9 New Net Name=NetJ2_src_9
+Change Net Name : Old Net Name=NetJ16_11 New Net Name=NetJ2_src_11
+Change Net Name : Old Net Name=NetJ16_13 New Net Name=NetJ2_src_13
+Change Net Name : Old Net Name=NetJ18_2 New Net Name=NetJ4_src_2
+Change Net Name : Old Net Name=NetR1_1 New Net Name=NetR14_src_1
+Change Net Name : Old Net Name=NetR11_2 New Net Name=NetR24_src_2
+Change Net Name : Old Net Name=NetR12_2 New Net Name=NetR25_src_2
+Change Net Name : Old Net Name=NetR17_1 New Net Name=NetR30_src_1
+Add Class Member: Failed to add class member : Component J14_src 5001
+Added Member To Class: ClassName=source Member=Component Q3 PHPT610030NPK

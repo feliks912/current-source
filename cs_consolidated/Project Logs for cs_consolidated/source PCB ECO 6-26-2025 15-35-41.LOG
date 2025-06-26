@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetC12_src_2 Pin=Q3-1
+Removed Pin From Net: NetName=NetJ6_src_1 Pin=Q3-2
+Removed Pin From Net: NetName=NetJ7_src_1 Pin=Q3-7_8
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q2_src
+Change Component Designator: OldDesignator=Q2_src NewDesignator=Q3_src
+Change Component Designator: OldDesignator=Q3_src NewDesignator=Q4_src
+Add Component: Footprint Not Found FP-5001-MFG
+Add Pin To Net: Unknown Pin: Pin J14_src-1
+Added Pin To Net: NetName=NetC12_src_2 Pin=Q3_src-1
+Added Pin To Net: NetName=NetJ6_src_1 Pin=Q3_src-2
+Added Pin To Net: NetName=NetJ7_src_1 Pin=Q3_src-7_8
+Change Net Name : Old Net Name=NetQ2_1 New Net Name=NetQ2_src_1
+Change Net Name : Old Net Name=NetQ2_3 New Net Name=NetQ2_src_3
+Add Class Member: Failed to add class member : Component J14_src 5001

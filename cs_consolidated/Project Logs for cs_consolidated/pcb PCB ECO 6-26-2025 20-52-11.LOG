@@ -1,0 +1,33 @@
+Added Pin To Net: NetName=GND Pin=D1_conn-2
+Added Pin To Net: NetName=GND Pin=D2_conn-2
+Added Pin To Net: NetName=GND Pin=J5_conn-2
+Added Pin To Net: NetName=GND Pin=J5_conn-3
+Added Pin To Net: NetName=GND Pin=J5_conn-4
+Added Pin To Net: NetName=GND Pin=J5_conn-5
+Added Pin To Net: NetName=GND Pin=J6_conn-2
+Added Pin To Net: NetName=GND Pin=J6_conn-3
+Added Pin To Net: NetName=GND Pin=J6_conn-4
+Added Pin To Net: NetName=GND Pin=J6_conn-5
+Added Pin To Net: NetName=GND Pin=J7_conn-1
+Added Pin To Net: NetName=GND Pin=J8_conn-1
+Added Pin To Net: NetName=GND Pin=R1_conn-1
+Added Pin To Net: NetName=GND Pin=R2_conn-1
+Added Pin To Net: NetName=NetD1_conn_1 Pin=D1_conn-1
+Added Pin To Net: NetName=NetD1_conn_1 Pin=F1_conn-2
+Added Pin To Net: NetName=NetD1_conn_1 Pin=J2_conn-1
+Added Pin To Net: NetName=NetD1_conn_1 Pin=R1_conn-2
+Added Net: Name=NetD1_conn_1
+Added Pin To Net: NetName=NetD2_conn_1 Pin=D2_conn-1
+Added Pin To Net: NetName=NetD2_conn_1 Pin=F2_conn-2
+Added Pin To Net: NetName=NetD2_conn_1 Pin=J4_conn-1
+Added Pin To Net: NetName=NetD2_conn_1 Pin=R2_conn-2
+Added Net: Name=NetD2_conn_1
+Added Pin To Net: NetName=NetF1_conn_1 Pin=F1_conn-1
+Added Pin To Net: NetName=NetF1_conn_1 Pin=J1_conn-1
+Added Pin To Net: NetName=NetF1_conn_1 Pin=J5_conn-1
+Added Net: Name=NetF1_conn_1
+Added Pin To Net: NetName=NetF2_conn_1 Pin=F2_conn-1
+Added Pin To Net: NetName=NetF2_conn_1 Pin=J3_conn-1
+Added Pin To Net: NetName=NetF2_conn_1 Pin=J6_conn-1
+Added Net: Name=NetF2_conn_1
+Added Class: Name=connectors

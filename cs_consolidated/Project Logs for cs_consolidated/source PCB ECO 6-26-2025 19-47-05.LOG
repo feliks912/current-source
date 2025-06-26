@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q3 NewDesignator=Q5
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q6
+Added Member To Class: ClassName=source Member=Component Q4 TIP31C

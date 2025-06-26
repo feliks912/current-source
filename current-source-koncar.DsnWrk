@@ -14,3 +14,5 @@ ProjectPath=mutliboard\multiboard.PrjMbd
 ProjectPath=..\..\..\..\Documents\AltiumLL\AltiumLL.PrjScr
 [Project7]
 ProjectPath=source\source.PrjPcb
+[Project8]
+ProjectPath=cs_consolidated\cs_consolidated.PrjPcb

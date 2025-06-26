@@ -1,0 +1,73 @@
+Change Component Designator: OldDesignator=C1 NewDesignator=C1_pwr
+Change Component Designator: OldDesignator=C2 NewDesignator=C2_pwr
+Change Component Designator: OldDesignator=C3 NewDesignator=C3_pwr
+Change Component Designator: OldDesignator=C5 NewDesignator=C4_pwr
+Change Component Designator: OldDesignator=C6 NewDesignator=C5_pwr
+Change Component Designator: OldDesignator=C7 NewDesignator=C6_pwr
+Change Component Designator: OldDesignator=C9 NewDesignator=C7_pwr
+Change Component Designator: OldDesignator=C10 NewDesignator=C8_pwr
+Change Component Designator: OldDesignator=C11 NewDesignator=C9_pwr
+Change Component Designator: OldDesignator=C12 NewDesignator=C10_pwr
+Change Component Designator: OldDesignator=C14 NewDesignator=C11_pwr
+Change Component Designator: OldDesignator=C15 NewDesignator=C12_pwr
+Change Component Designator: OldDesignator=C16 NewDesignator=C13_pwr
+Change Component Designator: OldDesignator=C17 NewDesignator=C14_pwr
+Change Component Designator: OldDesignator=C18 NewDesignator=C15_pwr
+Change Component Designator: OldDesignator=C19 NewDesignator=C16_pwr
+Change Component Designator: OldDesignator=C20 NewDesignator=C17_pwr
+Change Component Designator: OldDesignator=C21 NewDesignator=C18_pwr
+Change Component Designator: OldDesignator=C22 NewDesignator=C19_pwr
+Change Component Designator: OldDesignator=C24 NewDesignator=C20_pwr
+Change Component Designator: OldDesignator=D1 NewDesignator=D1_pwr
+Change Component Designator: OldDesignator=D2 NewDesignator=D2_pwr
+Change Component Designator: OldDesignator=F1 NewDesignator=F1_pwr
+Change Component Designator: OldDesignator=F2 NewDesignator=F2_pwr
+Change Component Designator: OldDesignator=J1 NewDesignator=J1_pwr
+Change Component Designator: OldDesignator=J2 NewDesignator=J2_pwr
+Change Component Designator: OldDesignator=J3 NewDesignator=J3_pwr
+Change Component Designator: OldDesignator=J4 NewDesignator=J4_pwr
+Change Component Designator: OldDesignator=J5 NewDesignator=J5_pwr
+Change Component Designator: OldDesignator=J6 NewDesignator=J6_pwr
+Change Component Designator: OldDesignator=J7 NewDesignator=J7_pwr
+Change Component Designator: OldDesignator=J8 NewDesignator=J8_pwr
+Change Component Designator: OldDesignator=J9 NewDesignator=J9_pwr
+Change Component Designator: OldDesignator=J10 NewDesignator=J10_pwr
+Change Component Designator: OldDesignator=L1 NewDesignator=L1_pwr
+Change Component Designator: OldDesignator=L2 NewDesignator=L2_pwr
+Change Component Designator: OldDesignator=L3 NewDesignator=L3_pwr
+Change Component Designator: OldDesignator=L4 NewDesignator=L4_pwr
+Change Component Designator: OldDesignator=Q1 NewDesignator=Q1_pwr
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q2_pwr
+Change Component Designator: OldDesignator=R1 NewDesignator=R1_pwr
+Change Component Designator: OldDesignator=R2 NewDesignator=R2_pwr
+Change Component Designator: OldDesignator=R3 NewDesignator=R3_pwr
+Change Component Designator: OldDesignator=R4 NewDesignator=R4_pwr
+Change Component Designator: OldDesignator=R5 NewDesignator=R5_pwr
+Change Component Designator: OldDesignator=R6 NewDesignator=R6_pwr
+Change Component Designator: OldDesignator=R7 NewDesignator=R7_pwr
+Change Component Designator: OldDesignator=R8 NewDesignator=R8_pwr
+Change Component Designator: OldDesignator=R9 NewDesignator=R9_pwr
+Change Component Designator: OldDesignator=R10 NewDesignator=R10_pwr
+Change Component Designator: OldDesignator=R11 NewDesignator=R11_pwr
+Change Component Designator: OldDesignator=R12 NewDesignator=R12_pwr
+Change Component Designator: OldDesignator=U1 NewDesignator=U1_pwr
+Change Component Designator: OldDesignator=U2 NewDesignator=U2_pwr
+Change Component Designator: OldDesignator=U3 NewDesignator=U3_pwr
+Change Component Designator: OldDesignator=Z1 NewDesignator=Z1_pwr
+Change Component Designator: OldDesignator=Z2 NewDesignator=Z2_pwr
+Change Net Name : Old Net Name=NetC2_1 New Net Name=NetC2_pwr_1
+Change Net Name : Old Net Name=NetC2_2 New Net Name=NetC2_pwr_2
+Change Net Name : Old Net Name=NetC11_1 New Net Name=NetC9_pwr_1
+Change Net Name : Old Net Name=NetC11_2 New Net Name=NetC9_pwr_2
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetD1_pwr_2
+Change Net Name : Old Net Name=NetD2_1 New Net Name=NetD2_pwr_1
+Change Net Name : Old Net Name=NetF1_1 New Net Name=NetF1_pwr_1
+Change Net Name : Old Net Name=NetF1_2 New Net Name=NetF1_pwr_2
+Change Net Name : Old Net Name=NetF2_1 New Net Name=NetF2_pwr_1
+Change Net Name : Old Net Name=NetF2_2 New Net Name=NetF2_pwr_2
+Change Net Name : Old Net Name=NetL3_1 New Net Name=NetL3_pwr_1
+Change Net Name : Old Net Name=NetL4_2 New Net Name=NetL4_pwr_2
+Change Net Name : Old Net Name=NetR1_1 New Net Name=NetR1_pwr_1
+Change Net Name : Old Net Name=NetR6_2 New Net Name=NetR6_pwr_2
+Change Net Name : Old Net Name=NetR7_1 New Net Name=NetR7_pwr_1
+Change Net Name : Old Net Name=NetR11_1 New Net Name=NetR11_pwr_1

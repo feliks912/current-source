@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=connectors.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=LDO.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=misc.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=power.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=connectors.SchDoc|FileName=source.SchDoc|SheetNumber=2

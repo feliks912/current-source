@@ -1,0 +1,63 @@
+Removed Pin From Net: NetName=NetC12_2 Pin=Q3-1
+Removed Pin From Net: NetName=NetJ6_1 Pin=Q3-2
+Removed Pin From Net: NetName=NetJ7_1 Pin=Q3-7_8
+Removed Member From Class: ClassName=source Member=C9
+Removed Member From Class: ClassName=misc Member=C13
+Removed Member From Class: ClassName=misc Member=C14
+Removed Member From Class: ClassName=source Member=J1
+Removed Member From Class: ClassName=power Member=J3
+Removed Member From Class: ClassName=misc Member=J6
+Removed Member From Class: ClassName=source Member=R6
+Removed Member From Class: ClassName=source Member=R11
+Removed Member From Class: ClassName=source Member=R13
+Removed Member From Class: ClassName=misc Member=R17
+Removed Member From Class: ClassName=misc Member=R18
+Removed Member From Class: ClassName=misc Member=R20
+Removed Member From Class: ClassName=misc Member=R21
+Removed Member From Class: ClassName=misc Member=R22
+Removed Member From Class: ClassName=misc Member=R23
+Removed Member From Class: ClassName=misc Member=R29
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q3
+Change Component Designator: OldDesignator=Q5 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q6 NewDesignator=Q5
+Change Component Designator: OldDesignator=Q7 NewDesignator=Q6
+Added Pin To Net: NetName=NetC12_2 Pin=Q3-1
+Added Pin To Net: NetName=NetJ6_1 Pin=Q3-2
+Added Pin To Net: NetName=NetJ7_1 Pin=Q3-7_8
+Added Member To Class: ClassName=misc Member=Component C2 1 µF
+Added Member To Class: ClassName=misc Member=Component C3 1 µF
+Added Member To Class: ClassName=misc Member=Component C4 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C6 1 µF
+Added Member To Class: ClassName=misc Member=Component C8 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C10 0.1 µF
+Added Member To Class: ClassName=misc Member=Component C11 0.1 µF
+Added Member To Class: ClassName=source Member=Component C12 0.1 µF
+Added Member To Class: ClassName=misc Member=Component J2 282837-2
+Added Member To Class: ClassName=source Member=Component J4 PRT-12807
+Added Member To Class: ClassName=source Member=Component J5 5001
+Added Member To Class: ClassName=source Member=Component J7 5001
+Added Member To Class: ClassName=source Member=Component J9 5001
+Added Member To Class: ClassName=source Member=Component J12 PRT-12807
+Added Member To Class: ClassName=source Member=Component J13 5001
+Added Member To Class: ClassName=source Member=Component J14 5001
+Added Member To Class: ClassName=source Member=Component J16 5001
+Added Member To Class: ClassName=source Member=Component J17 5001
+Added Member To Class: ClassName=power Member=Component J19 5001
+Added Member To Class: ClassName=source Member=Component Q3 PHPT610030NPK
+Added Member To Class: ClassName=misc Member=Component R3 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R4 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R5 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R7 10 kOhms
+Added Member To Class: ClassName=misc Member=Component R8 2.2 kOhms
+Added Member To Class: ClassName=misc Member=Component R9 2.2 kOhms
+Added Member To Class: ClassName=misc Member=Component R10 400
+Added Member To Class: ClassName=misc Member=Component R12 2 kOhms
+Added Member To Class: ClassName=source Member=Component R14 10 kOhms
+Added Member To Class: ClassName=source Member=Component R15 10 kOhms
+Added Member To Class: ClassName=source Member=Component R16 2.2 kOhms
+Added Member To Class: ClassName=source Member=Component R19 330 mOhms
+Added Member To Class: ClassName=source Member=Component R24 3.3 kOhms
+Added Member To Class: ClassName=source Member=Component R25 3.3 kOhms
+Added Member To Class: ClassName=source Member=Component R30 2 kOhms
+Added Member To Class: ClassName=source Member=Component R31 1 kOhms
+Added Member To Class: ClassName=source Member=Component R32 12 kOhms

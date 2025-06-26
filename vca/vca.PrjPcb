@@ -118,7 +118,7 @@ GenerateClassCluster=0
 DocumentUniqueId=HKUUGKJW
 
 [Document5]
-DocumentPath=source.PcbDoc
+DocumentPath=vca.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0

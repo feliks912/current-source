@@ -1,0 +1,59 @@
+Add Component: Footprint Not Found SOD2613X100N
+Add Component: Footprint Not Found SOD2613X100N
+Add Component: Footprint Not Found FUSC3216X90N
+Add Component: Footprint Not Found FUSC3216X90N
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-PCB_SMAFRA_HT-MFG
+Add Component: Footprint Not Found FP-PCB_SMAFRA_HT-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found FP-5001-MFG
+Add Component: Footprint Not Found RESC6332X65N
+Add Component: Footprint Not Found RESC6332X65N
+Add Pin To Net: Unknown Pin: Pin D1_conn-1
+Add Pin To Net: Unknown Pin: Pin D1_conn-2
+Add Pin To Net: Unknown Pin: Pin D2_conn-1
+Add Pin To Net: Unknown Pin: Pin D2_conn-2
+Add Pin To Net: Unknown Pin: Pin F1_conn-1
+Add Pin To Net: Unknown Pin: Pin F1_conn-2
+Add Pin To Net: Unknown Pin: Pin F2_conn-1
+Add Pin To Net: Unknown Pin: Pin F2_conn-2
+Add Pin To Net: Unknown Pin: Pin J1_conn-1
+Add Pin To Net: Unknown Pin: Pin J2_conn-1
+Add Pin To Net: Unknown Pin: Pin J3_conn-1
+Add Pin To Net: Unknown Pin: Pin J4_conn-1
+Add Pin To Net: Unknown Pin: Pin J5_conn-1
+Add Pin To Net: Unknown Pin: Pin J5_conn-2
+Add Pin To Net: Unknown Pin: Pin J5_conn-3
+Add Pin To Net: Unknown Pin: Pin J5_conn-4
+Add Pin To Net: Unknown Pin: Pin J5_conn-5
+Add Pin To Net: Unknown Pin: Pin J6_conn-1
+Add Pin To Net: Unknown Pin: Pin J6_conn-2
+Add Pin To Net: Unknown Pin: Pin J6_conn-3
+Add Pin To Net: Unknown Pin: Pin J6_conn-4
+Add Pin To Net: Unknown Pin: Pin J6_conn-5
+Add Pin To Net: Unknown Pin: Pin J7_conn-1
+Add Pin To Net: Unknown Pin: Pin J8_conn-1
+Add Pin To Net: Unknown Pin: Pin J14_src-1
+Add Pin To Net: Unknown Pin: Pin R1_conn-1
+Add Pin To Net: Unknown Pin: Pin R1_conn-2
+Add Pin To Net: Unknown Pin: Pin R2_conn-1
+Add Pin To Net: Unknown Pin: Pin R2_conn-2
+Add Class Member: Failed to add class member : Component D1_conn AQW05C-01FTG
+Add Class Member: Failed to add class member : Component D2_conn AQW05C-01FTG
+Add Class Member: Failed to add class member : Component F1_conn PTS120660V005
+Add Class Member: Failed to add class member : Component F2_conn PTS120660V005
+Add Class Member: Failed to add class member : Component J1_conn 5001
+Add Class Member: Failed to add class member : Component J2_conn 5001
+Add Class Member: Failed to add class member : Component J3_conn 5001
+Add Class Member: Failed to add class member : Component J4_conn 5001
+Add Class Member: Failed to add class member : Component J5_conn PCB.SMAFRA.HT
+Add Class Member: Failed to add class member : Component J6_conn PCB.SMAFRA.HT
+Add Class Member: Failed to add class member : Component J7_conn 5001
+Add Class Member: Failed to add class member : Component J8_conn 5001
+Add Class Member: Failed to add class member : Component J14_src 5001
+Add Class Member: Failed to add class member : Component R1_conn 50
+Add Class Member: Failed to add class member : Component R2_conn 50

@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=R1000-1
+Removed Pin From Net: NetName=Vref+ Pin=R1000-2
+Removed Member From Class: ClassName=misc Member=R1000

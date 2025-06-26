@@ -1,0 +1,18 @@
+Change Component Designator: OldDesignator=D1_conn NewDesignator=D4
+Change Component Designator: OldDesignator=D2_conn NewDesignator=D5
+Change Component Designator: OldDesignator=F1_conn NewDesignator=F3
+Change Component Designator: OldDesignator=F2_conn NewDesignator=F4
+Change Component Designator: OldDesignator=J1_conn NewDesignator=J29
+Change Component Designator: OldDesignator=J2_conn NewDesignator=J30
+Change Component Designator: OldDesignator=J3_conn NewDesignator=J31
+Change Component Designator: OldDesignator=J4_conn NewDesignator=J32
+Change Component Designator: OldDesignator=J5_conn NewDesignator=J33
+Change Component Designator: OldDesignator=J6_conn NewDesignator=J34
+Change Component Designator: OldDesignator=J7_conn NewDesignator=J35
+Change Component Designator: OldDesignator=J8_conn NewDesignator=J36
+Change Component Designator: OldDesignator=R1_conn NewDesignator=R45
+Change Component Designator: OldDesignator=R2_conn NewDesignator=R46
+Change Net Name : Old Net Name=NetD1_conn_1 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetD2_conn_1 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetF1_conn_1 New Net Name=NetF3_1
+Change Net Name : Old Net Name=NetF2_conn_1 New Net Name=NetF4_1

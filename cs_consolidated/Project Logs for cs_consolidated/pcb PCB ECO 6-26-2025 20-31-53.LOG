@@ -1,0 +1,142 @@
+Added Pin To Net: NetName=GND Pin=C1_pwr-1
+Added Pin To Net: NetName=GND Pin=C3_pwr-1
+Added Pin To Net: NetName=Vcc Pin=C3_pwr-2
+Added Pin To Net: NetName=GND Pin=C4_pwr-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C4_pwr-2
+Added Pin To Net: NetName=GND Pin=C5_pwr-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=C5_pwr-2
+Added Pin To Net: NetName=GND Pin=C6_pwr-1
+Added Pin To Net: NetName=Vdd Pin=C6_pwr-2
+Added Pin To Net: NetName=GND Pin=C7_pwr-1
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=C7_pwr-2
+Added Pin To Net: NetName=GND Pin=C8_pwr-1
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=C8_pwr-2
+Added Pin To Net: NetName=GND Pin=C10_pwr-1
+Added Pin To Net: NetName=GND Pin=C11_pwr-2
+Added Pin To Net: NetName=Vcc Pin=C12_pwr-1
+Added Pin To Net: NetName=GND Pin=C12_pwr-2
+Added Pin To Net: NetName=Vcc Pin=C13_pwr-1
+Added Pin To Net: NetName=GND Pin=C13_pwr-2
+Added Pin To Net: NetName=GND Pin=C14_pwr-1
+Added Pin To Net: NetName=Vcc Pin=C14_pwr-2
+Added Pin To Net: NetName=GND Pin=C15_pwr-1
+Added Pin To Net: NetName=Vcc Pin=C15_pwr-2
+Added Pin To Net: NetName=GND Pin=C16_pwr-1
+Added Pin To Net: NetName=Vdd Pin=C16_pwr-2
+Added Pin To Net: NetName=GND Pin=C17_pwr-1
+Added Pin To Net: NetName=Vdd Pin=C17_pwr-2
+Added Pin To Net: NetName=Vdd Pin=C18_pwr-1
+Added Pin To Net: NetName=GND Pin=C18_pwr-2
+Added Pin To Net: NetName=Vdd Pin=C19_pwr-1
+Added Pin To Net: NetName=GND Pin=C19_pwr-2
+Added Pin To Net: NetName=GND Pin=C20_pwr-1
+Added Pin To Net: NetName=GND Pin=D1_pwr-1
+Added Pin To Net: NetName=GND Pin=D2_pwr-2
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=J2_pwr-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=J3_pwr-2
+Added Pin To Net: NetName=Vcc Pin=J3_pwr-3
+Added Pin To Net: NetName=Vdd Pin=J4_pwr-1
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=J4_pwr-2
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=J5_pwr-1
+Added Pin To Net: NetName=Vcc Pin=J7_pwr-1
+Added Pin To Net: NetName=GND Pin=J8_pwr-1
+Added Pin To Net: NetName=GND Pin=J9_pwr-2
+Added Pin To Net: NetName=Vdd Pin=J10_pwr-1
+Added Pin To Net: NetName=Vcc Pin=L1_pwr-1
+Added Pin To Net: NetName=Vdd Pin=L2_pwr-1
+Added Pin To Net: NetName=Vcc Pin=L3_pwr-2
+Added Pin To Net: NetName=Vdd Pin=L4_pwr-1
+Added Pin To Net: NetName=GND Pin=Q1_pwr-1
+Added Pin To Net: NetName=GND Pin=Q2_pwr-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=R2_pwr-1
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=R12_pwr-1
+Added Pin To Net: NetName=VCC_LDO_OUT Pin=U2_pwr-1
+Added Pin To Net: NetName=GND Pin=U2_pwr-2
+Added Pin To Net: NetName=Vcc Pin=U2_pwr-3
+Added Pin To Net: NetName=Vcc Pin=U2_pwr-5
+Added Pin To Net: NetName=GND Pin=U3_pwr-1
+Added Pin To Net: NetName=Vdd Pin=U3_pwr-2
+Added Pin To Net: NetName=Vdd Pin=U3_pwr-3
+Added Pin To Net: NetName=VDD_LDO_OUT Pin=U3_pwr-5
+Added Pin To Net: NetName=Vcc Pin=Z1_pwr-1
+Added Pin To Net: NetName=GND Pin=Z1_pwr-2
+Added Pin To Net: NetName=GND Pin=Z2_pwr-1
+Added Pin To Net: NetName=Vdd Pin=Z2_pwr-2
+Added Pin To Net: NetName=NetC2_pwr_1 Pin=C2_pwr-1
+Added Pin To Net: NetName=NetC2_pwr_1 Pin=R4_pwr-1
+Added Pin To Net: NetName=NetC2_pwr_1 Pin=R5_pwr-2
+Added Pin To Net: NetName=NetC2_pwr_1 Pin=U1_pwr-6
+Added Net: Name=NetC2_pwr_1
+Added Pin To Net: NetName=NetC2_pwr_2 Pin=C2_pwr-2
+Added Pin To Net: NetName=NetC2_pwr_2 Pin=J1_pwr-1
+Added Pin To Net: NetName=NetC2_pwr_2 Pin=R5_pwr-1
+Added Pin To Net: NetName=NetC2_pwr_2 Pin=R6_pwr-1
+Added Pin To Net: NetName=NetC2_pwr_2 Pin=U1_pwr-7
+Added Net: Name=NetC2_pwr_2
+Added Pin To Net: NetName=NetC9_pwr_1 Pin=C9_pwr-1
+Added Pin To Net: NetName=NetC9_pwr_1 Pin=R8_pwr-1
+Added Pin To Net: NetName=NetC9_pwr_1 Pin=R9_pwr-2
+Added Pin To Net: NetName=NetC9_pwr_1 Pin=U1_pwr-2
+Added Net: Name=NetC9_pwr_1
+Added Pin To Net: NetName=NetC9_pwr_2 Pin=C9_pwr-2
+Added Pin To Net: NetName=NetC9_pwr_2 Pin=J6_pwr-1
+Added Pin To Net: NetName=NetC9_pwr_2 Pin=R7_pwr-2
+Added Pin To Net: NetName=NetC9_pwr_2 Pin=R9_pwr-1
+Added Pin To Net: NetName=NetC9_pwr_2 Pin=U1_pwr-1
+Added Net: Name=NetC9_pwr_2
+Added Pin To Net: NetName=NetD1_pwr_2 Pin=D1_pwr-2
+Added Pin To Net: NetName=NetD1_pwr_2 Pin=R1_pwr-2
+Added Pin To Net: NetName=NetD1_pwr_2 Pin=R3_pwr-2
+Added Net: Name=NetD1_pwr_2
+Added Pin To Net: NetName=NetD2_pwr_1 Pin=D2_pwr-1
+Added Pin To Net: NetName=NetD2_pwr_1 Pin=R10_pwr-1
+Added Pin To Net: NetName=NetD2_pwr_1 Pin=R11_pwr-2
+Added Net: Name=NetD2_pwr_1
+Added Pin To Net: NetName=NetF1_pwr_1 Pin=F1_pwr-1
+Added Pin To Net: NetName=NetF1_pwr_1 Pin=J9_pwr-1
+Added Net: Name=NetF1_pwr_1
+Added Pin To Net: NetName=NetF1_pwr_2 Pin=F1_pwr-2
+Added Pin To Net: NetName=NetF1_pwr_2 Pin=Q1_pwr-3
+Added Net: Name=NetF1_pwr_2
+Added Pin To Net: NetName=NetF2_pwr_1 Pin=F2_pwr-1
+Added Pin To Net: NetName=NetF2_pwr_1 Pin=J9_pwr-3
+Added Net: Name=NetF2_pwr_1
+Added Pin To Net: NetName=NetF2_pwr_2 Pin=F2_pwr-2
+Added Pin To Net: NetName=NetF2_pwr_2 Pin=Q2_pwr-3
+Added Net: Name=NetF2_pwr_2
+Added Pin To Net: NetName=NetL3_pwr_1 Pin=L3_pwr-1
+Added Pin To Net: NetName=NetL3_pwr_1 Pin=Q1_pwr-2
+Added Net: Name=NetL3_pwr_1
+Added Pin To Net: NetName=NetL4_pwr_2 Pin=L4_pwr-2
+Added Pin To Net: NetName=NetL4_pwr_2 Pin=Q2_pwr-2
+Added Net: Name=NetL4_pwr_2
+Added Pin To Net: NetName=NetR1_pwr_1 Pin=R1_pwr-1
+Added Pin To Net: NetName=NetR1_pwr_1 Pin=R2_pwr-2
+Added Pin To Net: NetName=NetR1_pwr_1 Pin=U1_pwr-5
+Added Net: Name=NetR1_pwr_1
+Added Pin To Net: NetName=NetR6_pwr_2 Pin=R6_pwr-2
+Added Pin To Net: NetName=NetR6_pwr_2 Pin=U2_pwr-4
+Added Net: Name=NetR6_pwr_2
+Added Pin To Net: NetName=NetR7_pwr_1 Pin=R7_pwr-1
+Added Pin To Net: NetName=NetR7_pwr_1 Pin=U3_pwr-4
+Added Net: Name=NetR7_pwr_1
+Added Pin To Net: NetName=NetR11_pwr_1 Pin=R11_pwr-1
+Added Pin To Net: NetName=NetR11_pwr_1 Pin=R12_pwr-2
+Added Pin To Net: NetName=NetR11_pwr_1 Pin=U1_pwr-3
+Added Net: Name=NetR11_pwr_1
+Added Pin To Net: NetName=VCC_filtered Pin=C1_pwr-2
+Added Pin To Net: NetName=VCC_filtered Pin=C11_pwr-1
+Added Pin To Net: NetName=VCC_filtered Pin=L1_pwr-2
+Added Pin To Net: NetName=VCC_filtered Pin=R3_pwr-1
+Added Pin To Net: NetName=VCC_filtered Pin=R4_pwr-2
+Added Pin To Net: NetName=VCC_filtered Pin=U1_pwr-8
+Added Net: Name=VCC_filtered
+Added Pin To Net: NetName=VDD_filtered Pin=C10_pwr-2
+Added Pin To Net: NetName=VDD_filtered Pin=C20_pwr-2
+Added Pin To Net: NetName=VDD_filtered Pin=L2_pwr-2
+Added Pin To Net: NetName=VDD_filtered Pin=R8_pwr-2
+Added Pin To Net: NetName=VDD_filtered Pin=R10_pwr-2
+Added Pin To Net: NetName=VDD_filtered Pin=U1_pwr-4
+Added Net: Name=VDD_filtered
+Added Class: Name=LDO
+Added Class: Name=power
