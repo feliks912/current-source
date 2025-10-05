@@ -1,0 +1,6 @@
+Record=TopLevelDocument|FileName=LDO.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=misc_A.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=misc_B.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=power.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=source_A.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=LDO.SchDoc|FileName=source_B.SchDoc|SheetNumber=5
