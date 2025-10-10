@@ -1,0 +1,543 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD24\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10/10/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:00:39</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc" class="file"><acronym title="C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc">C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">8</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">34</td></tr>
+</table>
+</td>
+</table><a name="ID2IVMB0FCXTN5OVJ1NKGN3NSPYMTRQV3CDRXB0OPI1DJ1NNFHMGE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQ55IHK2HJ22SHXWHD4O5WD5EDFQWLEE2SQ4LIAK4HVMYVMW1SGIF">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFIE5F5WQDSBPOCAFU2BOM50XGGOI3WCZ1P1XYKEZKTNLBGLEH1ZJ">Clearance Constraint (Gap=8mil) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLRXYHZ4AJKDAOJF1NHYJNK0TVOLJPSZL5H4WUFPYFCBZHSBYG21J">Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEX440HJALHCFPJYGKJKFJQGCSNL2KT2TG4SBHXCSQR1M4TOZCQWJ">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSKKPBKEWANFJJH2BLI0HMOQEOBDSMLY4J05B1SLJ4ZNB0VDXOI4F">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1HUCGZ44TXMQGJEPSHLQJLW2TB3KEYTFLR2CZQIH5FUIGQOUHFHP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDERTUXYME1LQTGFTBH0QCP0WEIKG3WFTMN02OWGP4N0MMD1R3UGHE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSQCMDE3NRWVCWAKNDQPP3S4TKWYYT1VL1W4IPMYGSXVXF03LJK">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJHQUKTNTSRK5EZPRRISFP1SWKLHFAYVMUFKMRCG0WX2ZYY2D4QNH">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGQYPFJK4EKGM43GEAR5IXR1GLXVDARU1KP4OZ05N11MCYLAOHM">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVW1YRVKM5KE0P0ENVQKMJX2LIOM32MIVJVVGNRMU0BVYDAR04JXJ">Routing Via (MinHoleWidth=7.874mil) (MaxHoleWidth=39.37mil) (PreferredHoleWidth=19.685mil) (MinWidth=13.78mil) (MaxWidth=78.74mil) (PreferedWidth=39.37mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKUWQUQSPJ45KNYQF3GSHHGVRBHR2GGSJS1Q42UC5COF4FKUUUFBB">Differential Pairs Uncoupled Length using the Gap Constraints (Min=10mil) (Max=10mil) (Prefered=10mil)  and Width Constraints (Min=15mil) (Max=15mil) (Prefered=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH44EXLCWVEDXFRM5TMQ3VK1WEKVF14DHUP2CERCU1NMNJXR1MKCM">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCVS2OFT4ZPFBETJAPLDTN3PERPKMLLZ4CBSCC0IA4HZC00LDYWGL">Minimum Annular Ring (Minimum=5.118mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIOF0YD2SKCISDFQADK3GH5GFXHJQVUOHHUIVOXGZXGANGEFLMXSK">Acute Angle Constraint (Minimum=85.000) (All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGYXXQVFFEAN4NSJBUXWVIDFW3M0XGQYXKEZP0ICBC42DJ1NZ5OXH">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFE4J2VTA2AVSBG3JVJDKLI0C5EKZ0C1ZD12NQ4DCQL2NMW5XX4RE">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFX4SEVVLRUBKB5VE0P414R5UJI4WFWRXDV52IIDAP325DZPUIXYH">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS5TFU302B0FIGIBTS5W35C4ZBNMCZUP4DEXATYP10PPKLUW2ALKE">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5OPGS2EWU0U2FHNW05KLPVWADIRI1XW5SM3UQHCU4HEGVFBCYB0F">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYFXC3TQVNU35EDI5WLBFSTNEZOA3LMOW5YL5MYOZVFZ3UMC35Q4E">Silk to Silk (Clearance=3.937mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSQA41ZRJIJNSQJXRFCMRZCP1CMMOOQT3M34AOD4IJNG4SHSHQXJ">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWKLEN4QIYTZAPHSCRFXJVJY0NLOBAN340Q5OLTPLEXEF1IECN2N">Board Clearance Constraint (Gap=0mil) (All AND NOT InComponentClass('OutOfBoardComponents'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0DTJTHOMLNSBN2QLCOOPA40YDB5G2IFLIWN5WVHU3FJTC014ZPDH">Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDORWNR2ZO2DBQDWA3GP0AJG2ELNUFAPW42K0JVSLML2M145PQ2YXG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">8</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXBOQS3LS3RKSJ53BV0HQAJ0YSHRLQ3Z0MQRYC330IQ4MACZK5B">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2FR2YWJOOHGGPLXRU5IH1F5RWMA2D2UAUVAEJQL1BT2FY5GLLI0L">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTTFGR3SEEVMMPFNMMRLAXZKX3BYQTQXIROOEZ3BBVROTOJS12ZOG">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">34</td>
+</tr>
+</table><br><a name="IDKTCWBFTWYEF1BHVMZWLZMGZTYH2SLARGQUC0CXHV5I1NDTTSW0EJ"><h2>Rule Violations</h2></a><a name="IDSKKPBKEWANFJJH2BLI0HMOQEOBDSMLY4J05B1SLJ4ZNB0VDXOI4F"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6222.361mil|Location2.X=6254.564mil|Location1.Y=3422.361mil|Location2.Y=3436.694mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6222.361mil|Location2.X=6254.564mil|Location1.Y=3422.361mil|Location2.Y=3436.694mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad Q2-5_6(4445mil,3400mil) on Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6192.833mil|Location2.X=6225.037mil|Location1.Y=3392.833mil|Location2.Y=3407.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6192.833mil|Location2.X=6225.037mil|Location1.Y=3392.833mil|Location2.Y=3407.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Region (0 hole(s)) Top Layer And Track (4445mil,3400mil)(4650mil,3400mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIOF0YD2SKCISDFQADK3GH5GFXHJQVUOHHUIVOXGZXGANGEFLMXSK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Acute Angle Constraint (Minimum=85.000) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5128.145mil|Location2.X=5147.645mil|Location1.Y=3299.5mil|Location2.Y=3319mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5128.145mil|Location2.X=5147.645mil|Location1.Y=3299.5mil|Location2.Y=3319mil|Absolute=True">Acute Angle Constraint: (78.750 &lt; 85.000) Polygon Region (327 hole(s)) Top Layer (Angle = 78.750)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.256mil|Location2.X=5067.756mil|Location1.Y=3299.5mil|Location2.Y=3319mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.256mil|Location2.X=5067.756mil|Location1.Y=3299.5mil|Location2.Y=3319mil|Absolute=True">Acute Angle Constraint: (78.750 &lt; 85.000) Polygon Region (327 hole(s)) Top Layer (Angle = 78.750)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5128.145mil|Location2.X=5147.645mil|Location1.Y=1554.5mil|Location2.Y=1574mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5128.145mil|Location2.X=5147.645mil|Location1.Y=1554.5mil|Location2.Y=1574mil|Absolute=True">Acute Angle Constraint: (78.750 &lt; 85.000) Polygon Region (327 hole(s)) Top Layer (Angle = 78.750)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.256mil|Location2.X=5067.756mil|Location1.Y=1554.5mil|Location2.Y=1574mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5048.256mil|Location2.X=5067.756mil|Location1.Y=1554.5mil|Location2.Y=1574mil|Absolute=True">Acute Angle Constraint: (78.750 &lt; 85.000) Polygon Region (327 hole(s)) Top Layer (Angle = 78.750)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.635mil|Location2.X=6314.135mil|Location1.Y=4399.108mil|Location2.Y=4418.608mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6294.635mil|Location2.X=6314.135mil|Location1.Y=4399.108mil|Location2.Y=4418.608mil|Absolute=True">Acute Angle Constraint: (8.611 &lt; 85.000) Polygon Region (327 hole(s)) Top Layer (Angle = 8.611)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4861.594mil|Location2.X=4881.094mil|Location1.Y=4398.013mil|Location2.Y=4417.513mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4861.594mil|Location2.X=4881.094mil|Location1.Y=4398.013mil|Location2.Y=4417.513mil|Absolute=True">Acute Angle Constraint: (56.250 &lt; 85.000) Between Polygon Region (327 hole(s)) Top Layer And Track (3102.008mil,4387.992mil)(3102.008mil,4441.681mil) on Top Layer (Angle = 56.250)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1PZ3NGRG4PG5EQXJGJAFGOFPNJEX01IAZUE5JAECUV2QR0LPUHSE"><h2>Waived Violations</h2></a><a name="IDXBOQS3LS3RKSJ53BV0HQAJ0YSHRLQ3Z0MQRYC330IQ4MACZK5B"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6156.742mil|Location2.X=6243.258mil|Location1.Y=3356.742mil|Location2.Y=3443.258mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6156.742mil|Location2.X=6243.258mil|Location1.Y=3356.742mil|Location2.Y=3443.258mil|Absolute=True">Short-Circuit Constraint: Between Pad Q2-5_6(4445mil,3400mil) on Top Layer And Region (0 hole(s)) Top Layer Location : [X = 6200mil][Y = 3400mil]</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6181.824mil|Location2.X=6328.104mil|Location1.Y=3326.86mil|Location2.Y=3473.14mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6181.824mil|Location2.X=6328.104mil|Location1.Y=3326.86mil|Location2.Y=3473.14mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (4445mil,3400mil)(4650mil,3400mil) on Top Layer Location : [X = 6254.964mil][Y = 3400mil]</acronym></a><br>Waived by Feliks Mihelj at 10/8/2025 18:25:59<br>These are the same tracks. For some reason Altium doesn't recognize that here, but on the same component in the other place it's working fine.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID2FR2YWJOOHGGPLXRU5IH1F5RWMA2D2UAUVAEJQL1BT2FY5GLLI0L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,196.85mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,196.85mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,196.85mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,196.85mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,5708.661mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,5708.661mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6583.066mil|Location2.X=6732.682mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,5708.661mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6582.566mil|Location2.X=6733.182mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True">Un-Routed Net Constraint: Arc (4902.874mil,5708.661mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,196.85mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,196.85mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=121.542mil|Location2.Y=272.159mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,196.85mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=122.042mil|Location2.Y=271.659mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,196.85mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,5708.661mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,5708.661mil) on Bottom Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2171.818mil|Location2.X=2322.434mil|Location1.Y=5633.353mil|Location2.Y=5783.97mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,5708.661mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.318mil|Location2.X=2321.934mil|Location1.Y=5633.853mil|Location2.Y=5783.47mil|Absolute=True">Un-Routed Net Constraint: Arc (492.126mil,5708.661mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDTTFGR3SEEVMMPFNMMRLAXZKX3BYQTQXIROOEZ3BBVROTOJS12ZOG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (4902.874mil,196.85mil) on Bottom Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (4902.874mil,196.85mil) on Bottom Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (4902.874mil,196.85mil) on Top Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (4902.874mil,196.85mil) on Top Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (4902.874mil,5708.661mil) on Bottom Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (4902.874mil,5708.661mil) on Bottom Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (4902.874mil,5708.661mil) on Top Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6578.451mil|Location2.X=6587.581mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (4902.874mil,5708.661mil) on Top Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (492.126mil,196.85mil) on Bottom Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (492.126mil,196.85mil) on Bottom Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=195.35mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (492.126mil,196.85mil) on Top Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=194.85mil|Location2.Y=202.395mil|Absolute=True">Width Constraint: Arc (492.126mil,196.85mil) on Top Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (492.126mil,5708.661mil) on Bottom Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (492.126mil,5708.661mil) on Bottom Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5707.161mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (492.126mil,5708.661mil) on Top Layer Actual Width = 0mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Work\Desktop\Koncar\Altium\current-source\cs_consolidated\KAAI3020_TESTPcbDoc.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.703mil|Location2.X=2176.833mil|Location1.Y=5706.661mil|Location2.Y=5714.206mil|Absolute=True">Width Constraint: Arc (492.126mil,5708.661mil) on Top Layer Actual Width = 1mil, Target Width = 3.5mil</acronym></a><br>Waived by Feliks Mihelj at 8/5/2025 15:15:03<br>bullshit</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
